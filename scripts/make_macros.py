@@ -1,6 +1,6 @@
 """Turn data/summary_scalars.csv into LaTeX macros.
 
-Every number quoted in main.tex comes from here, so a reported value cannot
+Every number quoted in AD_transcriptome_two_views.tex comes from here, so a reported value cannot
 drift from the analysis that produced it. Keys are mangled to letter-only
 macro names (LaTeX command names cannot contain digits or underscores):
 `acc_pls_mean` -> `\vAccPlsMean`.
@@ -17,7 +17,7 @@ COUNT_KEY = re.compile(r"(^n_|_n_|_n$|_rank_here$|_nofsamples$)")
 
 # Paths are overridable so the Kaggle notebook can run this file unmodified
 # against /kaggle/working -- the same arrangement figstyle.py uses, and the
-# reason the notebook emits the very file main.tex reads rather than a copy.
+# reason the notebook emits the very file AD_transcriptome_two_views.tex reads rather than a copy.
 if "PAPER_DATA" in os.environ:
     DATA = Path(os.environ["PAPER_DATA"])
     GEN = Path(os.environ.get("PAPER_GEN", DATA / "generated"))

@@ -117,7 +117,7 @@ def main():
 
     # The closing rule belongs to the fragment, not to the tabular that reads
     # it (a rule command immediately after \input resumes is a "Misplaced
-    # \noalign"); the opening \midrule stays in main.tex, where it is adjacent
+    # \noalign"); the opening \midrule stays in AD_transcriptome_two_views.tex, where it is adjacent
     # to a real row.
     summary.append(r"\bottomrule")
     top[-1] = r"\bottomrule"
