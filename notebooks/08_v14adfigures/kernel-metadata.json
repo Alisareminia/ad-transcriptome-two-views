@@ -1,0 +1,25 @@
+{
+  "id": "alisaremi/v14adfigures",
+  "id_no": 137707883,
+  "title": "V14ADfigures",
+  "code_file": "v14adfigures.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "alisaremi/ad-merged-geo-cohorts",
+    "alisaremi/v7admerged",
+    "alisaremi/v9adexternal",
+    "alisaremi/v10adgenevalidation",
+    "alisaremi/v11adrobustness",
+    "alisaremi/v15adage",
+    "alisaremi/v16adgenesides"
+  ],
+  "competition_sources": [],
+  "model_sources": []
+}

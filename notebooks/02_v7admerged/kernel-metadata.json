@@ -1,0 +1,19 @@
+{
+  "id": "alisaremi/v7admerged",
+  "id_no": 136911270,
+  "title": "V7ADmerged",
+  "code_file": "v7admerged.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "alisaremi/ad-merged-geo-cohorts"
+  ],
+  "competition_sources": [],
+  "model_sources": []
+}

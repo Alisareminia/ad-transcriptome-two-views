@@ -1,0 +1,80 @@
+ROBUSTNESS OF THE FROZEN GENE LISTS: CELL COMPOSITION AND RNA-SEQ
+gene-list SHA-256: b5383a49244784b16efc31c671086dcb95a5462a207d28445f5247b35bb9e69f
+cohorts: GSE132903 (195), GSE15222 (363), GSE29378 (33), GSE122063 (23), GSE36980 (32), GSE106241 (58), GSE1297 (31), GSE125583 (289)
+
+Cell composition, AD minus control (standardised difference):
+cell       OPCs  astrocytes  endothelial  microglia  neurons  oligodendrocytes
+cohort                                                                        
+GSE106241   NaN         NaN          NaN        NaN      NaN               NaN
+GSE122063  1.37        0.34         1.16       1.25    -1.35              0.87
+GSE125583  0.45        0.05         0.72       0.49    -0.98              0.29
+GSE1297     NaN         NaN          NaN        NaN      NaN               NaN
+GSE132903 -0.06        0.09         0.65       0.31    -0.97              0.53
+GSE15222  -0.35        0.04         0.38       0.34    -0.87              0.32
+GSE29378  -0.45        0.80         0.08       0.27    -0.52             -0.29
+GSE36980  -0.41        0.18         0.06      -0.05    -0.85              0.17
+
+Signature beyond age + sex + six cell-type scores (cross-validated AUC; matched-random sets through the same test):
+  GSE132903  PLS-DA  0.768 -> 0.879 (delta +0.111; matched +0.048, p 0.0099); LR p 1e-13 (vs matched p 0.00599)
+  GSE132903  CVAE    0.768 -> 0.879 (delta +0.111; matched +0.046, p 0.0099); LR p 9.1e-14 (vs matched p 0.004)
+  GSE15222   PLS-DA  0.893 -> 0.932 (delta +0.039; matched +0.020, p 0.0099); LR p 9.3e-11 (vs matched p 0.017)
+  GSE15222   CVAE    0.893 -> 0.905 (delta +0.011; matched +0.017, p 0.822); LR p 0.00066 (vs matched p 0.742)
+  GSE15222   Core    0.893 -> 0.903 (delta +0.010; matched +0.015, p 0.733); LR p 0.00032 (vs matched p 0.468)
+  GSE29378   PLS-DA  0.703 -> 0.831 (delta +0.127; matched +0.026, p 0.0099); LR p 1.2e-07 (vs matched p 0.005)
+  GSE29378   CVAE    0.703 -> 0.713 (delta +0.009; matched +0.013, p 0.495); LR p 0.33 (vs matched p 0.501)
+  GSE29378   Core    0.703 -> 0.691 (delta -0.012; matched +0.024, p 0.851); LR p 0.89 (vs matched p 0.941)
+  GSE122063  PLS-DA  0.800 -> 0.821 (delta +0.021; matched +0.015, p 0.188); LR p 0.96 (vs matched p 0.279)
+  GSE122063  CVAE    0.800 -> 0.811 (delta +0.011; matched +0.014, p 0.574); LR p 0.97 (vs matched p 0.451)
+  GSE122063  Core    0.800 -> 0.814 (delta +0.014; matched +0.013, p 0.426); LR p 0.95 (vs matched p 0.112)
+  GSE36980   PLS-DA  0.861 -> 0.889 (delta +0.028; matched -0.001, p 0.0198); LR p 1 (vs matched p 0.702)
+  GSE36980   CVAE    0.861 -> 0.865 (delta +0.004; matched -0.003, p 0.129); LR p 1 (vs matched p 0.867)
+  GSE36980   Core    0.861 -> 0.898 (delta +0.038; matched +0.003, p 0.0495); LR p 1 (vs matched p 0.715)
+  GSE125583  PLS-DA  0.786 -> 0.846 (delta +0.060; matched +0.030, p 0.0099); LR p 4.3e-10 (vs matched p 0.002)
+  GSE125583  CVAE    0.786 -> 0.848 (delta +0.062; matched +0.029, p 0.0099); LR p 1.9e-10 (vs matched p 0.000999)
+  GSE125583  Core    0.786 -> 0.858 (delta +0.073; matched +0.022, p 0.0099); LR p 9.8e-12 (vs matched p 0.000999)
+
+Gene effects meta-analysed before vs after composition adjustment (Core: new cohorts incl. RNA-seq, GSE132903 excluded):
+  ADGRA3   up   raw +0.43 (q 0.041) -> adjusted +0.07 (q 0.81); 15% of effect retained
+  ASCL1    up   raw +0.53 (q 0.0042) -> adjusted +0.27 (q 0.2); 52% of effect retained
+  CARTPT   down raw +0.79 (q 1.6e-07) -> adjusted +0.10 (q 0.56); 13% of effect retained
+  DGKG     up   raw +0.13 (q 0.75) -> adjusted +0.28 (q 0.0065); 209% of effect retained
+  GFAP     up   raw +0.84 (q 4.8e-17) -> adjusted +0.29 (q 0.00015); 34% of effect retained
+  HOPX     down raw +0.57 (q 0.00019) -> adjusted +0.24 (q 0.38); 42% of effect retained
+  KIF5A    up   raw +0.31 (q 0.3) -> adjusted +0.21 (q 0.12); 68% of effect retained
+  NEBL     up   raw +0.42 (q 0.11) -> adjusted +0.20 (q 0.44); 48% of effect retained
+  NINL     up   raw +0.49 (q 0.028) -> adjusted +0.02 (q 0.99); 4% of effect retained
+  NPTX2    down raw +0.70 (q 3.3e-06) -> adjusted +0.51 (q 0.016); 72% of effect retained
+  RPH3A    down raw +0.90 (q 3.9e-25) -> adjusted +0.29 (q 6.9e-05); 32% of effect retained
+  TRIL     up   raw +0.34 (q 0.028) -> adjusted +0.07 (q 0.94); 19% of effect retained
+  ZNF184   down raw +0.72 (q 2.4e-15) -> adjusted +0.12 (q 0.36); 16% of effect retained
+  PLS-DA: 36 -> 26 of 67 genes replicate after adjustment
+  CVAE: 47 -> 14 of 105 genes replicate after adjustment
+  Core: 10 -> 4 of 13 genes replicate after adjustment
+
+Dose-response (age-adjusted -> age + composition adjusted; matched-random p after adjustment):
+  GSE106241  braak  PLS-DA  n= 58 +0.517 -> +0.439 (p 0.00057; vs matched 0.002)
+  GSE106241  braak  CVAE    n= 58 +0.501 -> +0.489 (p 9.8e-05; vs matched 0.002)
+  GSE106241  braak  Core    n= 58 +0.435 -> +0.433 (p 0.00069; vs matched 0.00599)
+  GSE1297    braak  PLS-DA  n= 31 +0.422 -> +0.173 (p 0.35; vs matched 0.261)
+  GSE1297    braak  CVAE    n= 31 +0.352 -> -0.003 (p 0.99; vs matched 0.583)
+  GSE1297    braak  Core    n= 31 +0.500 -> +0.311 (p 0.089; vs matched 0.106)
+  GSE1297    mmse   PLS-DA  n= 31 -0.577 -> -0.416 (p 0.02; vs matched 0.0579)
+  GSE1297    mmse   CVAE    n= 31 -0.415 -> -0.011 (p 0.95; vs matched 0.826)
+  GSE1297    mmse   Core    n= 31 -0.482 -> -0.131 (p 0.48; vs matched 0.493)
+  GSE1297    nft    PLS-DA  n= 31 +0.403 -> +0.130 (p 0.49; vs matched 0.387)
+  GSE1297    nft    CVAE    n= 31 +0.338 -> +0.003 (p 0.99; vs matched 0.717)
+  GSE1297    nft    Core    n= 31 +0.530 -> +0.453 (p 0.011; vs matched 0.0339)
+  GSE29378   braak  PLS-DA  n= 27 +0.691 -> +0.462 (p 0.015; vs matched 0.002)
+  GSE29378   braak  CVAE    n= 27 +0.385 -> -0.058 (p 0.78; vs matched 0.501)
+  GSE29378   braak  Core    n= 27 +0.424 -> +0.025 (p 0.9; vs matched 0.485)
+  GSE29378   plaque PLS-DA  n= 29 +0.602 -> +0.502 (p 0.0055; vs matched 0.00599)
+  GSE29378   plaque CVAE    n= 29 +0.280 -> -0.081 (p 0.68; vs matched 0.932)
+  GSE29378   plaque Core    n= 29 +0.314 -> -0.075 (p 0.7; vs matched 0.89)
+  GSE125583  braak  PLS-DA  n=287 +0.400 -> +0.258 (p 9.3e-06; vs matched 0.0659)
+  GSE125583  braak  CVAE    n=287 +0.448 -> +0.346 (p 1.7e-09; vs matched 0.00399)
+  GSE125583  braak  Core    n=287 +0.405 -> +0.370 (p 9.3e-11; vs matched 0.002)
+
+RNA-seq cohort GSE125583:
+  PLS-DA  signature AUC 0.832 [matched 0.789, p 0.000999; topDE 0.816; beyond age+sex p 9.2e-19]
+  CVAE    signature AUC 0.815 [matched 0.789, p 0.00799; topDE 0.810; beyond age+sex p 2.7e-17]
+  Core    signature AUC 0.795 [matched 0.778, p 0.221; topDE 0.823; beyond age+sex p 6.6e-16]

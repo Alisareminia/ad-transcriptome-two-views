@@ -1,0 +1,7 @@
+arm,list,V7,this_arm,kept_from_V7,jaccard_with_V7
+"A, age-corrected",PLS-DA,54,41,24,0.3380281690140845
+"A, age-corrected",CVAE,75,68,48,0.5052631578947369
+"A, age-corrected",shared by both models,18,12,8,0.36363636363636365
+"B, age-matched",PLS-DA,54,45,24,0.32
+"B, age-matched",CVAE,75,53,26,0.2549019607843137
+"B, age-matched",shared by both models,18,13,7,0.2916666666666667

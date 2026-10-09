@@ -1,0 +1,5 @@
+set,n_genes,n_terms
+plsda_up,25,16
+plsda_down,15,11
+cvae_up,29,6
+cvae_down,26,40

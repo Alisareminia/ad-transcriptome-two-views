@@ -1,0 +1,205 @@
+[{"stream_name":"stderr","time":10.692010015,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.692153555,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.692162077,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.692165575,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":11.570638616,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.570678344,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.570684808,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.570690236,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":21.890926092,"data":"FORCE_CPU set; running on CPU as the published run did\n"}
+,{"stream_name":"stdout","time":21.890967987,"data":"device: cpu | torch 2.11.0+cpu\n"}
+,{"stream_name":"stdout","time":21.890974365,"data":"  python           3.13.15\n"}
+,{"stream_name":"stdout","time":21.890996064,"data":"  platform         Linux-6.18.48+-x86_64-with-glibc2.39\n"}
+,{"stream_name":"stdout","time":21.89100134,"data":"  torch            2.11.0+cpu\n"}
+,{"stream_name":"stdout","time":21.891006169,"data":"  numpy            2.1.3\n"}
+,{"stream_name":"stdout","time":21.891010854,"data":"  pandas           2.3.3\n"}
+,{"stream_name":"stdout","time":21.891015144,"data":"  scikit_learn     1.6.1\n"}
+,{"stream_name":"stdout","time":21.89101965,"data":"  scipy            1.16.3\n"}
+,{"stream_name":"stdout","time":21.891024147,"data":"  device           cpu\n"}
+,{"stream_name":"stdout","time":21.891028555,"data":"  force_cpu        True\n"}
+,{"stream_name":"stdout","time":21.891033109,"data":"  cuda_available   False\n"}
+,{"stream_name":"stdout","time":21.891037672,"data":"  cpu_count        4\n"}
+,{"stream_name":"stdout","time":21.8910421,"data":"  torch_num_threads 4\n"}
+,{"stream_name":"stdout","time":21.891046695,"data":"merged data from /kaggle/input/notebooks/alisaremi/ad-merged-geo-cohorts\n"}
+,{"stream_name":"stdout","time":29.186431028,"data":"   cohort platform  arrays_in_geo  after_diagnosis_filter  after_age_filter  donors  AD_arrays  control_arrays  AD_donors  control_donors  age_median_AD  age_median_control  regions  genes_measured\n"}
+,{"stream_name":"stdout","time":29.186476668,"data":" GSE48350   GPL570          253.0                   253.0             173.0    63.0       80.0            93.0       28.0            35.0           85.5                83.0      4.0           21462\n"}
+,{"stream_name":"stdout","time":29.186483921,"data":" GSE33000  GPL4372          624.0                   467.0             403.0   403.0      305.0            98.0      305.0            98.0           82.0                68.0      1.0           19865\n"}
+,{"stream_name":"stdout","time":29.186489784,"data":"GSE132903 GPL10558          195.0                   195.0             195.0   195.0       97.0            98.0       97.0            98.0           86.0                85.0      1.0           21744\n"}
+,{"stream_name":"stdout","time":29.186495093,"data":"GSE118553 GPL10558          401.0                   207.0             183.0    70.0      129.0            54.0       51.0            19.0           83.0                80.0      3.0           23402\n"}
+,{"stream_name":"stdout","time":29.186500636,"data":" GSE84422    GPL96          951.0                   642.0             642.0    86.0      448.0           194.0       64.0            22.0           88.5                83.5     15.0           12387\n"}
+,{"stream_name":"stdout","time":29.186527286,"data":"    TOTAL      NaN         2424.0                  1764.0            1596.0   817.0     1059.0           537.0      545.0           272.0           84.0                78.0     24.0           11214\n"}
+,{"stream_name":"stdout","time":29.186533273,"data":"age \u003e= 60: 1596 arrays from 817 donors in 5 cohorts\n"}
+,{"stream_name":"stdout","time":29.186539346,"data":"                   arrays  donors\n"}
+,{"stream_name":"stdout","time":29.186544716,"data":"cohort    GROUP                  \n"}
+,{"stream_name":"stdout","time":29.186549584,"data":"GSE118553 AD          129      51\n"}
+,{"stream_name":"stdout","time":29.186554729,"data":"          Control      54      19\n"}
+,{"stream_name":"stdout","time":29.186559009,"data":"GSE132903 AD           97      97\n"}
+,{"stream_name":"stdout","time":29.186563403,"data":"          Control      98      98\n"}
+,{"stream_name":"stdout","time":29.186568135999998,"data":"GSE33000  AD          305     305\n"}
+,{"stream_name":"stdout","time":29.186573731,"data":"          Control      98      98\n"}
+,{"stream_name":"stdout","time":29.186578918,"data":"GSE48350  AD           80      28\n"}
+,{"stream_name":"stdout","time":29.18658403,"data":"          Control      93      35\n"}
+,{"stream_name":"stdout","time":29.186589343,"data":"GSE84422  AD          448      64\n"}
+,{"stream_name":"stdout","time":29.186594391,"data":"          Control     194      22\n"}
+,{"stream_name":"stdout","time":29.376370299,"data":"arrays=1596  donors=817  genes=11214  classes=['AD', 'Control']\n"}
+,{"stream_name":"stdout","time":29.376407849,"data":"GROUP\n"}
+,{"stream_name":"stdout","time":29.376413682,"data":"AD         1059\n"}
+,{"stream_name":"stdout","time":29.376418322,"data":"Control     537\n"}
+,{"stream_name":"stdout","time":29.418494516,"data":"helpers defined\n"}
+,{"stream_name":"stdout","time":32.931306332,"data":"\u001b[?25l   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m0.0/455.2 kB\u001b[0m \u001b[31m?\u001b[0m eta \u001b[36m-:--:--\u001b[0m\r\u001b[2K   \u001b[91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[90m╺\u001b[0m\u001b[90m━━━━━\u001b[0m \u001b[32m389.1/455.2 kB\u001b[0m \u001b[31m11.6 MB/s\u001b[0m eta \u001b[36m0:00:01\u001b[0m\r\u001b[2K   \u001b[91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[91m╸\u001b[0m \u001b[32m450.6/455.2 kB\u001b[0m \u001b[31m12.2 MB/s\u001b[0m eta \u001b[36m0:00:01\u001b[0m\r\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m455.2/455.2 kB\u001b[0m \u001b[31m6.2 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\r\n"}
+,{"stream_name":"stdout","time":36.379107599,"data":"\u001b[?25hattribution helpers ready\n"}
+,{"stream_name":"stdout","time":36.409058062,"data":"LOCO trainer ready\n"}
+,{"stream_name":"stdout","time":36.580442469,"data":"\n"}
+,{"stream_name":"stdout","time":36.580478817,"data":"=== held out: GSE132903  (195 arrays, 195 donors; training on 1401 arrays from 4 cohorts)\n"}
+,{"stream_name":"stdout","time":129.92229824,"data":"  run  1/20  AUC  PLS-DA 0.880 | CVAE agnostic 0.883 | CVAE conditioned* 0.910 | age 0.506   [1.6 min]\n"}
+,{"stream_name":"stdout","time":201.686175885,"data":"  run  2/20  AUC  PLS-DA 0.865 | CVAE agnostic 0.861 | CVAE conditioned* 0.890 | age 0.506   [2.8 min]\n"}
+,{"stream_name":"stdout","time":236.840682698,"data":"  run  3/20  AUC  PLS-DA 0.830 | CVAE agnostic 0.833 | CVAE conditioned* 0.837 | age 0.506   [3.3 min]\n"}
+,{"stream_name":"stdout","time":285.731978193,"data":"  run  4/20  AUC  PLS-DA 0.867 | CVAE agnostic 0.801 | CVAE conditioned* 0.827 | age 0.506   [4.2 min]\n"}
+,{"stream_name":"stdout","time":366.790635655,"data":"  run  5/20  AUC  PLS-DA 0.890 | CVAE agnostic 0.864 | CVAE conditioned* 0.896 | age 0.506   [5.5 min]\n"}
+,{"stream_name":"stdout","time":423.754591386,"data":"  run  6/20  AUC  PLS-DA 0.849 | CVAE agnostic 0.860 | CVAE conditioned* 0.887 | age 0.506   [6.5 min]\n"}
+,{"stream_name":"stdout","time":473.610510218,"data":"  run  7/20  AUC  PLS-DA 0.840 | CVAE agnostic 0.817 | CVAE conditioned* 0.849 | age 0.506   [7.3 min]\n"}
+,{"stream_name":"stdout","time":522.614341953,"data":"  run  8/20  AUC  PLS-DA 0.844 | CVAE agnostic 0.862 | CVAE conditioned* 0.886 | age 0.506   [8.1 min]\n"}
+,{"stream_name":"stdout","time":574.441584019,"data":"  run  9/20  AUC  PLS-DA 0.843 | CVAE agnostic 0.861 | CVAE conditioned* 0.886 | age 0.506   [9.0 min]\n"}
+,{"stream_name":"stdout","time":671.720369008,"data":"  run 10/20  AUC  PLS-DA 0.831 | CVAE agnostic 0.860 | CVAE conditioned* 0.890 | age 0.506   [10.6 min]\n"}
+,{"stream_name":"stdout","time":725.272506938,"data":"  run 11/20  AUC  PLS-DA 0.836 | CVAE agnostic 0.785 | CVAE conditioned* 0.817 | age 0.506   [11.5 min]\n"}
+,{"stream_name":"stdout","time":811.476195083,"data":"  run 12/20  AUC  PLS-DA 0.852 | CVAE agnostic 0.859 | CVAE conditioned* 0.890 | age 0.506   [12.9 min]\n"}
+,{"stream_name":"stdout","time":883.118116007,"data":"  run 13/20  AUC  PLS-DA 0.831 | CVAE agnostic 0.815 | CVAE conditioned* 0.846 | age 0.506   [14.1 min]\n"}
+,{"stream_name":"stdout","time":917.327738217,"data":"  run 14/20  AUC  PLS-DA 0.848 | CVAE agnostic 0.845 | CVAE conditioned* 0.849 | age 0.506   [14.7 min]\n"}
+,{"stream_name":"stdout","time":971.064352377,"data":"  run 15/20  AUC  PLS-DA 0.858 | CVAE agnostic 0.817 | CVAE conditioned* 0.846 | age 0.506   [15.6 min]\n"}
+,{"stream_name":"stdout","time":1045.763738333,"data":"  run 16/20  AUC  PLS-DA 0.864 | CVAE agnostic 0.831 | CVAE conditioned* 0.867 | age 0.506   [16.8 min]\n"}
+,{"stream_name":"stdout","time":1082.792369403,"data":"  run 17/20  AUC  PLS-DA 0.884 | CVAE agnostic 0.864 | CVAE conditioned* 0.875 | age 0.506   [17.4 min]\n"}
+,{"stream_name":"stdout","time":1121.512597222,"data":"  run 18/20  AUC  PLS-DA 0.865 | CVAE agnostic 0.854 | CVAE conditioned* 0.869 | age 0.506   [18.1 min]\n"}
+,{"stream_name":"stdout","time":1187.671534471,"data":"  run 19/20  AUC  PLS-DA 0.882 | CVAE agnostic 0.844 | CVAE conditioned* 0.869 | age 0.506   [19.2 min]\n"}
+,{"stream_name":"stdout","time":1252.223993423,"data":"  run 20/20  AUC  PLS-DA 0.861 | CVAE agnostic 0.800 | CVAE conditioned* 0.838 | age 0.506   [20.3 min]\n"}
+,{"stream_name":"stdout","time":1285.334945398,"data":"  null 1/10\n"}
+,{"stream_name":"stdout","time":1339.733878501,"data":"  null 2/10\n"}
+,{"stream_name":"stdout","time":1372.789436268,"data":"  null 3/10\n"}
+,{"stream_name":"stdout","time":1405.526541151,"data":"  null 4/10\n"}
+,{"stream_name":"stdout","time":1440.064872266,"data":"  null 5/10\n"}
+,{"stream_name":"stdout","time":1521.345802629,"data":"  null 6/10\n"}
+,{"stream_name":"stdout","time":1561.041093556,"data":"  null 7/10\n"}
+,{"stream_name":"stdout","time":1594.262112672,"data":"  null 8/10\n"}
+,{"stream_name":"stdout","time":1627.374170674,"data":"  null 9/10\n"}
+,{"stream_name":"stdout","time":1660.259980853,"data":"  null 10/10\n"}
+,{"stream_name":"stdout","time":1660.260026465,"data":"\n"}
+,{"stream_name":"stdout","time":1660.260043464,"data":"* the conditioned arm is given each held-out array's true diagnosis -- reference only\n"}
+,{"stream_name":"stdout","time":1703.557047624,"data":"GSE132903: PLS-DA 79 genes, CVAE 127 genes selected on the other four\n"}
+,{"stream_name":"stdout","time":1703.557088185,"data":" held_out method  n_selected  n_directional  concordance  replication  null_concordance_mean  null_concordance_lo  null_concordance_hi  null_replication_mean  null_replication_lo  null_replication_hi  p_concordance  p_replication\n"}
+,{"stream_name":"stdout","time":1703.557101274,"data":"GSE132903 PLS-DA          79             67        0.836        0.642                  0.757                0.642                0.851                  0.564                0.448                0.672          0.083          0.123\n"}
+,{"stream_name":"stdout","time":1703.557108014,"data":"GSE132903   CVAE         127            105        0.724        0.495                  0.755                0.676                0.838                  0.565                0.467                0.657          0.818          0.936\n"}
+,{"stream_name":"stdout","time":1703.557115236,"data":" held_out method  n_up  n_down  signature_auc  signature_auc_donor\n"}
+,{"stream_name":"stdout","time":1703.557120949,"data":"GSE132903 PLS-DA    44      23          0.886                0.886\n"}
+,{"stream_name":"stdout","time":1703.557127235,"data":"GSE132903   CVAE    63      42          0.852                0.852\n"}
+,{"stream_name":"stdout","time":1703.557133276,"data":"method  n_folds\n"}
+,{"stream_name":"stdout","time":1703.55714851,"data":"CVAE    1          127\n"}
+,{"stream_name":"stdout","time":1703.55715416,"data":"PLS-DA  1           79\n"}
+,{"stream_name":"stdout","time":1711.787413392,"data":"                               key         value\n"}
+,{"stream_name":"stdout","time":1711.787460882,"data":"                        n_external  1.950000e+02\n"}
+,{"stream_name":"stdout","time":1711.787467671,"data":"                              n_AD  9.700000e+01\n"}
+,{"stream_name":"stdout","time":1711.787473228,"data":"                         n_control  9.800000e+01\n"}
+,{"stream_name":"stdout","time":1711.787479137,"data":"                     age_median_AD  8.600000e+01\n"}
+,{"stream_name":"stdout","time":1711.787485212,"data":"                age_median_control  8.500000e+01\n"}
+,{"stream_name":"stdout","time":1711.78749093,"data":"                 age_mannwhitney_p  8.938766e-01\n"}
+,{"stream_name":"stdout","time":1711.787496884,"data":"                  auc_age_only_raw  5.055754e-01\n"}
+,{"stream_name":"stdout","time":1711.787502355,"data":"               rho_age_pls_control  1.727856e-01\n"}
+,{"stream_name":"stdout","time":1711.787507675,"data":"             rho_age_pls_control_p  8.887446e-02\n"}
+,{"stream_name":"stdout","time":1711.787513788,"data":"                    rho_age_pls_AD -1.969607e-01\n"}
+,{"stream_name":"stdout","time":1711.787519476,"data":"                  rho_age_pls_AD_p  5.315280e-02\n"}
+,{"stream_name":"stdout","time":1711.787525455,"data":"            lr_pls_beyond_age_stat  9.475058e+01\n"}
+,{"stream_name":"stdout","time":1711.787531423,"data":"               lr_pls_beyond_age_p  2.159500e-22\n"}
+,{"stream_name":"stdout","time":1711.787537375,"data":"         auc_pls_plus_age_insample  8.696613e-01\n"}
+,{"stream_name":"stdout","time":1711.787543182,"data":"                 auc_pls_mean_prob  8.679781e-01\n"}
+,{"stream_name":"stdout","time":1711.78754909,"data":"      rho_age_cvae_neutral_control  1.670343e-01\n"}
+,{"stream_name":"stdout","time":1711.787554634,"data":"    rho_age_cvae_neutral_control_p  1.001947e-01\n"}
+,{"stream_name":"stdout","time":1711.787560239,"data":"           rho_age_cvae_neutral_AD -1.178381e-01\n"}
+,{"stream_name":"stdout","time":1711.787584292,"data":"         rho_age_cvae_neutral_AD_p  2.503353e-01\n"}
+,{"stream_name":"stdout","time":1711.787589799,"data":"   lr_cvae_neutral_beyond_age_stat  1.006563e+02\n"}
+,{"stream_name":"stdout","time":1711.787594548,"data":"      lr_cvae_neutral_beyond_age_p  1.094118e-23\n"}
+,{"stream_name":"stdout","time":1711.787604308,"data":"auc_cvae_neutral_plus_age_insample  8.747107e-01\n"}
+,{"stream_name":"stdout","time":1711.787610271,"data":"        auc_cvae_neutral_mean_prob  8.746055e-01\n"}
+,{"stream_name":"stdout","time":1711.787614355,"data":"         rho_age_cvae_true_control  1.707685e-01\n"}
+,{"stream_name":"stdout","time":1711.787617509,"data":"       rho_age_cvae_true_control_p  9.272317e-02\n"}
+,{"stream_name":"stdout","time":1711.78762054,"data":"              rho_age_cvae_true_AD -1.213008e-01\n"}
+,{"stream_name":"stdout","time":1711.787623748,"data":"            rho_age_cvae_true_AD_p  2.365861e-01\n"}
+,{"stream_name":"stdout","time":1711.787626755,"data":"      lr_cvae_true_beyond_age_stat  1.170007e+02\n"}
+,{"stream_name":"stdout","time":1711.787629666,"data":"         lr_cvae_true_beyond_age_p  2.869695e-27\n"}
+,{"stream_name":"stdout","time":1711.787632641,"data":"   auc_cvae_true_plus_age_insample  8.986956e-01\n"}
+,{"stream_name":"stdout","time":1711.787635524,"data":"           auc_cvae_true_mean_prob  8.983800e-01\n"}
+,{"stream_name":"stdout","time":1711.78763852,"data":"         frac_age_genes_background  5.349563e-01\n"}
+,{"stream_name":"stdout","time":1711.78764309,"data":"             frac_age_genes_PLS-DA  5.063291e-01\n"}
+,{"stream_name":"stdout","time":1711.787647815,"data":"                n_age_genes_PLS-DA  4.000000e+01\n"}
+,{"stream_name":"stdout","time":1711.787652415,"data":"                 n_selected_PLS-DA  7.900000e+01\n"}
+,{"stream_name":"stdout","time":1711.787657058,"data":"         age_genes_PLS-DA_fisher_p  6.513594e-01\n"}
+,{"stream_name":"stdout","time":1711.787661308,"data":"               frac_age_genes_CVAE  5.669291e-01\n"}
+,{"stream_name":"stdout","time":1711.787666279,"data":"                  n_age_genes_CVAE  7.200000e+01\n"}
+,{"stream_name":"stdout","time":1711.787670913,"data":"                   n_selected_CVAE  1.270000e+02\n"}
+,{"stream_name":"stdout","time":1711.787675716,"data":"           age_genes_CVAE_fisher_p  4.758598e-01\n"}
+,{"stream_name":"stdout","time":1711.787682368,"data":" band  n  n_AD  n_control  age_median_AD  age_median_control  auc_pls_mean  auc_pls_sd  auc_cvae_neutral_mean  auc_cvae_neutral_sd  auc_cvae_true_mean  auc_cvae_true_sd  auc_age_mean  auc_age_sd\n"}
+,{"stream_name":"stdout","time":1711.787688215,"data":"  \u003c80 42    21         21           76.0                76.0         0.907       0.015                  0.858                0.037               0.886             0.031         0.508         0.0\n"}
+,{"stream_name":"stdout","time":1711.787694157,"data":"80-89 98    49         49           85.0                85.0         0.876       0.021                  0.869                0.025               0.888             0.025         0.529         0.0\n"}
+,{"stream_name":"stdout","time":1711.787698982,"data":"  90+ 55    27         28           92.0                92.0         0.776       0.027                  0.791                0.048               0.824             0.042         0.521         0.0\n"}
+,{"stream_name":"stdout","time":1711.823943723,"data":"EXTERNAL VALIDATION on GSE132903: 195 arrays (97 AD / 98 control), trained on the other four cohorts\n"}
+,{"stream_name":"stdout","time":1711.823984993,"data":"\n"}
+,{"stream_name":"stdout","time":1711.82398976,"data":"  PLS-DA                         AUC 0.856 +/- 0.019   AP 0.885   balanced acc 0.703\n"}
+,{"stream_name":"stdout","time":1711.824006355,"data":"  CVAE (label-agnostic)          AUC 0.841 +/- 0.027   AP 0.840   balanced acc 0.695\n"}
+,{"stream_name":"stdout","time":1711.824010205,"data":"  CVAE (label-conditioned)*      AUC 0.866 +/- 0.026   AP 0.865   balanced acc 0.716\n"}
+,{"stream_name":"stdout","time":1711.824013497,"data":"  age only (trained)             AUC 0.506 +/- 0.000   AP 0.501   balanced acc 0.500\n"}
+,{"stream_name":"stdout","time":1711.824022944,"data":"  CVAE (label-agnostic) vs PLS-DA, paired over 20 runs: p = 0.021\n"}
+,{"stream_name":"stdout","time":1711.824027615,"data":"\n"}
+,{"stream_name":"stdout","time":1711.82403217,"data":"AGE VALIDATION\n"}
+,{"stream_name":"stdout","time":1711.824036963,"data":"  median age AD 86 vs control 85 (Mann-Whitney p = 0.89); raw age AUC 0.506\n"}
+,{"stream_name":"stdout","time":1711.824041561,"data":"  PLS-DA                   risk vs age: rho controls +0.17 (p 0.089), rho AD -0.20 (p 0.053); beyond age: LR p = 2.2e-22\n"}
+,{"stream_name":"stdout","time":1711.824046187,"data":"  CVAE (label-agnostic)    risk vs age: rho controls +0.17 (p 0.1), rho AD -0.12 (p 0.25); beyond age: LR p = 1.1e-23\n"}
+,{"stream_name":"stdout","time":1711.824050753,"data":"  age \u003c80    n= 42 (21 AD/21 C): AUC PLS-DA 0.907, CVAE 0.858, age 0.508\n"}
+,{"stream_name":"stdout","time":1711.824055788,"data":"  age 80-89  n= 98 (49 AD/49 C): AUC PLS-DA 0.876, CVAE 0.869, age 0.529\n"}
+,{"stream_name":"stdout","time":1711.824060105,"data":"  age 90+    n= 55 (27 AD/28 C): AUC PLS-DA 0.776, CVAE 0.791, age 0.521\n"}
+,{"stream_name":"stdout","time":1711.824064795,"data":"  age-associated genes (training controls, FDR\u003c0.05): background 53.5%, PLS-DA set 50.6%, CVAE set 56.7%\n"}
+,{"stream_name":"stdout","time":1711.824069897,"data":"\n"}
+,{"stream_name":"stdout","time":1711.824074559,"data":"GENES SELECTED ON THE FOUR TRAINING COHORTS, TESTED ON THE EXTERNAL ONE\n"}
+,{"stream_name":"stdout","time":1711.824079401,"data":"  PLS-DA   79 genes: same direction 83.6% (random 75.7%, p 0.0835); replicated at FDR\u003c0.05 64.2% (random 56.4%, p 0.123); signature AUC 0.886\n"}
+,{"stream_name":"stdout","time":1711.824084601,"data":"  CVAE    127 genes: same direction 72.4% (random 75.5%, p 0.818); replicated at FDR\u003c0.05 49.5% (random 56.5%, p 0.936); signature AUC 0.852\n"}
+,{"stream_name":"stdout","time":1714.865613359,"data":"  figures/figE1_external_prediction.pdf + .png\n"}
+,{"stream_name":"stdout","time":1716.87919246,"data":"  figures/figE2_age_validation.pdf + .png\n"}
+,{"stream_name":"stdout","time":1718.662210787,"data":"  figures/figE3_external_genes.pdf + .png\n"}
+,{"stream_name":"stdout","time":1718.707484354,"data":"                                 file   bytes\n"}
+,{"stream_name":"stdout","time":1718.707518729,"data":"       EXTERNAL_VALIDATION_REPORT.txt    1519\n"}
+,{"stream_name":"stdout","time":1718.707548602,"data":"                   cohort_summary.csv     204\n"}
+,{"stream_name":"stdout","time":1718.707553505,"data":"                       env_report.csv     224\n"}
+,{"stream_name":"stdout","time":1718.70755842,"data":"               external_age_bands.csv     694\n"}
+,{"stream_name":"stdout","time":1718.707562943,"data":"          external_age_validation.csv    1542\n"}
+,{"stream_name":"stdout","time":1718.707567807,"data":"        external_mean_predictions.csv   19124\n"}
+,{"stream_name":"stdout","time":1718.707572505,"data":"figures/figE1_external_prediction.pdf   40595\n"}
+,{"stream_name":"stdout","time":1718.707577225,"data":"figures/figE1_external_prediction.png  419941\n"}
+,{"stream_name":"stdout","time":1718.707581957,"data":"     figures/figE2_age_validation.pdf   31262\n"}
+,{"stream_name":"stdout","time":1718.707586627,"data":"     figures/figE2_age_validation.png  387276\n"}
+,{"stream_name":"stdout","time":1718.707607549,"data":"     figures/figE3_external_genes.pdf   25861\n"}
+,{"stream_name":"stdout","time":1718.707612421,"data":"     figures/figE3_external_genes.png  375851\n"}
+,{"stream_name":"stdout","time":1718.707617013,"data":"             gene_age_association.csv  763171\n"}
+,{"stream_name":"stdout","time":1718.707621176,"data":"              loco_gene_frequency.csv    3613\n"}
+,{"stream_name":"stdout","time":1718.707626125,"data":"            loco_gene_replication.csv     644\n"}
+,{"stream_name":"stdout","time":1718.707630497,"data":"           loco_ig_null_GSE132903.npy  448688\n"}
+,{"stream_name":"stdout","time":1718.707635048,"data":"           loco_ig_real_GSE132903.npy  897248\n"}
+,{"stream_name":"stdout","time":1718.70763938,"data":"                 loco_predictions.csv  578954\n"}
+,{"stream_name":"stdout","time":1718.70764416,"data":"                  loco_roc_curves.csv  148026\n"}
+,{"stream_name":"stdout","time":1718.707648557,"data":"                 loco_run_metrics.csv    7132\n"}
+,{"stream_name":"stdout","time":1718.707653174,"data":"              loco_selected_genes.csv   19269\n"}
+,{"stream_name":"stdout","time":1718.707658135,"data":"            loco_signature_scores.csv     182\n"}
+,{"stream_name":"stdout","time":1718.707662571,"data":"          loco_vip_null_GSE132903.npy  897248\n"}
+,{"stream_name":"stdout","time":1718.707667311,"data":"          loco_vip_real_GSE132903.npy 1794368\n"}
+,{"stream_name":"stdout","time":1718.707672051,"data":"                  sample_metadata.csv  126807\n"}
+,{"stream_name":"stdout","time":1718.707676821,"data":"\n"}
+,{"stream_name":"stdout","time":1718.707681497,"data":"25 files, 7.0 MB\n"}
+,{"stream_name":"stdout","time":1718.707686118,"data":"no empty files\n"}
+,{"stream_name":"stderr","time":1724.291180089,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1724.2912259,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1724.52771004,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1724.527740411,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1725.4841163,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":1725.605809483,"data":"[NbConvertApp] Writing 373732 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":1728.92054425,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1730.041994496,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":1730.042027432,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1730.042450048,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1730.043064303,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1730.043080547,"data":"[NbConvertApp] Writing 683185 bytes to __results__.html\n"}
+]

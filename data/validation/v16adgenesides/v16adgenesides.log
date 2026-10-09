@@ -1,0 +1,117 @@
+[{"stream_name":"stderr","time":7.073175627,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":7.073227741,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":8.126597162,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.126631841,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.126637452,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.126641772,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.85816807,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.858207818,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.858213643,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.858217736,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":13.050523929,"data":"downloaded Homo_sapiens.gene_info.gz: 5.2 MB\n"}
+,{"stream_name":"stdout","time":14.730647684000001,"data":"merged_expression.csv.gz: /kaggle/input/notebooks/alisaremi/ad-merged-geo-cohorts/merged_expression.csv.gz  sha256 844fc8b43c955e72\n"}
+,{"stream_name":"stdout","time":14.730684669,"data":"PLSDA_gene_significance.csv: /kaggle/input/notebooks/alisaremi/v7admerged/PLSDA_gene_significance.csv  sha256 0038eb2c2646e834\n"}
+,{"stream_name":"stdout","time":14.730690705,"data":"CVAE_gene_significance.csv: /kaggle/input/notebooks/alisaremi/v7admerged/CVAE_gene_significance.csv  sha256 9cb5f7b9f70e8760\n"}
+,{"stream_name":"stdout","time":21.49187554,"data":"donor-level matrix: 817 donors x 11,214 genes (545 AD, 272 control)\n"}
+,{"stream_name":"stdout","time":21.491918092,"data":"dx          AD  Control\n"}
+,{"stream_name":"stdout","time":21.491923544,"data":"cohort                 \n"}
+,{"stream_name":"stdout","time":21.491927775,"data":"GSE118553   51       19\n"}
+,{"stream_name":"stdout","time":21.491931971,"data":"GSE132903   97       98\n"}
+,{"stream_name":"stdout","time":21.491935768,"data":"GSE33000   305       98\n"}
+,{"stream_name":"stdout","time":21.491939563,"data":"GSE48350    28       35\n"}
+,{"stream_name":"stdout","time":21.491943178,"data":"GSE84422    64       22\n"}
+,{"stream_name":"stdout","time":21.600385272,"data":"shared        18\n"}
+,{"stream_name":"stdout","time":21.600425137,"data":"PLS-DA only   36\n"}
+,{"stream_name":"stdout","time":21.600430218,"data":"CVAE only     57\n"}
+,{"stream_name":"stdout","time":25.599682806,"data":"shared       coherence 0.167 (matched null 0.226, x0.74, p 0.99); PC1 0.23\n"}
+,{"stream_name":"stdout","time":33.474888066,"data":"PLS-DA only  coherence 0.218 (matched null 0.266, x0.82, p 0.99); PC1 0.24\n"}
+,{"stream_name":"stdout","time":45.924546873,"data":"CVAE only    coherence 0.132 (matched null 0.160, x0.83, p 1); PC1 0.15\n"}
+,{"stream_name":"stdout","time":52.135936412,"data":"PLS-DA only minus CVAE only coherence: +0.086 (permutation p 0.0002)\n"}
+,{"stream_name":"stdout","time":54.785287499,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 829.4/829.4 kB 10.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":54.987833847,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 829.4/829.4 kB 10.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":60.39791848,"data":"downloaded BRETIGEA_1.0.3.tar.gz: 1.7 MB\n"}
+,{"stream_name":"stdout","time":60.397970381,"data":"{'astrocytes': 50, 'endothelial': 50, 'microglia': 50, 'neurons': 50, 'oligodendrocytes': 50, 'OPCs': 50} markers per cell type (selected genes excluded)\n"}
+,{"stream_name":"stderr","time":60.401101768,"data":"/tmp/ipykernel_15/3521540125.py:8: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.\n"}
+,{"stream_name":"stderr","time":60.401133863,"data":"  tf.extract(\"BRETIGEA/data/markers_df_human_brain.rda\", TMP)\n"}
+,{"stream_name":"stderr","time":60.40113858,"data":"\n"}
+,{"stream_name":"stderr","time":60.40114219,"data":"/tmp/ipykernel_15/3521540125.py:8: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.\n"}
+,{"stream_name":"stderr","time":60.401146629,"data":"  tf.extract(\"BRETIGEA/data/markers_df_human_brain.rda\", TMP)\n"}
+,{"stream_name":"stdout","time":60.617800468,"data":"mean AD-minus-control cell score by type: {'astrocytes': 0.41, 'endothelial': 0.64, 'microglia': 0.59, 'neurons': -0.68, 'oligodendrocytes': 0.16, 'OPCs': 0.56}\n"}
+,{"stream_name":"stdout","time":73.238029247,"data":"      group  effect_class    n  n_genes  fraction  null_matched_fraction  null_lo  null_hi  p_vs_matched\n"}
+,{"stream_name":"stdout","time":73.238085374,"data":"     shared        direct   12       18     0.667                  0.440    0.278    0.611         0.009\n"}
+,{"stream_name":"stdout","time":73.238093662,"data":"     shared compositional    0       18     0.000                  0.213    0.056    0.389         0.014\n"}
+,{"stream_name":"stdout","time":73.238097962,"data":"     shared        masked    5       18     0.278                  0.127    0.000    0.278         0.085\n"}
+,{"stream_name":"stdout","time":73.238102239,"data":"     shared       neither    1       18     0.056                  0.220    0.111    0.333         0.037\n"}
+,{"stream_name":"stdout","time":73.238106282,"data":"PLS-DA only        direct   31       36     0.861                  0.538    0.389    0.694         0.000\n"}
+,{"stream_name":"stdout","time":73.238110255,"data":"PLS-DA only compositional    4       36     0.111                  0.382    0.222    0.528         0.001\n"}
+,{"stream_name":"stdout","time":73.23811433,"data":"PLS-DA only        masked    0       36     0.000                  0.055    0.000    0.139         0.234\n"}
+,{"stream_name":"stdout","time":73.238118729,"data":"PLS-DA only       neither    1       36     0.028                  0.024    0.000    0.056         1.000\n"}
+,{"stream_name":"stdout","time":73.238122199,"data":"  CVAE only        direct   18       57     0.316                  0.265    0.175    0.351         0.361\n"}
+,{"stream_name":"stdout","time":73.238124857,"data":"  CVAE only compositional   13       57     0.228                  0.286    0.193    0.386         0.314\n"}
+,{"stream_name":"stdout","time":73.238127474,"data":"  CVAE only        masked   13       57     0.228                  0.182    0.088    0.281         0.408\n"}
+,{"stream_name":"stdout","time":73.238130278,"data":"  CVAE only       neither   13       57     0.228                  0.268    0.193    0.351         0.435\n"}
+,{"stream_name":"stdout","time":73.238147951,"data":"  all genes        direct 3331    11214     0.297                    NaN      NaN      NaN           NaN\n"}
+,{"stream_name":"stdout","time":73.238152036,"data":"  all genes compositional 4272    11214     0.381                    NaN      NaN      NaN           NaN\n"}
+,{"stream_name":"stdout","time":73.238155777,"data":"  all genes        masked 1680    11214     0.150                    NaN      NaN      NaN           NaN\n"}
+,{"stream_name":"stdout","time":73.238159582,"data":"  all genes       neither 1931    11214     0.172                    NaN      NaN      NaN           NaN\n"}
+,{"stream_name":"stdout","time":73.238163731,"data":"direct effects, PLS-DA only 0.86 vs CVAE only 0.32: Fisher OR 13.4, p 2e-07\n"}
+,{"stream_name":"stdout","time":73.238167354,"data":"group            CVAE only  PLS-DA only  PLS-DA only vs CVAE only  shared\n"}
+,{"stream_name":"stdout","time":73.238171262,"data":"metric                                                                   \n"}
+,{"stream_name":"stdout","time":73.238177167,"data":"R2_cells             0.186        0.215                     0.029   0.334\n"}
+,{"stream_name":"stdout","time":73.238181312,"data":"abs_d                0.298        0.713                     0.415   0.655\n"}
+,{"stream_name":"stdout","time":73.238185335,"data":"abs_t_adj            2.542        7.859                     5.317   6.080\n"}
+,{"stream_name":"stdout","time":73.238189137,"data":"abs_t_raw            3.814        8.985                     5.171   8.335\n"}
+,{"stream_name":"stdout","time":73.238193196,"data":"connectivity         0.136        0.141                     0.005   0.127\n"}
+,{"stream_name":"stdout","time":73.238213889,"data":"delta_abs_t         -1.322       -2.358                    -1.036  -1.401\n"}
+,{"stream_name":"stdout","time":73.238216329,"data":"effect_retained      0.360        0.771                     0.410   0.654\n"}
+,{"stream_name":"stdout","time":73.238218683,"data":"excess_tail         -0.002        0.015                     0.017   0.014\n"}
+,{"stream_name":"stdout","time":73.238221052,"data":"lnVR                 0.052        0.148                     0.096   0.077\n"}
+,{"stream_name":"stdout","time":73.23822338,"data":"group            CVAE only  PLS-DA only  PLS-DA only vs CVAE only  shared\n"}
+,{"stream_name":"stdout","time":73.238225652,"data":"metric                                                                   \n"}
+,{"stream_name":"stdout","time":73.23822813,"data":"R2_cells            0.1056       0.0004                    0.8840  0.4047\n"}
+,{"stream_name":"stdout","time":73.238230467,"data":"abs_d               0.5179       0.5095                    0.0000  0.2747\n"}
+,{"stream_name":"stdout","time":73.23823277,"data":"abs_t_adj           0.0880       0.0004                    0.0000  0.0004\n"}
+,{"stream_name":"stdout","time":73.238235095,"data":"abs_t_raw           0.2719       0.2979                    0.0000  0.7319\n"}
+,{"stream_name":"stdout","time":73.238237437,"data":"connectivity        0.0192       0.0004                    0.6502  0.0004\n"}
+,{"stream_name":"stdout","time":73.238239734,"data":"delta_abs_t         0.7922       0.0004                    0.3540  0.0004\n"}
+,{"stream_name":"stdout","time":73.238242025,"data":"effect_retained     0.1200       0.0004                    0.0006  0.0004\n"}
+,{"stream_name":"stdout","time":73.238244348,"data":"excess_tail         0.0116       0.6099                    0.0691  0.7171\n"}
+,{"stream_name":"stdout","time":73.238247081,"data":"lnVR                0.0148       0.2212                    0.0004  0.3275\n"}
+,{"stream_name":"stdout","time":77.820830953,"data":"      group  n_genes  n_markers  neurons  astrocytes  microglia  endothelial  oligodendrocytes  OPCs  null_matched_fraction  p_vs_matched\n"}
+,{"stream_name":"stdout","time":77.820883144,"data":"     shared       18          4        0           3          0            0                 0     1               0.071456      0.068386\n"}
+,{"stream_name":"stdout","time":77.820891769,"data":"PLS-DA only       36          1        0           1          0            0                 0     0               0.079011      0.439912\n"}
+,{"stream_name":"stdout","time":77.820898826,"data":"  CVAE only       57          8        0           3          1            3                 0     1               0.059021      0.033993\n"}
+,{"stream_name":"stdout","time":77.820906413,"data":"  all genes    11214        698      111         119        134          141               111    82                    NaN           NaN\n"}
+,{"stream_name":"stdout","time":77.820913198,"data":"  shared: ADGRA3 (astrocytes #50), DGKG (OPCs #177), GFAP (astrocytes #11), TRIL (astrocytes #54)\n"}
+,{"stream_name":"stdout","time":77.820920201,"data":"  PLS-DA only: TUBB2B (astrocytes #88)\n"}
+,{"stream_name":"stdout","time":77.820924401,"data":"  CVAE only: ACP6 (astrocytes #197), ACSBG1 (astrocytes #25), CLDN5 (endothelial #29), IFITM1 (endothelial #7), LAMA2 (endothelial #123), OLR1 (microglia #30), TNR (OPCs #8), TRPM3 (astrocytes #102)\n"}
+,{"stream_name":"stdout","time":77.820928364,"data":"markers, PLS-DA only vs CVAE only: Fisher OR 0.17, p 0.15\n"}
+,{"stream_name":"stdout","time":78.058729297,"data":"score        property  spearman     p  partial_spearman_given_abs_d  p_partial  n_genes\n"}
+,{"stream_name":"stdout","time":78.058764935,"data":"  vip           abs_d     0.343 0.000                           NaN        NaN    11214\n"}
+,{"stream_name":"stdout","time":78.058770441,"data":"  vip    connectivity     0.397 0.000                         0.269      0.000    11214\n"}
+,{"stream_name":"stdout","time":78.05877527,"data":"  vip        R2_cells     0.365 0.000                         0.195      0.000    11214\n"}
+,{"stream_name":"stdout","time":78.058780233,"data":"  vip effect_retained     0.106 0.000                         0.098      0.000    11214\n"}
+,{"stream_name":"stdout","time":78.058784855,"data":"  vip       abs_t_raw     0.345 0.000                           NaN        NaN    11214\n"}
+,{"stream_name":"stdout","time":78.058789543,"data":"  vip       abs_t_adj     0.403 0.000                         0.346      0.000    11214\n"}
+,{"stream_name":"stdout","time":78.058794293,"data":"  vip     delta_abs_t    -0.147 0.000                         0.348      0.000    11214\n"}
+,{"stream_name":"stdout","time":78.058799019,"data":"  vip            lnVR     0.022 0.020                        -0.032      0.001    11214\n"}
+,{"stream_name":"stdout","time":78.058803646,"data":"  vip     excess_tail     0.019 0.040                         0.017      0.073    11214\n"}
+,{"stream_name":"stdout","time":78.058808312,"data":"   ig           abs_d    -0.089 0.000                           NaN        NaN    11214\n"}
+,{"stream_name":"stdout","time":78.058812926,"data":"   ig    connectivity    -0.215 0.000                        -0.199      0.000    11214\n"}
+,{"stream_name":"stdout","time":78.058817807,"data":"   ig        R2_cells    -0.172 0.000                        -0.152      0.000    11214\n"}
+,{"stream_name":"stdout","time":78.05882247,"data":"   ig effect_retained     0.068 0.000                         0.072      0.000    11214\n"}
+,{"stream_name":"stdout","time":78.058827173,"data":"   ig       abs_t_raw    -0.088 0.000                           NaN        NaN    11214\n"}
+,{"stream_name":"stdout","time":78.058850088,"data":"   ig       abs_t_adj     0.064 0.000                         0.091      0.000    11214\n"}
+,{"stream_name":"stdout","time":78.058854078,"data":"   ig     delta_abs_t     0.128 0.000                         0.106      0.000    11214\n"}
+,{"stream_name":"stdout","time":78.058857865,"data":"   ig            lnVR    -0.021 0.029                        -0.007      0.433    11214\n"}
+,{"stream_name":"stdout","time":78.058861695,"data":"   ig     excess_tail    -0.006 0.555                        -0.005      0.619    11214\n"}
+,{"stream_name":"stdout","time":78.852231725,"data":"written: ['gene_sides_attribution.csv', 'gene_sides_cell_scores.csv', 'gene_sides_celltypes.csv', 'gene_sides_coherence.csv', 'gene_sides_coherence_diff.csv', 'gene_sides_coherence_null.csv', 'gene_sides_effect_classes.csv', 'gene_sides_fisher.csv', 'gene_sides_fisher_markers.csv', 'gene_sides_per_gene.csv', 'gene_sides_summary.csv']\n"}
+,{"stream_name":"stderr","time":82.425487417,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":82.425525444,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":82.622498678,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":82.622529698,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":83.476533008,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":83.574982654,"data":"[NbConvertApp] Writing 46326 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":86.681161653,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":87.448669283,"data":"[NbConvertApp] Writing 436352 bytes to __results__.html\n"}
+]

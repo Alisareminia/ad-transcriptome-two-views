@@ -1,0 +1,2 @@
+n_subjects,n_genes,n_AD,n_control,class_order,AD_index,n_donors,n_donors_AD,n_donors_control,age_min,n_cohorts,age_median_AD,age_median_control
+1596,11214,1059,537,AD|Control,0,817,545,272,60,5,84.0,78.0

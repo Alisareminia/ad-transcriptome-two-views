@@ -1,0 +1,59 @@
+INDEPENDENT VALIDATION OF THE FROZEN GENE LISTS
+gene-list file SHA-256: b5383a49244784b16efc31c671086dcb95a5462a207d28445f5247b35bb9e69f
+
+Cohorts: GSE132903 (195 donors), GSE15222 (363 donors), GSE29378 (33 donors), GSE122063 (23 donors), GSE36980 (32 donors), GSE106241 (58 donors), GSE1297 (31 donors)
+
+Set-level replication (adjusted for age and sex, donor level). Baselines: matched random = genes equally AD-associated in training; topDE = plain differential expression.
+
+  PLS-DA  GSE132903  n= 67  same direction 83.6% [matched 84.1%, p 0.625; topDE 98.5%]  replicated 65.7% [matched 69.1%, p 0.785; topDE 88.1%]  signature AUC 0.886 [matched 0.791, p 0.000999; topDE 0.846; beyond age+sex p 7.7e-25]
+  PLS-DA  GSE15222   n= 64  same direction 87.5% [matched 87.2%, p 0.562; topDE 93.8%]  replicated 54.7% [matched 58.4%, p 0.79; topDE 76.6%]  signature AUC 0.839 [matched 0.776, p 0.000999; topDE 0.814; beyond age+sex p 1.8e-20]
+  PLS-DA  GSE29378   n= 66  same direction 69.7% [matched 79.4%, p 0.982; topDE 93.9%]  replicated  7.6% [matched  5.2%, p 0.265; topDE 16.7%]  signature AUC 0.882 [matched 0.709, p 0.000999; topDE 0.746; beyond age+sex p 3.9e-05]
+  PLS-DA  GSE122063  n= 67  same direction 79.1% [matched 89.4%, p 0.999; topDE 97.0%]  replicated  0.0% [matched  0.1%, p 1; topDE  0.0%]  signature AUC 0.902 [matched 0.855, p 0.014; topDE 0.894; beyond age+sex p 0.00019]
+  PLS-DA  GSE36980   n= 64  same direction 53.1% [matched 70.4%, p 1; topDE 73.4%]  replicated  0.0% [matched  0.0%, p 1; topDE  0.0%]  signature AUC 0.749 [matched 0.697, p 0.0979; topDE 0.769; beyond age+sex p 0.18]
+  PLS-DA  META       n= 67  same direction 88.1% [matched 93.0%, p 0.964; topDE 100.0%]  replicated 43.3% [matched 56.7%, p 0.995; topDE 83.6%]
+  CVAE    GSE132903  n=105  same direction 72.4% [matched 79.6%, p 0.97; topDE 95.2%]  replicated 52.4% [matched 61.9%, p 0.989; topDE 86.7%]  signature AUC 0.852 [matched 0.790, p 0.000999; topDE 0.832; beyond age+sex p 1.4e-19]
+  CVAE    GSE15222   n=100  same direction 72.0% [matched 81.9%, p 0.998; topDE 95.0%]  replicated 42.0% [matched 49.0%, p 0.949; topDE 78.0%]  signature AUC 0.791 [matched 0.772, p 0.0979; topDE 0.809; beyond age+sex p 2e-14]
+  CVAE    GSE29378   n=104  same direction 63.5% [matched 73.1%, p 0.995; topDE 91.3%]  replicated  4.8% [matched  3.8%, p 0.365; topDE 16.3%]  signature AUC 0.702 [matched 0.701, p 0.512; topDE 0.743; beyond age+sex p 0.0088]
+  CVAE    GSE122063  n=105  same direction 82.9% [matched 84.4%, p 0.732; topDE 97.1%]  replicated  1.0% [matched  0.1%, p 0.102; topDE  0.0%]  signature AUC 0.886 [matched 0.857, p 0.0919; topDE 0.886; beyond age+sex p 0.00055]
+  CVAE    GSE36980   n=100  same direction 61.0% [matched 67.7%, p 0.945; topDE 72.0%]  replicated  0.0% [matched  0.0%, p 1; topDE  0.0%]  signature AUC 0.835 [matched 0.694, p 0.000999; topDE 0.753; beyond age+sex p 0.064]
+  CVAE    META       n=105  same direction 79.0% [matched 88.4%, p 1; topDE 100.0%]  replicated 38.1% [matched 46.4%, p 0.978; topDE 82.9%]
+  Core    GSE15222   n= 12  same direction 100.0% [matched 92.4%, p 0.377; topDE 100.0%]  replicated 83.3% [matched 69.0%, p 0.229; topDE 83.3%]  signature AUC 0.785 [matched 0.751, p 0.146; topDE 0.737; beyond age+sex p 9.1e-15]
+  Core    GSE29378   n= 13  same direction 69.2% [matched 86.9%, p 0.982; topDE 84.6%]  replicated  7.7% [matched  7.0%, p 0.599; topDE 30.8%]  signature AUC 0.651 [matched 0.709, p 0.902; topDE 0.890; beyond age+sex p 0.028]
+  Core    GSE122063  n= 13  same direction 92.3% [matched 95.3%, p 0.882; topDE 92.3%]  replicated  0.0% [matched  0.3%, p 1; topDE  0.0%]  signature AUC 0.826 [matched 0.851, p 0.79; topDE 0.879; beyond age+sex p 0.0023]
+  Core    GSE36980   n= 13  same direction 76.9% [matched 75.0%, p 0.58; topDE 69.2%]  replicated  0.0% [matched  0.0%, p 1; topDE  0.0%]  signature AUC 0.847 [matched 0.683, p 0.003; topDE 0.655; beyond age+sex p 0.0027]
+  Core    META       n= 13  same direction 100.0% [matched 97.9%, p 0.753; topDE 100.0%]  replicated 53.8% [matched 56.3%, p 0.693; topDE 61.5%]
+
+Dose-response (partial Spearman, age removed; sign expected: + for Braak/NFT/plaque, - for MMSE):
+  GSE106241  braak  PLS-DA  n= 58 rho=+0.524 (p 2.4e-05); matched-random p 0.000999
+  GSE106241  braak  CVAE    n= 58 rho=+0.510 (p 4.3e-05); matched-random p 0.000999
+  GSE106241  braak  Core    n= 58 rho=+0.448 (p 0.00042); matched-random p 0.00899
+  GSE1297    braak  PLS-DA  n= 31 rho=+0.428 (p 0.016); matched-random p 0.492
+  GSE1297    braak  CVAE    n= 31 rho=+0.352 (p 0.052); matched-random p 0.858
+  GSE1297    braak  Core    n= 31 rho=+0.491 (p 0.005); matched-random p 0.155
+  GSE1297    mmse   PLS-DA  n= 31 rho=-0.583 (p 0.00058); matched-random p 0.214
+  GSE1297    mmse   CVAE    n= 31 rho=-0.415 (p 0.02); matched-random p 0.974
+  GSE1297    mmse   Core    n= 31 rho=-0.470 (p 0.0077); matched-random p 0.614
+  GSE1297    nft    PLS-DA  n= 31 rho=+0.410 (p 0.022); matched-random p 0.678
+  GSE1297    nft    CVAE    n= 31 rho=+0.340 (p 0.061); matched-random p 0.933
+  GSE1297    nft    Core    n= 31 rho=+0.527 (p 0.0023); matched-random p 0.0989
+  GSE29378   braak  PLS-DA  n= 27 rho=+0.688 (p 7.3e-05); matched-random p 0.000999
+  GSE29378   braak  CVAE    n= 27 rho=+0.383 (p 0.048); matched-random p 0.238
+  GSE29378   braak  Core    n= 27 rho=+0.425 (p 0.027); matched-random p 0.217
+  GSE29378   plaque PLS-DA  n= 29 rho=+0.589 (p 0.00078); matched-random p 0.000999
+  GSE29378   plaque CVAE    n= 29 rho=+0.263 (p 0.17); matched-random p 0.74
+  GSE29378   plaque Core    n= 29 rho=+0.306 (p 0.11); matched-random p 0.458
+
+Core genes (13); their meta-analysis uses the new cohorts only (GSE132903 helped define them):
+  ADGRA3    up    same direction in 2/3 new cohorts, significant in 0/3; meta (new cohorts) +0.39 [-0.27, +1.06] q=0.49 I2=49%
+  ASCL1     up    same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) +0.36 [+0.14, +0.59] q=0.014 I2=0%
+  CARTPT    down  same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) -0.82 [-1.26, -0.37] q=0.0038 I2=61%
+  DGKG      up    same direction in 2/4 new cohorts, significant in 1/4; meta (new cohorts) +0.27 [-0.24, +0.78] q=0.54 I2=62%
+  GFAP      up    same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) +0.95 [+0.75, +1.16] q=3.8e-16 I2=0%
+  HOPX      down  same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) -0.42 [-0.64, -0.20] q=0.0025 I2=0%
+  KIF5A     up    same direction in 2/4 new cohorts, significant in 1/4; meta (new cohorts) +0.19 [-0.47, +0.85] q=0.77 I2=77%
+  NEBL      up    same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) +0.56 [-0.06, +1.18] q=0.23 I2=77%
+  NINL      up    same direction in 3/4 new cohorts, significant in 1/4; meta (new cohorts) +0.35 [-0.14, +0.83] q=0.38 I2=55%
+  NPTX2     down  same direction in 3/4 new cohorts, significant in 1/4; meta (new cohorts) -0.75 [-1.20, -0.29] q=0.011 I2=55%
+  RPH3A     down  same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) -0.82 [-1.03, -0.61] q=1.3e-11 I2=0%
+  TRIL      up    same direction in 3/4 new cohorts, significant in 0/4; meta (new cohorts) +0.43 [-0.00, +0.87] q=0.18 I2=49%
+  ZNF184    down  same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) -0.69 [-1.01, -0.38] q=0.00031 I2=23%

@@ -1,0 +1,112 @@
+gene,theme,ncbi_gene_id,ncbi_description
+BDNF,"Synaptic, neurotrophic and receptor signalling",627,brain derived neurotrophic factor
+NPTX2,"Synaptic, neurotrophic and receptor signalling",4885,neuronal pentraxin 2
+RPH3A,"Synaptic, neurotrophic and receptor signalling",22895,rabphilin 3A
+CARTPT,"Synaptic, neurotrophic and receptor signalling",9607,CART prepropeptide
+VGF,"Synaptic, neurotrophic and receptor signalling",7425,VGF nerve growth factor inducible
+DRD2,"Synaptic, neurotrophic and receptor signalling",1813,dopamine receptor D2
+RCVRN,"Synaptic, neurotrophic and receptor signalling",5957,recoverin
+TRPM3,"Synaptic, neurotrophic and receptor signalling",80036,transient receptor potential cation channel subfamily M member 3
+GPR17,"Synaptic, neurotrophic and receptor signalling",2840,G protein-coupled receptor 17
+ITPKB,Kinase and second-messenger signalling,3707,inositol-trisphosphate 3-kinase B
+DGKG,Kinase and second-messenger signalling,1608,diacylglycerol kinase gamma
+AKAP9,Kinase and second-messenger signalling,10142,A-kinase anchoring protein 9
+DUSP6,Kinase and second-messenger signalling,1848,dual specificity phosphatase 6
+SPRY4,Kinase and second-messenger signalling,81848,sprouty RTK signaling antagonist 4
+RAF1,Kinase and second-messenger signalling,5894,"Raf-1 proto-oncogene, serine/threonine kinase"
+ELK1,Kinase and second-messenger signalling,2002,ETS transcription factor ELK1
+TAB2,Kinase and second-messenger signalling,23118,TGF-beta activated kinase 1 (MAP3K7) binding protein 2
+CAB39L,Kinase and second-messenger signalling,81617,calcium binding protein 39 like
+RHOQ,Kinase and second-messenger signalling,23433,ras homolog family member Q
+PPM1A,Kinase and second-messenger signalling,5494,"protein phosphatase, Mg2+/Mn2+ dependent 1A"
+STAP2,Kinase and second-messenger signalling,55620,signal transducing adaptor family member 2
+CHP1,Kinase and second-messenger signalling,11261,calcineurin like EF-hand protein 1
+GMIP,Kinase and second-messenger signalling,51291,GEM interacting protein
+ASCL1,Transcription and chromatin regulation,429,achaete-scute family bHLH transcription factor 1
+KDM2A,Transcription and chromatin regulation,22992,lysine demethylase 2A
+ZMYND8,Transcription and chromatin regulation,23613,zinc finger MYND-type containing 8
+RERE,Transcription and chromatin regulation,473,arginine-glutamic acid dipeptide repeats
+FOXN3,Transcription and chromatin regulation,1112,forkhead box N3
+ZNF148,Transcription and chromatin regulation,7707,zinc finger protein 148
+CDK13,Transcription and chromatin regulation,8621,cyclin dependent kinase 13
+AEBP1,Transcription and chromatin regulation,165,AE binding protein 1
+FAM53C,Transcription and chromatin regulation,51307,family with sequence similarity 53 member C
+HMGN2,Transcription and chromatin regulation,3151,high mobility group nucleosomal binding domain 2
+NPAS2,Transcription and chromatin regulation,4862,neuronal PAS domain protein 2
+ASF1B,Transcription and chromatin regulation,55723,anti-silencing function 1B histone chaperone
+YEATS4,Transcription and chromatin regulation,8089,YEATS domain containing 4
+MSL2,Transcription and chromatin regulation,55167,MSL complex subunit 2
+PWWP3A,Transcription and chromatin regulation,84939,"PWWP domain containing 3A, DNA repair factor"
+ZNF184,Transcription and chromatin regulation,7738,zinc finger protein 184
+ZNF669,Transcription and chromatin regulation,79862,zinc finger protein 669
+NKX2-5,Transcription and chromatin regulation,1482,NK2 homeobox 5
+GREB1,Transcription and chromatin regulation,9687,growth regulating estrogen receptor binding 1
+KCTD15,Transcription and chromatin regulation,79047,potassium channel tetramerization domain containing 15
+POLR1D,RNA processing and translation,51082,RNA polymerase I and III subunit D
+SRSF4,RNA processing and translation,6429,serine and arginine rich splicing factor 4
+CPEB3,RNA processing and translation,22849,cytoplasmic polyadenylation element binding protein 3
+TRMT5,RNA processing and translation,57570,tRNA methyltransferase 5
+CPSF6,RNA processing and translation,11052,cleavage and polyadenylation specific factor 6
+TRMO,RNA processing and translation,51531,tRNA methyltransferase O
+HEMK1,RNA processing and translation,51409,"HemK methyltransferase 1, mitochondrial release factors N(5)-glutamine"
+NEBL,Cytoskeleton and intracellular transport,10529,nebulette
+KIF5A,Cytoskeleton and intracellular transport,3798,kinesin family member 5A
+GGA2,Cytoskeleton and intracellular transport,23062,"golgi associated, gamma adaptin ear containing, ARF binding protein 2"
+PDE4DIP,Cytoskeleton and intracellular transport,9659,phosphodiesterase 4D interacting protein
+SPECC1L,Cytoskeleton and intracellular transport,23384,sperm antigen with calponin homology and coiled-coil domains 1 like
+TUBB2B,Cytoskeleton and intracellular transport,347733,tubulin beta 2B class IIb
+ELMO2,Cytoskeleton and intracellular transport,63916,engulfment and cell motility 2
+ABLIM1,Cytoskeleton and intracellular transport,3983,actin binding LIM protein 1
+NINL,Cytoskeleton and intracellular transport,22981,ninein like
+KLHL1,Cytoskeleton and intracellular transport,57626,kelch like family member 1
+TOM1L1,Cytoskeleton and intracellular transport,10040,target of myb1 like 1 membrane trafficking protein
+ITPRID2,Cytoskeleton and intracellular transport,6744,ITPR interacting domain containing 2
+LRRC37A2,Cytoskeleton and intracellular transport,474170,leucine rich repeat containing 37 member A2
+PEG10,"Proteostasis, autophagy and cell cycle",23089,paternally expressed 10
+STIP1,"Proteostasis, autophagy and cell cycle",10963,stress induced phosphoprotein 1
+RCHY1,"Proteostasis, autophagy and cell cycle",25898,ring finger and CHY zinc finger domain containing 1
+UBE2C,"Proteostasis, autophagy and cell cycle",11065,ubiquitin conjugating enzyme E2 C
+CDC25B,"Proteostasis, autophagy and cell cycle",994,cell division cycle 25B
+CENPQ,"Proteostasis, autophagy and cell cycle",55166,centromere protein Q
+KLHDC10,"Proteostasis, autophagy and cell cycle",23008,kelch domain containing 10
+TPP2,"Proteostasis, autophagy and cell cycle",7174,tripeptidyl peptidase 2
+DEPP1,"Proteostasis, autophagy and cell cycle",11067,DEPP autophagy regulator 1
+GFAP,Glial reaction and innate immunity,2670,glial fibrillary acidic protein
+TRIL,Glial reaction and innate immunity,9865,TLR4 interactor with leucine rich repeats
+ADGRA3,Glial reaction and innate immunity,166647,adhesion G protein-coupled receptor A3
+NAIP,Glial reaction and innate immunity,4671,NLR family apoptosis inhibitory protein
+FCGR2C,Glial reaction and innate immunity,9103,Fc gamma receptor IIc (gene/pseudogene)
+CD52,Glial reaction and innate immunity,1043,CD52 molecule
+ICAM3,Glial reaction and innate immunity,3385,intercellular adhesion molecule 3
+OLR1,Glial reaction and innate immunity,4973,oxidized low density lipoprotein receptor 1
+PSTPIP1,Glial reaction and innate immunity,9051,proline-serine-threonine phosphatase interacting protein 1
+IFITM1,Glial reaction and innate immunity,8519,interferon induced transmembrane protein 1
+PLAC8,Glial reaction and innate immunity,51316,placenta associated 8
+DPEP2,Glial reaction and innate immunity,64174,dipeptidase 2
+COL21A1,Vasculature and extracellular matrix,81578,collagen type XXI alpha 1 chain
+COLEC12,Vasculature and extracellular matrix,81035,collectin subfamily member 12
+NEDD9,Vasculature and extracellular matrix,4739,"neural precursor cell expressed, developmentally down-regulated 9"
+APLNR,Vasculature and extracellular matrix,187,apelin receptor
+CLDN5,Vasculature and extracellular matrix,7122,claudin 5
+LAMA2,Vasculature and extracellular matrix,3908,laminin subunit alpha 2
+VEGFA,Vasculature and extracellular matrix,7422,vascular endothelial growth factor A
+ANGPTL7,Vasculature and extracellular matrix,10218,angiopoietin like 7
+TNR,Vasculature and extracellular matrix,7143,tenascin R
+QPRT,Metabolism and solute transport,23475,quinolinate phosphoribosyltransferase
+SLC5A3,Metabolism and solute transport,6526,solute carrier family 5 member 3
+SLC38A2,Metabolism and solute transport,54407,solute carrier family 38 member 2
+ABHD8,Metabolism and solute transport,79575,abhydrolase domain containing 8
+SLC2A3,Metabolism and solute transport,6515,solute carrier family 2 member 3
+ACSBG1,Metabolism and solute transport,23205,acyl-CoA synthetase bubblegum family member 1
+ACP6,Metabolism and solute transport,51205,"acid phosphatase 6, lysophosphatidic"
+FDXR,Metabolism and solute transport,2232,ferredoxin reductase
+LIPT1,Metabolism and solute transport,51601,lipoyltransferase 1
+GSTM1,Metabolism and solute transport,2944,glutathione S-transferase mu 1
+LPA,Metabolism and solute transport,4018,lipoprotein(a)
+HBB,Haemoglobin (probable residual blood),3043,hemoglobin subunit beta
+HBD,Haemoglobin (probable residual blood),3045,hemoglobin subunit delta
+CCDC106,Poorly characterised,29903,coiled-coil domain containing 106
+TMEM80,Poorly characterised,283232,transmembrane protein 80
+LRRC14,Poorly characterised,9684,leucine rich repeat containing 14
+NAT8B,Poorly characterised,51471,"N-acetyltransferase 8B (putative, gene/pseudogene)"
+PLCXD1,Poorly characterised,55344,phosphatidylinositol specific phospholipase C X domain containing 1

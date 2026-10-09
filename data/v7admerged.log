@@ -1,0 +1,858 @@
+[{"stream_name":"stderr","time":8.289129204,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":8.289192845,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":9.624671885,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.624718608,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.624723322,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.624726712,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.479057473,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.479101469,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.47910879,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.479113291,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":20.236870719,"data":"FORCE_CPU set; running on CPU as the published run did\n"}
+,{"stream_name":"stdout","time":20.236931974,"data":"device: cpu | torch 2.11.0+cpu\n"}
+,{"stream_name":"stdout","time":20.236939035,"data":"  python           3.13.15\n"}
+,{"stream_name":"stdout","time":20.236944049,"data":"  platform         Linux-6.18.48+-x86_64-with-glibc2.39\n"}
+,{"stream_name":"stdout","time":20.236948505,"data":"  torch            2.11.0+cpu\n"}
+,{"stream_name":"stdout","time":20.236952421,"data":"  numpy            2.1.3\n"}
+,{"stream_name":"stdout","time":20.236956224,"data":"  pandas           2.3.3\n"}
+,{"stream_name":"stdout","time":20.236960068,"data":"  scikit_learn     1.6.1\n"}
+,{"stream_name":"stdout","time":20.236963887,"data":"  scipy            1.16.3\n"}
+,{"stream_name":"stdout","time":20.236967684,"data":"  device           cpu\n"}
+,{"stream_name":"stdout","time":20.236971309,"data":"  force_cpu        True\n"}
+,{"stream_name":"stdout","time":20.236975058,"data":"  cuda_available   False\n"}
+,{"stream_name":"stdout","time":20.237002515,"data":"  cpu_count        4\n"}
+,{"stream_name":"stdout","time":20.237008101,"data":"  torch_num_threads 4\n"}
+,{"stream_name":"stdout","time":20.237012628,"data":"merged data from /kaggle/input/notebooks/alisaremi/ad-merged-geo-cohorts\n"}
+,{"stream_name":"stdout","time":27.596256404000002,"data":"   cohort platform  arrays_in_geo  after_diagnosis_filter  after_age_filter  donors  AD_arrays  control_arrays  AD_donors  control_donors  age_median_AD  age_median_control  regions  genes_measured\n"}
+,{"stream_name":"stdout","time":27.596327465999998,"data":" GSE48350   GPL570          253.0                   253.0             173.0    63.0       80.0            93.0       28.0            35.0           85.5                83.0      4.0           21462\n"}
+,{"stream_name":"stdout","time":27.596335578,"data":" GSE33000  GPL4372          624.0                   467.0             403.0   403.0      305.0            98.0      305.0            98.0           82.0                68.0      1.0           19865\n"}
+,{"stream_name":"stdout","time":27.596360481,"data":"GSE132903 GPL10558          195.0                   195.0             195.0   195.0       97.0            98.0       97.0            98.0           86.0                85.0      1.0           21744\n"}
+,{"stream_name":"stdout","time":27.596365488,"data":"GSE118553 GPL10558          401.0                   207.0             183.0    70.0      129.0            54.0       51.0            19.0           83.0                80.0      3.0           23402\n"}
+,{"stream_name":"stdout","time":27.596376245,"data":" GSE84422    GPL96          951.0                   642.0             642.0    86.0      448.0           194.0       64.0            22.0           88.5                83.5     15.0           12387\n"}
+,{"stream_name":"stdout","time":27.596379364,"data":"    TOTAL      NaN         2424.0                  1764.0            1596.0   817.0     1059.0           537.0      545.0           272.0           84.0                78.0     24.0           11214\n"}
+,{"stream_name":"stdout","time":27.830351336,"data":"age \u003e= 60: 1596 arrays from 817 donors in 5 cohorts\n"}
+,{"stream_name":"stdout","time":27.830392731,"data":"                   arrays  donors\n"}
+,{"stream_name":"stdout","time":27.830396749,"data":"cohort    GROUP                  \n"}
+,{"stream_name":"stdout","time":27.83039977,"data":"GSE118553 AD          129      51\n"}
+,{"stream_name":"stdout","time":27.830402516,"data":"          Control      54      19\n"}
+,{"stream_name":"stdout","time":27.830405218,"data":"GSE132903 AD           97      97\n"}
+,{"stream_name":"stdout","time":27.830407893,"data":"          Control      98      98\n"}
+,{"stream_name":"stdout","time":27.830433147,"data":"GSE33000  AD          305     305\n"}
+,{"stream_name":"stdout","time":27.830437852,"data":"          Control      98      98\n"}
+,{"stream_name":"stdout","time":27.830446898,"data":"GSE48350  AD           80      28\n"}
+,{"stream_name":"stdout","time":27.830451150000002,"data":"          Control      93      35\n"}
+,{"stream_name":"stdout","time":27.83045584,"data":"GSE84422  AD          448      64\n"}
+,{"stream_name":"stdout","time":27.830460418,"data":"          Control     194      22\n"}
+,{"stream_name":"stdout","time":27.830464353,"data":"arrays=1596  donors=817  genes=11214  classes=['AD', 'Control']\n"}
+,{"stream_name":"stdout","time":27.830468567,"data":"GROUP\n"}
+,{"stream_name":"stdout","time":27.83047244,"data":"AD         1059\n"}
+,{"stream_name":"stdout","time":27.830476292,"data":"Control     537\n"}
+,{"stream_name":"stdout","time":27.897696674,"data":"helpers defined\n"}
+,{"stream_name":"stdout","time":31.123169146,"data":"\u001b[?25l   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m0.0/455.2 kB\u001b[0m \u001b[31m?\u001b[0m eta \u001b[36m-:--:--\u001b[0m\r\u001b[2K   \u001b[91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[91m╸\u001b[0m\u001b[90m━━\u001b[0m \u001b[32m430.1/455.2 kB\u001b[0m \u001b[31m13.3 MB/s\u001b[0m eta \u001b[36m0:00:01\u001b[0m\r\u001b[2K   \u001b[91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[91m╸\u001b[0m \u001b[32m450.6/455.2 kB\u001b[0m \u001b[31m12.3 MB/s\u001b[0m eta \u001b[36m0:00:01\u001b[0m\r\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m455.2/455.2 kB\u001b[0m \u001b[31m6.1 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\r\n"}
+,{"stream_name":"stdout","time":34.529371288,"data":"\u001b[?25hattribution helpers ready\n"}
+,{"stream_name":"stdout","time":34.568336352,"data":"split trainer ready\n"}
+,{"stream_name":"stdout","time":142.02627033,"data":"run  1/20  acc_pls=0.772 auc_pls=0.830 | acc_cvae=0.829 auc_cvae=0.891 | neutral auc=0.880 | age-only auc=0.676 | cohort-only auc=0.595 | test donors=164\n"}
+,{"stream_name":"stdout","time":206.897950528,"data":"run  2/20  acc_pls=0.847 auc_pls=0.888 | acc_cvae=0.817 auc_cvae=0.892 | neutral auc=0.878 | age-only auc=0.653 | cohort-only auc=0.578 | test donors=164\n"}
+,{"stream_name":"stdout","time":245.34532148,"data":"run  3/20  acc_pls=0.789 auc_pls=0.882 | acc_cvae=0.736 auc_cvae=0.816 | neutral auc=0.814 | age-only auc=0.689 | cohort-only auc=0.629 | test donors=164\n"}
+,{"stream_name":"stdout","time":328.768776181,"data":"run  4/20  acc_pls=0.796 auc_pls=0.838 | acc_cvae=0.833 auc_cvae=0.904 | neutral auc=0.889 | age-only auc=0.706 | cohort-only auc=0.595 | test donors=164\n"}
+,{"stream_name":"stdout","time":382.670215024,"data":"run  5/20  acc_pls=0.766 auc_pls=0.825 | acc_cvae=0.802 auc_cvae=0.843 | neutral auc=0.829 | age-only auc=0.529 | cohort-only auc=0.616 | test donors=164\n"}
+,{"stream_name":"stdout","time":513.174870585,"data":"run  6/20  acc_pls=0.736 auc_pls=0.802 | acc_cvae=0.825 auc_cvae=0.889 | neutral auc=0.869 | age-only auc=0.675 | cohort-only auc=0.594 | test donors=164\n"}
+,{"stream_name":"stdout","time":592.746021676,"data":"run  7/20  acc_pls=0.770 auc_pls=0.835 | acc_cvae=0.813 auc_cvae=0.918 | neutral auc=0.904 | age-only auc=0.656 | cohort-only auc=0.609 | test donors=164\n"}
+,{"stream_name":"stdout","time":693.568912498,"data":"run  8/20  acc_pls=0.738 auc_pls=0.768 | acc_cvae=0.776 auc_cvae=0.842 | neutral auc=0.823 | age-only auc=0.646 | cohort-only auc=0.611 | test donors=164\n"}
+,{"stream_name":"stdout","time":753.53015479,"data":"run  9/20  acc_pls=0.741 auc_pls=0.754 | acc_cvae=0.775 auc_cvae=0.814 | neutral auc=0.796 | age-only auc=0.652 | cohort-only auc=0.617 | test donors=164\n"}
+,{"stream_name":"stdout","time":857.022195629,"data":"run 10/20  acc_pls=0.792 auc_pls=0.778 | acc_cvae=0.866 auc_cvae=0.834 | neutral auc=0.818 | age-only auc=0.689 | cohort-only auc=0.606 | test donors=164\n"}
+,{"stream_name":"stdout","time":926.565556351,"data":"run 11/20  acc_pls=0.754 auc_pls=0.805 | acc_cvae=0.807 auc_cvae=0.854 | neutral auc=0.835 | age-only auc=0.730 | cohort-only auc=0.618 | test donors=164\n"}
+,{"stream_name":"stdout","time":991.213258476,"data":"run 12/20  acc_pls=0.721 auc_pls=0.762 | acc_cvae=0.773 auc_cvae=0.808 | neutral auc=0.788 | age-only auc=0.696 | cohort-only auc=0.624 | test donors=164\n"}
+,{"stream_name":"stdout","time":1092.267227249,"data":"run 13/20  acc_pls=0.733 auc_pls=0.783 | acc_cvae=0.843 auc_cvae=0.900 | neutral auc=0.883 | age-only auc=0.622 | cohort-only auc=0.619 | test donors=164\n"}
+,{"stream_name":"stdout","time":1196.216460482,"data":"run 14/20  acc_pls=0.802 auc_pls=0.865 | acc_cvae=0.853 auc_cvae=0.905 | neutral auc=0.891 | age-only auc=0.650 | cohort-only auc=0.627 | test donors=164\n"}
+,{"stream_name":"stdout","time":1243.397291548,"data":"run 15/20  acc_pls=0.823 auc_pls=0.891 | acc_cvae=0.823 auc_cvae=0.906 | neutral auc=0.892 | age-only auc=0.725 | cohort-only auc=0.627 | test donors=164\n"}
+,{"stream_name":"stdout","time":1338.163417773,"data":"run 16/20  acc_pls=0.760 auc_pls=0.789 | acc_cvae=0.782 auc_cvae=0.854 | neutral auc=0.834 | age-only auc=0.616 | cohort-only auc=0.604 | test donors=164\n"}
+,{"stream_name":"stdout","time":1481.845227004,"data":"run 17/20  acc_pls=0.773 auc_pls=0.837 | acc_cvae=0.808 auc_cvae=0.881 | neutral auc=0.860 | age-only auc=0.615 | cohort-only auc=0.587 | test donors=164\n"}
+,{"stream_name":"stdout","time":1526.481107516,"data":"run 18/20  acc_pls=0.748 auc_pls=0.808 | acc_cvae=0.772 auc_cvae=0.817 | neutral auc=0.802 | age-only auc=0.621 | cohort-only auc=0.618 | test donors=164\n"}
+,{"stream_name":"stdout","time":1590.233756357,"data":"run 19/20  acc_pls=0.779 auc_pls=0.755 | acc_cvae=0.798 auc_cvae=0.854 | neutral auc=0.837 | age-only auc=0.531 | cohort-only auc=0.610 | test donors=164\n"}
+,{"stream_name":"stdout","time":1681.175881659,"data":"run 20/20  acc_pls=0.744 auc_pls=0.779 | acc_cvae=0.764 auc_cvae=0.847 | neutral auc=0.826 | age-only auc=0.708 | cohort-only auc=0.599 | test donors=164\n"}
+,{"stream_name":"stdout","time":1681.317278594,"data":"\n"}
+,{"stream_name":"stdout","time":1681.317326068,"data":"real runs complete\n"}
+,{"stream_name":"stdout","time":1756.499516409,"data":"null run 1/10\n"}
+,{"stream_name":"stdout","time":1804.471361164,"data":"null run 2/10\n"}
+,{"stream_name":"stdout","time":1878.663190807,"data":"null run 3/10\n"}
+,{"stream_name":"stdout","time":1910.906445067,"data":"null run 4/10\n"}
+,{"stream_name":"stdout","time":1946.657756759,"data":"null run 5/10\n"}
+,{"stream_name":"stdout","time":2010.64975725,"data":"null run 6/10\n"}
+,{"stream_name":"stdout","time":2090.639115314,"data":"null run 7/10\n"}
+,{"stream_name":"stdout","time":2150.832099846,"data":"null run 8/10\n"}
+,{"stream_name":"stdout","time":2213.966091457,"data":"null run 9/10\n"}
+,{"stream_name":"stdout","time":2274.331446591,"data":"null run 10/10\n"}
+,{"stream_name":"stdout","time":2274.331519255,"data":"null runs complete\n"}
+,{"stream_name":"stdout","time":2308.816685167,"data":"PLSDA_upregulated: 34\n"}
+,{"stream_name":"stdout","time":2308.816722918,"data":"PLSDA_downregulated: 16\n"}
+,{"stream_name":"stdout","time":2308.816729439,"data":"CVAE_upregulated: 35\n"}
+,{"stream_name":"stdout","time":2308.816734117,"data":"CVAE_downregulated: 23\n"}
+,{"stream_name":"stdout","time":2308.816739156,"data":"\n"}
+,{"stream_name":"stdout","time":2308.816743962,"data":"PLS-DA significant: 54   CVAE significant: 75\n"}
+,{"stream_name":"stdout","time":2308.816749214,"data":"overlap: 18 -\u003e ['ADGRA3', 'AKAP9', 'ASCL1', 'BDNF', 'CARTPT', 'DGKG', 'GFAP', 'HBB', 'HBD', 'ITPKB', 'NAIP', 'NEBL', 'NPTX2', 'PEG10', 'POLR1D', 'QPRT', 'RPH3A', 'TRIL']   Jaccard=0.1622\n"}
+,{"stream_name":"stdout","time":2308.816757189,"data":"Spearman rho between mean VIP and mean IG: 0.0886 (p=5.442e-21)\n"}
+,{"stream_name":"stdout","time":2389.565014285,"data":"latent structure written\n"}
+,{"stream_name":"stdout","time":2389.88410702,"data":"                                                key                                                                                                value note\n"}
+,{"stream_name":"stdout","time":2389.88414993,"data":"0                                      acc_pls_mean                                                                                             0.769183     \n"}
+,{"stream_name":"stdout","time":2389.884157055,"data":"1                                        acc_pls_sd                                                                                             0.032302     \n"}
+,{"stream_name":"stdout","time":2389.884179588,"data":"2                                      auc_pls_mean                                                                                             0.813657     \n"}
+,{"stream_name":"stdout","time":2389.884186498,"data":"3                                        auc_pls_sd                                                                                             0.044044     \n"}
+,{"stream_name":"stdout","time":2389.884193348,"data":"4                                       ap_pls_mean                                                                                             0.880594     \n"}
+,{"stream_name":"stdout","time":2389.884200186,"data":"5                                         ap_pls_sd                                                                                             0.034875     \n"}
+,{"stream_name":"stdout","time":2389.884224908,"data":"6                            acc_cvae_lat_true_mean                                                                                             0.804663     \n"}
+,{"stream_name":"stdout","time":2389.88423007,"data":"7                              acc_cvae_lat_true_sd                                                                                             0.032953     \n"}
+,{"stream_name":"stdout","time":2389.884234966,"data":"8                            auc_cvae_lat_true_mean                                                                                             0.863542     \n"}
+,{"stream_name":"stdout","time":2389.884239852,"data":"9                              auc_cvae_lat_true_sd                                                                                             0.035591     \n"}
+,{"stream_name":"stdout","time":2389.884244617,"data":"10                            ap_cvae_lat_true_mean                                                                                             0.915244     \n"}
+,{"stream_name":"stdout","time":2389.884251537,"data":"11                              ap_cvae_lat_true_sd                                                                                             0.031101     \n"}
+,{"stream_name":"stdout","time":2389.884256304,"data":"12                        acc_cvae_lat_neutral_mean                                                                                             0.789663     \n"}
+,{"stream_name":"stdout","time":2389.884266467,"data":"13                          acc_cvae_lat_neutral_sd                                                                                             0.032264     \n"}
+,{"stream_name":"stdout","time":2389.884270051,"data":"14                        auc_cvae_lat_neutral_mean                                                                                             0.847299     \n"}
+,{"stream_name":"stdout","time":2389.884273825,"data":"15                          auc_cvae_lat_neutral_sd                                                                                             0.036061     \n"}
+,{"stream_name":"stdout","time":2389.884291289,"data":"16                         ap_cvae_lat_neutral_mean                                                                                             0.904565     \n"}
+,{"stream_name":"stdout","time":2389.884297381,"data":"17                           ap_cvae_lat_neutral_sd                                                                                             0.032742     \n"}
+,{"stream_name":"stdout","time":2389.884302824,"data":"18                          acc_cvae_head_true_mean                                                                                             0.802404     \n"}
+,{"stream_name":"stdout","time":2389.884308628,"data":"19                            acc_cvae_head_true_sd                                                                                             0.032703     \n"}
+,{"stream_name":"stdout","time":2389.884314322,"data":"20                          auc_cvae_head_true_mean                                                                                             0.858301     \n"}
+,{"stream_name":"stdout","time":2389.88431923,"data":"21                            auc_cvae_head_true_sd                                                                                             0.038819     \n"}
+,{"stream_name":"stdout","time":2389.884323992,"data":"22                       acc_cvae_head_neutral_mean                                                                                             0.788176     \n"}
+,{"stream_name":"stdout","time":2389.884328802,"data":"23                         acc_cvae_head_neutral_sd                                                                                             0.030375     \n"}
+,{"stream_name":"stdout","time":2389.884338486,"data":"24                       auc_cvae_head_neutral_mean                                                                                             0.841785     \n"}
+,{"stream_name":"stdout","time":2389.884343362,"data":"25                         auc_cvae_head_neutral_sd                                                                                             0.039146     \n"}
+,{"stream_name":"stdout","time":2389.884357687,"data":"26                                     sil_pls_mean                                                                                             0.066602     \n"}
+,{"stream_name":"stdout","time":2389.884362581,"data":"27                                       sil_pls_sd                                                                                             0.018521     \n"}
+,{"stream_name":"stdout","time":2389.884367398,"data":"28                                     ari_pls_mean                                                                                             0.057877     \n"}
+,{"stream_name":"stdout","time":2389.884372203,"data":"29                                       ari_pls_sd                                                                                              0.04766     \n"}
+,{"stream_name":"stdout","time":2389.884381495,"data":"30                                      db_pls_mean                                                                                             3.057409     \n"}
+,{"stream_name":"stdout","time":2389.884397158,"data":"31                                        db_pls_sd                                                                                             0.405493     \n"}
+,{"stream_name":"stdout","time":2389.884402767,"data":"32                                      ch_pls_mean                                                                                            26.586979     \n"}
+,{"stream_name":"stdout","time":2389.884408426,"data":"33                                        ch_pls_sd                                                                                             6.483856     \n"}
+,{"stream_name":"stdout","time":2389.884414078,"data":"34                                     iir_pls_mean                                                                                             0.664745     \n"}
+,{"stream_name":"stdout","time":2389.884419545,"data":"35                                       iir_pls_sd                                                                                             0.085936     \n"}
+,{"stream_name":"stdout","time":2389.88442433,"data":"36                               sil_cvae_true_mean                                                                                             0.175633     \n"}
+,{"stream_name":"stdout","time":2389.884429953,"data":"37                                 sil_cvae_true_sd                                                                                             0.053929     \n"}
+,{"stream_name":"stdout","time":2389.884434806,"data":"38                               ari_cvae_true_mean                                                                                             0.143322     \n"}
+,{"stream_name":"stdout","time":2389.88443951,"data":"39                                 ari_cvae_true_sd                                                                                             0.163225     \n"}
+,{"stream_name":"stdout","time":2389.884444328,"data":"40                                db_cvae_true_mean                                                                                             1.884586     \n"}
+,{"stream_name":"stdout","time":2389.884449178,"data":"41                                  db_cvae_true_sd                                                                                              0.36609     \n"}
+,{"stream_name":"stdout","time":2389.884458266,"data":"42                                ch_cvae_true_mean                                                                                            69.504837     \n"}
+,{"stream_name":"stdout","time":2389.884463053,"data":"43                                  ch_cvae_true_sd                                                                                            34.323902     \n"}
+,{"stream_name":"stdout","time":2389.884467918,"data":"44                               iir_cvae_true_mean                                                                                             1.104095     \n"}
+,{"stream_name":"stdout","time":2389.884472464,"data":"45                                 iir_cvae_true_sd                                                                                             0.238235     \n"}
+,{"stream_name":"stdout","time":2389.884482731,"data":"46                            sil_cvae_neutral_mean                                                                                             0.158596     \n"}
+,{"stream_name":"stdout","time":2389.884498637,"data":"47                              sil_cvae_neutral_sd                                                                                             0.048432     \n"}
+,{"stream_name":"stdout","time":2389.884504529,"data":"48                            ari_cvae_neutral_mean                                                                                              0.12971     \n"}
+,{"stream_name":"stdout","time":2389.884510447,"data":"49                              ari_cvae_neutral_sd                                                                                              0.14513     \n"}
+,{"stream_name":"stdout","time":2389.884517313,"data":"50                             db_cvae_neutral_mean                                                                                             1.998263     \n"}
+,{"stream_name":"stdout","time":2389.88452292,"data":"51                               db_cvae_neutral_sd                                                                                             0.384615     \n"}
+,{"stream_name":"stdout","time":2389.884527616,"data":"52                             ch_cvae_neutral_mean                                                                                            61.583691     \n"}
+,{"stream_name":"stdout","time":2389.884532633,"data":"53                               ch_cvae_neutral_sd                                                                                            28.776577     \n"}
+,{"stream_name":"stdout","time":2389.884537429,"data":"54                            iir_cvae_neutral_mean                                                                                              1.03999     \n"}
+,{"stream_name":"stdout","time":2389.884542559,"data":"55                              iir_cvae_neutral_sd                                                                                             0.218584     \n"}
+,{"stream_name":"stdout","time":2389.884547298,"data":"56                                mse_pls_mean_mean                                                                                             0.667466     \n"}
+,{"stream_name":"stdout","time":2389.884552118,"data":"57                                  mse_pls_mean_sd                                                                                             0.020222     \n"}
+,{"stream_name":"stdout","time":2389.884556888,"data":"58                          mse_cvae_true_mean_mean                                                                                             0.913299     \n"}
+,{"stream_name":"stdout","time":2389.884561718,"data":"59                            mse_cvae_true_mean_sd                                                                                             0.048058     \n"}
+,{"stream_name":"stdout","time":2389.884586165,"data":"60                       mse_cvae_neutral_mean_mean                                                                                             0.919742     \n"}
+,{"stream_name":"stdout","time":2389.884602394,"data":"61                         mse_cvae_neutral_mean_sd                                                                                             0.050497     \n"}
+,{"stream_name":"stdout","time":2389.884608156,"data":"62                           acc_cvae_true_vs_pls_t                                                                                             4.322249     \n"}
+,{"stream_name":"stdout","time":2389.884614528,"data":"63                           acc_cvae_true_vs_pls_p                                                                                             0.000367     \n"}
+,{"stream_name":"stdout","time":2389.884620274,"data":"64                    acc_cvae_true_vs_pls_cohen_dz                                                                                             0.966484     \n"}
+,{"stream_name":"stdout","time":2389.884625824,"data":"65                           auc_cvae_true_vs_pls_t                                                                                             5.550157     \n"}
+,{"stream_name":"stdout","time":2389.88463042,"data":"66                           auc_cvae_true_vs_pls_p                                                                                             0.000024     \n"}
+,{"stream_name":"stdout","time":2389.884635199,"data":"67                    auc_cvae_true_vs_pls_cohen_dz                                                                                             1.241053     \n"}
+,{"stream_name":"stdout","time":2389.884640032,"data":"68                        acc_cvae_neutral_vs_pls_t                                                                                             2.589162     \n"}
+,{"stream_name":"stdout","time":2389.884644728,"data":"69                        acc_cvae_neutral_vs_pls_p                                                                                             0.017996     \n"}
+,{"stream_name":"stdout","time":2389.884649613,"data":"70                 acc_cvae_neutral_vs_pls_cohen_dz                                                                                             0.578954     \n"}
+,{"stream_name":"stdout","time":2389.884654307,"data":"71                        auc_cvae_neutral_vs_pls_t                                                                                             4.025647     \n"}
+,{"stream_name":"stdout","time":2389.884659043,"data":"72                        auc_cvae_neutral_vs_pls_p                                                                                             0.000723     \n"}
+,{"stream_name":"stdout","time":2389.884663871,"data":"73                 auc_cvae_neutral_vs_pls_cohen_dz                                                                                             0.900162     \n"}
+,{"stream_name":"stdout","time":2389.884668552,"data":"74                       acc_cvae_true_vs_neutral_t                                                                                            15.055887     \n"}
+,{"stream_name":"stdout","time":2389.884673319,"data":"75                       acc_cvae_true_vs_neutral_p                                                                                                  0.0     \n"}
+,{"stream_name":"stdout","time":2389.884679101,"data":"76                acc_cvae_true_vs_neutral_cohen_dz                                                                                             3.366599     \n"}
+,{"stream_name":"stdout","time":2389.884689414,"data":"77                       auc_cvae_true_vs_neutral_t                                                                                            16.427945     \n"}
+,{"stream_name":"stdout","time":2389.884708931,"data":"78                       auc_cvae_true_vs_neutral_p                                                                                                  0.0     \n"}
+,{"stream_name":"stdout","time":2389.884715178,"data":"79                auc_cvae_true_vs_neutral_cohen_dz                                                                                               3.6734     \n"}
+,{"stream_name":"stdout","time":2389.884720873,"data":"80                recon_cvae_true_vs_pls_wilcoxon_p                                                                                                  0.0     \n"}
+,{"stream_name":"stdout","time":2389.884726564,"data":"81                   recon_cvae_true_vs_pls_ttest_p                                                                                                  0.0     \n"}
+,{"stream_name":"stdout","time":2389.884731562,"data":"82                  recon_cvae_true_vs_pls_cohen_dz                                                                                             1.179439     \n"}
+,{"stream_name":"stdout","time":2389.884736342,"data":"83             recon_cvae_true_vs_pls_rank_biserial                                                                                             0.997126     \n"}
+,{"stream_name":"stdout","time":2389.884741163,"data":"84             recon_cvae_neutral_vs_pls_wilcoxon_p                                                                                                  0.0     \n"}
+,{"stream_name":"stdout","time":2389.884745989,"data":"85                recon_cvae_neutral_vs_pls_ttest_p                                                                                                  0.0     \n"}
+,{"stream_name":"stdout","time":2389.884750664,"data":"86               recon_cvae_neutral_vs_pls_cohen_dz                                                                                             1.182946     \n"}
+,{"stream_name":"stdout","time":2389.884755375,"data":"87          recon_cvae_neutral_vs_pls_rank_biserial                                                                                             0.997126     \n"}
+,{"stream_name":"stdout","time":2389.884760127,"data":"88                              recon_n_oof_samples                                                                                                 6262     \n"}
+,{"stream_name":"stdout","time":2389.884765383,"data":"89                       recon_mse_pls_Control_mean                                                                                             0.636285     \n"}
+,{"stream_name":"stdout","time":2389.884770116,"data":"90                         recon_mse_pls_Control_sd                                                                                             0.334291     \n"}
+,{"stream_name":"stdout","time":2389.884777849,"data":"91                 recon_mse_cvae_true_Control_mean                                                                                             0.874505     \n"}
+,{"stream_name":"stdout","time":2389.884782838,"data":"92                   recon_mse_cvae_true_Control_sd                                                                                             0.451286     \n"}
+,{"stream_name":"stdout","time":2389.884792306,"data":"93                                  recon_n_Control                                                                                                 2099     \n"}
+,{"stream_name":"stdout","time":2389.88480733,"data":"94                            recon_mse_pls_AD_mean                                                                                             0.681827     \n"}
+,{"stream_name":"stdout","time":2389.88481306,"data":"95                              recon_mse_pls_AD_sd                                                                                             0.351244     \n"}
+,{"stream_name":"stdout","time":2389.884823305,"data":"96                      recon_mse_cvae_true_AD_mean                                                                                             0.933255     \n"}
+,{"stream_name":"stdout","time":2389.88482907,"data":"97                        recon_mse_cvae_true_AD_sd                                                                                             0.473652     \n"}
+,{"stream_name":"stdout","time":2389.884833668,"data":"98                                       recon_n_AD                                                                                                 4163     \n"}
+,{"stream_name":"stdout","time":2389.884838427,"data":"99                    recon_group_pls_mannwhitney_p                                                                                                  0.0     \n"}
+,{"stream_name":"stdout","time":2389.884843171,"data":"100              recon_group_cvaetrue_mannwhitney_p                                                                                                  0.0     \n"}
+,{"stream_name":"stdout","time":2389.884847987,"data":"101           recon_group_cvaeneutral_mannwhitney_p                                                                                                  0.0     \n"}
+,{"stream_name":"stdout","time":2389.884853277,"data":"102                              cm_pls_sensitivity                                                                                              0.82969     \n"}
+,{"stream_name":"stdout","time":2389.884858173,"data":"103                              cm_pls_specificity                                                                                             0.646975     \n"}
+,{"stream_name":"stdout","time":2389.884862985,"data":"104                                cm_pls_precision                                                                                             0.823361     \n"}
+,{"stream_name":"stdout","time":2389.884867753,"data":"105                        cm_pls_balanced_accuracy                                                                                             0.738332     \n"}
+,{"stream_name":"stdout","time":2389.884872573,"data":"106                         cm_cvaetrue_sensitivity                                                                                             0.890944     \n"}
+,{"stream_name":"stdout","time":2389.884877385,"data":"107                         cm_cvaetrue_specificity                                                                                             0.632682     \n"}
+,{"stream_name":"stdout","time":2389.884882109,"data":"108                           cm_cvaetrue_precision                                                                                             0.827902     \n"}
+,{"stream_name":"stdout","time":2389.884892167,"data":"109                   cm_cvaetrue_balanced_accuracy                                                                                             0.761813     \n"}
+,{"stream_name":"stdout","time":2389.884908056,"data":"110                      cm_cvaeneutral_sensitivity                                                                                             0.879894     \n"}
+,{"stream_name":"stdout","time":2389.884913615,"data":"111                      cm_cvaeneutral_specificity                                                                                             0.609814     \n"}
+,{"stream_name":"stdout","time":2389.88491924,"data":"112                        cm_cvaeneutral_precision                                                                                             0.817269     \n"}
+,{"stream_name":"stdout","time":2389.884924554,"data":"113                cm_cvaeneutral_balanced_accuracy                                                                                             0.744854     \n"}
+,{"stream_name":"stdout","time":2389.884933948,"data":"114                                prob_pls_AD_mean                                                                                             0.808015     \n"}
+,{"stream_name":"stdout","time":2389.884939275,"data":"115                           prob_pls_control_mean                                                                                             0.355056     \n"}
+,{"stream_name":"stdout","time":2389.884944029,"data":"116                                    prob_pls_gap                                                                                             0.452959     \n"}
+,{"stream_name":"stdout","time":2389.884948894,"data":"117                          prob_pls_mannwhitney_p                                                                                                  0.0     \n"}
+,{"stream_name":"stdout","time":2389.88495357,"data":"118                         prob_pls_frac_ambiguous                                                                                             0.051581     \n"}
+,{"stream_name":"stdout","time":2389.884958246,"data":"119                            prob_cvaelat_AD_mean                                                                                             0.857707     \n"}
+,{"stream_name":"stdout","time":2389.884962897,"data":"120                       prob_cvaelat_control_mean                                                                                             0.383724     \n"}
+,{"stream_name":"stdout","time":2389.884967658,"data":"121                                prob_cvaelat_gap                                                                                             0.473983     \n"}
+,{"stream_name":"stdout","time":2389.884972403,"data":"122                      prob_cvaelat_mannwhitney_p                                                                                                  0.0     \n"}
+,{"stream_name":"stdout","time":2389.884995562,"data":"123                     prob_cvaelat_frac_ambiguous                                                                                              0.05717     \n"}
+,{"stream_name":"stdout","time":2389.885002483,"data":"124                           prob_cvaehead_AD_mean                                                                                             0.863723     \n"}
+,{"stream_name":"stdout","time":2389.885008139,"data":"125                      prob_cvaehead_control_mean                                                                                             0.342128     \n"}
+,{"stream_name":"stdout","time":2389.885012847,"data":"126                               prob_cvaehead_gap                                                                                             0.521595     \n"}
+,{"stream_name":"stdout","time":2389.885017651,"data":"127                     prob_cvaehead_mannwhitney_p                                                                                                  0.0     \n"}
+,{"stream_name":"stdout","time":2389.885022993,"data":"128                    prob_cvaehead_frac_ambiguous                                                                                             0.034494     \n"}
+,{"stream_name":"stdout","time":2389.885027724,"data":"129                                 kl_true_AD_mean                                                                                              1.07106     \n"}
+,{"stream_name":"stdout","time":2389.885032653,"data":"130                               kl_true_AD_median                                                                                             0.274571     \n"}
+,{"stream_name":"stdout","time":2389.885037483,"data":"131                            kl_true_control_mean                                                                                             0.846277     \n"}
+,{"stream_name":"stdout","time":2389.88504648,"data":"132                          kl_true_control_median                                                                                             0.314776     \n"}
+,{"stream_name":"stdout","time":2389.885051358,"data":"133                           kl_true_mannwhitney_p                                                                                             0.000188     \n"}
+,{"stream_name":"stdout","time":2389.885056111,"data":"134                         kl_true_pct_increase_AD                                                                                             26.56146     \n"}
+,{"stream_name":"stdout","time":2389.885060962,"data":"135                            meanvar_true_AD_mean                                                                                             0.904447     \n"}
+,{"stream_name":"stdout","time":2389.885071463,"data":"136                          meanvar_true_AD_median                                                                                             0.942698     \n"}
+,{"stream_name":"stdout","time":2389.885087926,"data":"137                       meanvar_true_control_mean                                                                                             0.911855     \n"}
+,{"stream_name":"stdout","time":2389.885093362,"data":"138                     meanvar_true_control_median                                                                                             0.945732     \n"}
+,{"stream_name":"stdout","time":2389.885099005,"data":"139                      meanvar_true_mannwhitney_p                                                                                             0.124396     \n"}
+,{"stream_name":"stdout","time":2389.885104194,"data":"140                    meanvar_true_pct_increase_AD                                                                                            -0.812382     \n"}
+,{"stream_name":"stdout","time":2389.885110433,"data":"141                              kl_neutral_AD_mean                                                                                             1.059346     \n"}
+,{"stream_name":"stdout","time":2389.885115624,"data":"142                            kl_neutral_AD_median                                                                                             0.271952     \n"}
+,{"stream_name":"stdout","time":2389.885120552,"data":"143                         kl_neutral_control_mean                                                                                             0.833834     \n"}
+,{"stream_name":"stdout","time":2389.885125173,"data":"144                       kl_neutral_control_median                                                                                              0.31272     \n"}
+,{"stream_name":"stdout","time":2389.885129953,"data":"145                        kl_neutral_mannwhitney_p                                                                                             0.000431     \n"}
+,{"stream_name":"stdout","time":2389.885134704,"data":"146                      kl_neutral_pct_increase_AD                                                                                            27.045215     \n"}
+,{"stream_name":"stdout","time":2389.885139466,"data":"147                         meanvar_neutral_AD_mean                                                                                             0.904642     \n"}
+,{"stream_name":"stdout","time":2389.885144204,"data":"148                       meanvar_neutral_AD_median                                                                                             0.942692     \n"}
+,{"stream_name":"stdout","time":2389.885149104,"data":"149                    meanvar_neutral_control_mean                                                                                             0.911684     \n"}
+,{"stream_name":"stdout","time":2389.885158056,"data":"150                  meanvar_neutral_control_median                                                                                             0.945527     \n"}
+,{"stream_name":"stdout","time":2389.88516289,"data":"151                   meanvar_neutral_mannwhitney_p                                                                                             0.168618     \n"}
+,{"stream_name":"stdout","time":2389.885167594,"data":"152                 meanvar_neutral_pct_increase_AD                                                                                            -0.772497     \n"}
+,{"stream_name":"stdout","time":2389.88517765,"data":"153                                        unc_n_AD                                                                                                 4163     \n"}
+,{"stream_name":"stdout","time":2389.885194265,"data":"154                                   unc_n_control                                                                                                 2099     \n"}
+,{"stream_name":"stdout","time":2389.885200428,"data":"155                                     n_sig_plsda                                                                                                   54     \n"}
+,{"stream_name":"stdout","time":2389.885205798,"data":"156                                      n_sig_cvae                                                                                                   75     \n"}
+,{"stream_name":"stdout","time":2389.885211522,"data":"157                                       n_overlap                                                                                                   18     \n"}
+,{"stream_name":"stdout","time":2389.885217028,"data":"158                                         jaccard                                                                                             0.162162     \n"}
+,{"stream_name":"stdout","time":2389.885221678,"data":"159                                 consensus_genes  ADGRA3|AKAP9|ASCL1|BDNF|CARTPT|DGKG|GFAP|HBB|HBD|ITPKB|NAIP|NEBL|NPTX2|PEG10|POLR1D|QPRT|RPH3A|TRIL     \n"}
+,{"stream_name":"stdout","time":2389.885226538,"data":"160                             spearman_rho_vip_ig                                                                                             0.088604     \n"}
+,{"stream_name":"stdout","time":2389.885231413,"data":"161                               spearman_p_vip_ig                                                                                                  0.0     \n"}
+,{"stream_name":"stdout","time":2389.88523629,"data":"162                              n_total_discovered                                                                                                  111     \n"}
+,{"stream_name":"stdout","time":2389.885241102,"data":"163                                    n_plsda_only                                                                                                   36     \n"}
+,{"stream_name":"stdout","time":2389.885245803,"data":"164                                     n_cvae_only                                                                                                   57     \n"}
+,{"stream_name":"stdout","time":2389.885250578,"data":"165                               n_not_significant                                                                                                11103     \n"}
+,{"stream_name":"stdout","time":2389.885255358,"data":"166                            mean_stability_plsda                                                                                             0.716667     \n"}
+,{"stream_name":"stdout","time":2389.885260955,"data":"167                             mean_stability_cvae                                                                                             0.571333     \n"}
+,{"stream_name":"stdout","time":2389.885269868,"data":"168                                         n_genes                                                                                                11214     \n"}
+,{"stream_name":"stdout","time":2389.885280905,"data":"169                                      n_subjects                                                                                                 1596     \n"}
+,{"stream_name":"stdout","time":2389.885296034,"data":"170                                            n_AD                                                                                                 1059     \n"}
+,{"stream_name":"stdout","time":2389.885301881,"data":"171                                        n_donors                                                                                                  817     \n"}
+,{"stream_name":"stdout","time":2389.885307438,"data":"172                                     n_donors_AD                                                                                                  545     \n"}
+,{"stream_name":"stdout","time":2389.885313122,"data":"173                                n_donors_control                                                                                                  272     \n"}
+,{"stream_name":"stdout","time":2389.885318575,"data":"174                                         age_min                                                                                                   60     \n"}
+,{"stream_name":"stdout","time":2389.885323338,"data":"175                                mean_test_donors                                                                                                164.0     \n"}
+,{"stream_name":"stdout","time":2389.885328204,"data":"176                                       n_cohorts                                                                                                    5     \n"}
+,{"stream_name":"stdout","time":2389.885333143,"data":"177                               auc_age_only_mean                                                                                             0.654219     \n"}
+,{"stream_name":"stdout","time":2389.885337959,"data":"178                                 auc_age_only_sd                                                                                             0.055057     \n"}
+,{"stream_name":"stdout","time":2389.885342808,"data":"179                            auc_cohort_only_mean                                                                                             0.609178     \n"}
+,{"stream_name":"stdout","time":2389.885347735,"data":"180                              auc_cohort_only_sd                                                                                             0.014181     \n"}
+,{"stream_name":"stdout","time":2389.885352553,"data":"181                              auc_pls_donor_mean                                                                                             0.889483     \n"}
+,{"stream_name":"stdout","time":2389.885357338,"data":"182                                auc_pls_donor_sd                                                                                             0.018992     \n"}
+,{"stream_name":"stdout","time":2389.885362128,"data":"183                    auc_cvae_lat_true_donor_mean                                                                                             0.945655     \n"}
+,{"stream_name":"stdout","time":2389.885366938,"data":"184                      auc_cvae_lat_true_donor_sd                                                                                              0.02644     \n"}
+,{"stream_name":"stdout","time":2389.885371633,"data":"185                 auc_cvae_lat_neutral_donor_mean                                                                                             0.936647     \n"}
+,{"stream_name":"stdout","time":2389.885395373,"data":"186                   auc_cvae_lat_neutral_donor_sd                                                                                             0.025485     \n"}
+,{"stream_name":"stdout","time":2389.885402422,"data":"187                              cohort_gse118553_n                                                                                                  744     \n"}
+,{"stream_name":"stdout","time":2389.885408028,"data":"188                        cohort_gse118553_auc_pls                                                                                              0.98914     \n"}
+,{"stream_name":"stdout","time":2389.885413759,"data":"189                       cohort_gse118553_auc_cvae                                                                                             0.970007     \n"}
+,{"stream_name":"stdout","time":2389.885419358,"data":"190                              cohort_gse132903_n                                                                                                  800     \n"}
+,{"stream_name":"stdout","time":2389.885423946,"data":"191                        cohort_gse132903_auc_pls                                                                                             0.938763     \n"}
+,{"stream_name":"stdout","time":2389.885428566,"data":"192                       cohort_gse132903_auc_cvae                                                                                             0.949487     \n"}
+,{"stream_name":"stdout","time":2389.885434202,"data":"193                               cohort_gse33000_n                                                                                                 1620     \n"}
+,{"stream_name":"stdout","time":2389.885439072,"data":"194                         cohort_gse33000_auc_pls                                                                                              0.95248     \n"}
+,{"stream_name":"stdout","time":2389.885443814,"data":"195                        cohort_gse33000_auc_cvae                                                                                             0.963182     \n"}
+,{"stream_name":"stdout","time":2389.885448558,"data":"196                               cohort_gse48350_n                                                                                                  647     \n"}
+,{"stream_name":"stdout","time":2389.885453406,"data":"197                         cohort_gse48350_auc_pls                                                                                             0.716111     \n"}
+,{"stream_name":"stdout","time":2389.885458155,"data":"198                        cohort_gse48350_auc_cvae                                                                                             0.731915     \n"}
+,{"stream_name":"stdout","time":2389.885463016,"data":"199                               cohort_gse84422_n                                                                                                 2451     \n"}
+,{"stream_name":"stdout","time":2389.885467733,"data":"200                         cohort_gse84422_auc_pls                                                                                             0.694203     \n"}
+,{"stream_name":"stdout","time":2389.885472717,"data":"201                        cohort_gse84422_auc_cvae                                                                                             0.697649     \n"}
+,{"stream_name":"stdout","time":2389.885482988,"data":"202                     region_anterior_cingulate_n                                                                                                  184     \n"}
+,{"stream_name":"stdout","time":2389.885498738,"data":"203               region_anterior_cingulate_auc_pls                                                                                             0.756557     \n"}
+,{"stream_name":"stdout","time":2389.885508858,"data":"204              region_anterior_cingulate_auc_cvae                                                                                             0.708984     \n"}
+,{"stream_name":"stdout","time":2389.885514812,"data":"205         region_dorsolateral_prefrontal_cortex_n                                                                                                  166     \n"}
+,{"stream_name":"stdout","time":2389.885520799,"data":"206   region_dorsolateral_prefrontal_cortex_auc_pls                                                                                              0.65182     \n"}
+,{"stream_name":"stdout","time":2389.885525577,"data":"207  region_dorsolateral_prefrontal_cortex_auc_cvae                                                                                             0.682471     \n"}
+,{"stream_name":"stdout","time":2389.885530616,"data":"208                      region_entorhinal_cortex_n                                                                                                  342     \n"}
+,{"stream_name":"stdout","time":2389.885535367,"data":"209                region_entorhinal_cortex_auc_pls                                                                                             0.855242     \n"}
+,{"stream_name":"stdout","time":2389.885540208,"data":"210               region_entorhinal_cortex_auc_cvae                                                                                             0.873306     \n"}
+,{"stream_name":"stdout","time":2389.885544916,"data":"211                         region_frontal_cortex_n                                                                                                  214     \n"}
+,{"stream_name":"stdout","time":2389.885549779,"data":"212                   region_frontal_cortex_auc_pls                                                                                              0.97782     \n"}
+,{"stream_name":"stdout","time":2389.8855545,"data":"213                  region_frontal_cortex_auc_cvae                                                                                             0.955745     \n"}
+,{"stream_name":"stdout","time":2389.885559259,"data":"214                           region_frontal_pole_n                                                                                                  184     \n"}
+,{"stream_name":"stdout","time":2389.885564071,"data":"215                     region_frontal_pole_auc_pls                                                                                             0.667935     \n"}
+,{"stream_name":"stdout","time":2389.885575638,"data":"216                    region_frontal_pole_auc_cvae                                                                                             0.688513     \n"}
+,{"stream_name":"stdout","time":2389.88558516,"data":"217                            region_hippocampus_n                                                                                                  331     \n"}
+,{"stream_name":"stdout","time":2389.885600531,"data":"218                      region_hippocampus_auc_pls                                                                                             0.605778     \n"}
+,{"stream_name":"stdout","time":2389.885606495,"data":"219                     region_hippocampus_auc_cvae                                                                                             0.690535     \n"}
+,{"stream_name":"stdout","time":2389.885612075,"data":"220                 region_inferior_frontal_gyrus_n                                                                                                  142     \n"}
+,{"stream_name":"stdout","time":2389.885617732,"data":"221           region_inferior_frontal_gyrus_auc_pls                                                                                             0.725202     \n"}
+,{"stream_name":"stdout","time":2389.885627446,"data":"222          region_inferior_frontal_gyrus_auc_cvae                                                                                             0.746204     \n"}
+,{"stream_name":"stdout","time":2389.885632344,"data":"223                region_inferior_temporal_gyrus_n                                                                                                  166     \n"}
+,{"stream_name":"stdout","time":2389.885637229,"data":"224          region_inferior_temporal_gyrus_auc_pls                                                                                             0.760862     \n"}
+,{"stream_name":"stdout","time":2389.885641983,"data":"225         region_inferior_temporal_gyrus_auc_cvae                                                                                             0.753621     \n"}
+,{"stream_name":"stdout","time":2389.885646839,"data":"226                  region_middle_temporal_gyrus_n                                                                                                  979     \n"}
+,{"stream_name":"stdout","time":2389.885651582,"data":"227            region_middle_temporal_gyrus_auc_pls                                                                                             0.885766     \n"}
+,{"stream_name":"stdout","time":2389.885656522,"data":"228           region_middle_temporal_gyrus_auc_cvae                                                                                             0.916315     \n"}
+,{"stream_name":"stdout","time":2389.885661301,"data":"229                region_occipital_visual_cortex_n                                                                                                  143     \n"}
+,{"stream_name":"stdout","time":2389.885666103,"data":"230          region_occipital_visual_cortex_auc_pls                                                                                             0.660468     \n"}
+,{"stream_name":"stdout","time":2389.885670808,"data":"231         region_occipital_visual_cortex_auc_cvae                                                                                              0.64348     \n"}
+,{"stream_name":"stdout","time":2389.885676064,"data":"232                  region_parahippocampal_gyrus_n                                                                                                  184     \n"}
+,{"stream_name":"stdout","time":2389.885686437,"data":"233            region_parahippocampal_gyrus_auc_pls                                                                                             0.767876     \n"}
+,{"stream_name":"stdout","time":2389.885701461,"data":"234           region_parahippocampal_gyrus_auc_cvae                                                                                             0.777419     \n"}
+,{"stream_name":"stdout","time":2389.885707029,"data":"235                      region_postcentral_gyrus_n                                                                                                  184     \n"}
+,{"stream_name":"stdout","time":2389.885712427,"data":"236                region_postcentral_gyrus_auc_pls                                                                                              0.71691     \n"}
+,{"stream_name":"stdout","time":2389.885718228,"data":"237               region_postcentral_gyrus_auc_cvae                                                                                             0.727337     \n"}
+,{"stream_name":"stdout","time":2389.885723944,"data":"238             region_posterior_cingulate_cortex_n                                                                                                  153     \n"}
+,{"stream_name":"stdout","time":2389.885728673,"data":"239       region_posterior_cingulate_cortex_auc_pls                                                                                             0.642422     \n"}
+,{"stream_name":"stdout","time":2389.885737293,"data":"240      region_posterior_cingulate_cortex_auc_cvae                                                                                             0.672256     \n"}
+,{"stream_name":"stdout","time":2389.885742166,"data":"241                       region_precentral_gyrus_n                                                                                                  145     \n"}
+,{"stream_name":"stdout","time":2389.885746872,"data":"242                 region_precentral_gyrus_auc_pls                                                                                             0.659148     \n"}
+,{"stream_name":"stdout","time":2389.885751573,"data":"243                region_precentral_gyrus_auc_cvae                                                                                             0.659148     \n"}
+,{"stream_name":"stdout","time":2389.885756287,"data":"244                      region_prefrontal_cortex_n                                                                                                 1798     \n"}
+,{"stream_name":"stdout","time":2389.885761479,"data":"245                region_prefrontal_cortex_auc_pls                                                                                             0.927077     \n"}
+,{"stream_name":"stdout","time":2389.885766249,"data":"246               region_prefrontal_cortex_auc_cvae                                                                                              0.94633     \n"}
+,{"stream_name":"stdout","time":2389.885771074,"data":"247                 region_superior_frontal_gyrus_n                                                                                                  172     \n"}
+,{"stream_name":"stdout","time":2389.885775996,"data":"248           region_superior_frontal_gyrus_auc_pls                                                                                             0.753611     \n"}
+,{"stream_name":"stdout","time":2389.885785504,"data":"249          region_superior_frontal_gyrus_auc_cvae                                                                                             0.751944     \n"}
+,{"stream_name":"stdout","time":2389.885800948,"data":"250               region_superior_parietal_lobule_n                                                                                                  124     \n"}
+,{"stream_name":"stdout","time":2389.885806418,"data":"251         region_superior_parietal_lobule_auc_pls                                                                                              0.62963     \n"}
+,{"stream_name":"stdout","time":2389.885812078,"data":"252        region_superior_parietal_lobule_auc_cvae                                                                                             0.713753     \n"}
+,{"stream_name":"stdout","time":2389.885817684,"data":"253                region_superior_temporal_gyrus_n                                                                                                  177     \n"}
+,{"stream_name":"stdout","time":2389.885823552,"data":"254          region_superior_temporal_gyrus_auc_pls                                                                                             0.563189     \n"}
+,{"stream_name":"stdout","time":2389.885829456,"data":"255         region_superior_temporal_gyrus_auc_cvae                                                                                             0.602981     \n"}
+,{"stream_name":"stdout","time":2389.885834227,"data":"256                        region_temporal_cortex_n                                                                                                  310     \n"}
+,{"stream_name":"stdout","time":2389.885839021,"data":"257                  region_temporal_cortex_auc_pls                                                                                             0.997126     \n"}
+,{"stream_name":"stdout","time":2389.885848073,"data":"258                 region_temporal_cortex_auc_cvae                                                                                             0.976909     \n"}
+,{"stream_name":"stdout","time":2389.885852919,"data":"259                          region_temporal_pole_n                                                                                                  164     \n"}
+,{"stream_name":"stdout","time":2389.885857678,"data":"260                    region_temporal_pole_auc_pls                                                                                             0.808947     \n"}
+,{"stream_name":"stdout","time":2389.885862478,"data":"261                   region_temporal_pole_auc_cvae                                                                                              0.76193     \n"}
+,{"stream_name":"stdout","time":2389.885867258,"data":"262                                 mean_epochs_run                                                                                                51.25     \n"}
+,{"stream_name":"stdout","time":2389.885872172,"data":"\n"}
+,{"stream_name":"stdout","time":2389.885876307,"data":"All CSVs written to /kaggle/working\n"}
+,{"stream_name":"stdout","time":2389.885884788,"data":"['CVAE_downregulated_genes.csv', 'CVAE_gene_significance.csv', 'CVAE_upregulated_genes.csv', 'PLSDA_downregulated_genes.csv', 'PLSDA_gene_significance.csv', 'PLSDA_upregulated_genes.csv', '__notebook__.ipynb', 'cohort_summary.csv', 'confusion_matrices.csv', 'consensus_significant_genes.csv', 'env_report.csv', 'gene_de_stats.csv', 'ig_null.npy', 'ig_real.npy', 'latent_coords_representative.csv', 'latent_embeddings.csv', 'latent_gene_weights_CVAE_neutral.npy', 'latent_gene_weights_CVAE_true.npy', 'latent_gene_weights_PLS-DA.npy', 'latent_snr.csv', 'oof_predictions.csv', 'oof_reconstruction.csv', 'oof_uncertainty.csv', 'pr_curves_raw.csv', 'recon_scatter_representative.csv', 'roc_curves_raw.csv', 'run_metrics.csv', 'sample_metadata.csv', 'summary_scalars.csv', 'vip_null.npy', 'vip_real.npy']\n"}
+,{"stream_name":"stdout","time":2392.047517234,"data":"plsda_up: 34 genes -\u003e 23 enriched terms\n"}
+,{"stream_name":"stdout","time":2395.186280763,"data":"plsda_down: 16 genes -\u003e 153 enriched terms\n"}
+,{"stream_name":"stdout","time":2397.019350169,"data":"cvae_up: 35 genes -\u003e 2 enriched terms\n"}
+,{"stream_name":"stdout","time":2398.775642355,"data":"cvae_down: 23 genes -\u003e 33 enriched terms\n"}
+,{"stream_name":"stdout","time":2398.77567912,"data":"\n"}
+,{"stream_name":"stdout","time":2398.775684415,"data":"enrichment written to /kaggle/working/enrichment\n"}
+,{"stream_name":"stdout","time":2398.940188123,"data":"                                      key       value\n"}
+,{"stream_name":"stdout","time":2398.940227732,"data":"                   repro_cvae_n_reference   12.000000\n"}
+,{"stream_name":"stdout","time":2398.940233083,"data":"                     repro_cvae_n_current   75.000000\n"}
+,{"stream_name":"stdout","time":2398.940237058,"data":"                      repro_cvae_n_shared    1.000000\n"}
+,{"stream_name":"stdout","time":2398.940241262,"data":"                       repro_cvae_jaccard    0.011628\n"}
+,{"stream_name":"stdout","time":2398.940309165,"data":"     repro_cvae_frac_current_in_reference    0.013333\n"}
+,{"stream_name":"stdout","time":2398.940312658,"data":"    repro_cvae_reference_median_rank_here  713.000000\n"}
+,{"stream_name":"stdout","time":2398.940315322,"data":"       repro_cvae_reference_max_rank_here 1767.000000\n"}
+,{"stream_name":"stdout","time":2398.940317892,"data":"   repro_cvae_reference_frac_in_top_fifty    0.333333\n"}
+,{"stream_name":"stdout","time":2398.940362193,"data":" repro_cvae_reference_frac_in_top_hundred    0.333333\n"}
+,{"stream_name":"stdout","time":2398.940367608,"data":"                  repro_plsda_n_reference   45.000000\n"}
+,{"stream_name":"stdout","time":2398.940372219,"data":"                    repro_plsda_n_current   54.000000\n"}
+,{"stream_name":"stdout","time":2398.940376407,"data":"                     repro_plsda_n_shared    2.000000\n"}
+,{"stream_name":"stdout","time":2398.940380346,"data":"                      repro_plsda_jaccard    0.020619\n"}
+,{"stream_name":"stdout","time":2398.940384487,"data":"    repro_plsda_frac_current_in_reference    0.037037\n"}
+,{"stream_name":"stdout","time":2398.940388885,"data":"   repro_plsda_reference_median_rank_here  878.000000\n"}
+,{"stream_name":"stdout","time":2398.940393261,"data":"      repro_plsda_reference_max_rank_here 5450.000000\n"}
+,{"stream_name":"stdout","time":2398.940398103,"data":"  repro_plsda_reference_frac_in_top_fifty    0.071429\n"}
+,{"stream_name":"stdout","time":2398.940402183,"data":"repro_plsda_reference_frac_in_top_hundred    0.142857\n"}
+,{"stream_name":"stdout","time":2399.010174167,"data":"wrote /kaggle/working/values.tex with 289 macros\n"}
+,{"stream_name":"stdout","time":2399.010228423,"data":"% Generated by scripts/make_macros.py -- do not edit by hand.\n"}
+,{"stream_name":"stdout","time":2399.010235566,"data":"% Sources: data/summary_scalars.csv, data/reproducibility.csv, data/enrichment_counts.csv\n"}
+,{"stream_name":"stdout","time":2399.010240139,"data":"\n"}
+,{"stream_name":"stdout","time":2399.010244783,"data":"\\newcommand{\\vAccPlsMean}{0.769}\n"}
+,{"stream_name":"stdout","time":2399.01024995,"data":"\\newcommand{\\vAccPlsSd}{0.032}\n"}
+,{"stream_name":"stdout","time":2399.010254311,"data":"\\newcommand{\\vAucPlsMean}{0.814}\n"}
+,{"stream_name":"stdout","time":2399.010258113,"data":"\\newcommand{\\vAucPlsSd}{0.044}\n"}
+,{"stream_name":"stdout","time":2399.010262037,"data":"\\newcommand{\\vApPlsMean}{0.881}\n"}
+,{"stream_name":"stdout","time":2399.010265985,"data":"\\newcommand{\\vApPlsSd}{0.035}\n"}
+,{"stream_name":"stdout","time":2399.010269951,"data":"\\newcommand{\\vAccCvaeLatTrueMean}{0.805}\n"}
+,{"stream_name":"stdout","time":2399.010273978,"data":"\\newcommand{\\vAccCvaeLatTrueSd}{0.033}\n"}
+,{"stream_name":"stdout","time":2399.01027977,"data":"\\newcommand{\\vAucCvaeLatTrueMean}{0.864}\n"}
+,{"stream_name":"stdout","time":2399.01028825,"data":"\\newcommand{\\vAucCvaeLatTrueSd}{0.036}\n"}
+,{"stream_name":"stdout","time":2399.010291391,"data":"\\newcommand{\\vApCvaeLatTrueMean}{0.915}\n"}
+,{"stream_name":"stdout","time":2399.010293982,"data":"\\newcommand{\\vApCvaeLatTrueSd}{0.031}\n"}
+,{"stream_name":"stdout","time":2399.01029706,"data":"\\newcommand{\\vAccCvaeLatNeutralMean}{0.790}\n"}
+,{"stream_name":"stdout","time":2399.01030105,"data":"\\newcommand{\\vAccCvaeLatNeutralSd}{0.032}\n"}
+,{"stream_name":"stdout","time":2399.010304941,"data":"\\newcommand{\\vAucCvaeLatNeutralMean}{0.847}\n"}
+,{"stream_name":"stdout","time":2399.010323694,"data":"\\newcommand{\\vAucCvaeLatNeutralSd}{0.036}\n"}
+,{"stream_name":"stdout","time":2399.010328621,"data":"\\newcommand{\\vApCvaeLatNeutralMean}{0.905}\n"}
+,{"stream_name":"stdout","time":2399.01033315,"data":"\\newcommand{\\vApCvaeLatNeutralSd}{0.033}\n"}
+,{"stream_name":"stdout","time":2399.010337461,"data":"\\newcommand{\\vAccCvaeHeadTrueMean}{0.802}\n"}
+,{"stream_name":"stdout","time":2399.01034215,"data":"\\newcommand{\\vAccCvaeHeadTrueSd}{0.033}\n"}
+,{"stream_name":"stdout","time":2399.010346821,"data":"\\newcommand{\\vAucCvaeHeadTrueMean}{0.858}\n"}
+,{"stream_name":"stdout","time":2399.010366807,"data":"\\newcommand{\\vAucCvaeHeadTrueSd}{0.039}\n"}
+,{"stream_name":"stdout","time":2399.010370818,"data":"\\newcommand{\\vAccCvaeHeadNeutralMean}{0.788}\n"}
+,{"stream_name":"stdout","time":2399.010374807,"data":"\\newcommand{\\vAccCvaeHeadNeutralSd}{0.030}\n"}
+,{"stream_name":"stdout","time":2399.010378657,"data":"\\newcommand{\\vAucCvaeHeadNeutralMean}{0.842}\n"}
+,{"stream_name":"stdout","time":2399.010382618,"data":"\\newcommand{\\vAucCvaeHeadNeutralSd}{0.039}\n"}
+,{"stream_name":"stdout","time":2399.010386504,"data":"\\newcommand{\\vSilPlsMean}{0.067}\n"}
+,{"stream_name":"stdout","time":2399.010390543,"data":"\\newcommand{\\vSilPlsSd}{0.019}\n"}
+,{"stream_name":"stdout","time":2399.010400359,"data":"\\newcommand{\\vAriPlsMean}{0.058}\n"}
+,{"stream_name":"stdout","time":2399.010404296,"data":"\\newcommand{\\vAriPlsSd}{0.048}\n"}
+,{"stream_name":"stdout","time":2399.010407076,"data":"\\newcommand{\\vDbPlsMean}{3.057}\n"}
+,{"stream_name":"stdout","time":2399.010410759,"data":"\\newcommand{\\vDbPlsSd}{0.405}\n"}
+,{"stream_name":"stdout","time":2399.010427898,"data":"\\newcommand{\\vChPlsMean}{26.59}\n"}
+,{"stream_name":"stdout","time":2399.010432544,"data":"\\newcommand{\\vChPlsSd}{6.484}\n"}
+,{"stream_name":"stdout","time":2399.010437307,"data":"\\newcommand{\\vIirPlsMean}{0.665}\n"}
+,{"stream_name":"stdout","time":2399.010442369,"data":"\\newcommand{\\vIirPlsSd}{0.086}\n"}
+,{"stream_name":"stdout","time":2399.010447027,"data":"\\newcommand{\\vSilCvaeTrueMean}{0.176}\n"}
+,{"stream_name":"stdout","time":2399.010451176,"data":"\\newcommand{\\vSilCvaeTrueSd}{0.054}\n"}
+,{"stream_name":"stdout","time":2399.010455073,"data":"\\newcommand{\\vAriCvaeTrueMean}{0.143}\n"}
+,{"stream_name":"stdout","time":2399.010458952,"data":"\\newcommand{\\vAriCvaeTrueSd}{0.163}\n"}
+,{"stream_name":"stdout","time":2399.010462826,"data":"\\newcommand{\\vDbCvaeTrueMean}{1.885}\n"}
+,{"stream_name":"stdout","time":2399.010466698,"data":"\\newcommand{\\vDbCvaeTrueSd}{0.366}\n"}
+,{"stream_name":"stdout","time":2399.010470511,"data":"\\newcommand{\\vChCvaeTrueMean}{69.50}\n"}
+,{"stream_name":"stdout","time":2399.010474384,"data":"\\newcommand{\\vChCvaeTrueSd}{34.32}\n"}
+,{"stream_name":"stdout","time":2399.010478241,"data":"\\newcommand{\\vIirCvaeTrueMean}{1.104}\n"}
+,{"stream_name":"stdout","time":2399.010482081,"data":"\\newcommand{\\vIirCvaeTrueSd}{0.238}\n"}
+,{"stream_name":"stdout","time":2399.010485906,"data":"\\newcommand{\\vSilCvaeNeutralMean}{0.159}\n"}
+,{"stream_name":"stdout","time":2399.010497338,"data":"\\newcommand{\\vSilCvaeNeutralSd}{0.048}\n"}
+,{"stream_name":"stdout","time":2399.010501519,"data":"\\newcommand{\\vAriCvaeNeutralMean}{0.130}\n"}
+,{"stream_name":"stdout","time":2399.010522391,"data":"\\newcommand{\\vAriCvaeNeutralSd}{0.145}\n"}
+,{"stream_name":"stdout","time":2399.010527301,"data":"\\newcommand{\\vDbCvaeNeutralMean}{1.998}\n"}
+,{"stream_name":"stdout","time":2399.010531971,"data":"\\newcommand{\\vDbCvaeNeutralSd}{0.385}\n"}
+,{"stream_name":"stdout","time":2399.010536399,"data":"\\newcommand{\\vChCvaeNeutralMean}{61.58}\n"}
+,{"stream_name":"stdout","time":2399.010540851,"data":"\\newcommand{\\vChCvaeNeutralSd}{28.78}\n"}
+,{"stream_name":"stdout","time":2399.010545489,"data":"\\newcommand{\\vIirCvaeNeutralMean}{1.040}\n"}
+,{"stream_name":"stdout","time":2399.010549733,"data":"\\newcommand{\\vIirCvaeNeutralSd}{0.219}\n"}
+,{"stream_name":"stdout","time":2399.01055375,"data":"\\newcommand{\\vMsePlsMeanMean}{0.667}\n"}
+,{"stream_name":"stdout","time":2399.010557515,"data":"\\newcommand{\\vMsePlsMeanSd}{0.020}\n"}
+,{"stream_name":"stdout","time":2399.010561439,"data":"\\newcommand{\\vMseCvaeTrueMeanMean}{0.913}\n"}
+,{"stream_name":"stdout","time":2399.01056991,"data":"\\newcommand{\\vMseCvaeTrueMeanSd}{0.048}\n"}
+,{"stream_name":"stdout","time":2399.010573867,"data":"\\newcommand{\\vMseCvaeNeutralMeanMean}{0.920}\n"}
+,{"stream_name":"stdout","time":2399.010577893,"data":"\\newcommand{\\vMseCvaeNeutralMeanSd}{0.050}\n"}
+,{"stream_name":"stdout","time":2399.010581927,"data":"\\newcommand{\\vAccCvaeTrueVsPlsT}{4.322}\n"}
+,{"stream_name":"stdout","time":2399.010585783,"data":"\\newcommand{\\vAccCvaeTrueVsPlsP}{0.0004}\n"}
+,{"stream_name":"stdout","time":2399.010589722,"data":"\\newcommand{\\vAccCvaeTrueVsPlsCohenDz}{0.966}\n"}
+,{"stream_name":"stdout","time":2399.010593932,"data":"\\newcommand{\\vAucCvaeTrueVsPlsT}{5.550}\n"}
+,{"stream_name":"stdout","time":2399.010597796,"data":"\\newcommand{\\vAucCvaeTrueVsPlsP}{2.4\\times 10^{-5}}\n"}
+,{"stream_name":"stdout","time":2399.010601926,"data":"\\newcommand{\\vAucCvaeTrueVsPlsCohenDz}{1.241}\n"}
+,{"stream_name":"stdout","time":2399.010607765,"data":"\\newcommand{\\vAccCvaeNeutralVsPlsT}{2.589}\n"}
+,{"stream_name":"stdout","time":2399.010611919,"data":"\\newcommand{\\vAccCvaeNeutralVsPlsP}{0.018}\n"}
+,{"stream_name":"stdout","time":2399.010617667,"data":"\\newcommand{\\vAccCvaeNeutralVsPlsCohenDz}{0.579}\n"}
+,{"stream_name":"stdout","time":2399.010622157,"data":"\\newcommand{\\vAucCvaeNeutralVsPlsT}{4.026}\n"}
+,{"stream_name":"stdout","time":2399.010626934,"data":"\\newcommand{\\vAucCvaeNeutralVsPlsP}{0.0007}\n"}
+,{"stream_name":"stdout","time":2399.010631747,"data":"\\newcommand{\\vAucCvaeNeutralVsPlsCohenDz}{0.900}\n"}
+,{"stream_name":"stdout","time":2399.010636613,"data":"\\newcommand{\\vAccCvaeTrueVsNeutralT}{15.06}\n"}
+,{"stream_name":"stdout","time":2399.01064125,"data":"\\newcommand{\\vAccCvaeTrueVsNeutralP}{5.2\\times 10^{-12}}\n"}
+,{"stream_name":"stdout","time":2399.010645192,"data":"\\newcommand{\\vAccCvaeTrueVsNeutralCohenDz}{3.367}\n"}
+,{"stream_name":"stdout","time":2399.010649124,"data":"\\newcommand{\\vAucCvaeTrueVsNeutralT}{16.43}\n"}
+,{"stream_name":"stdout","time":2399.010653121,"data":"\\newcommand{\\vAucCvaeTrueVsNeutralP}{1.1\\times 10^{-12}}\n"}
+,{"stream_name":"stdout","time":2399.010657054,"data":"\\newcommand{\\vAucCvaeTrueVsNeutralCohenDz}{3.673}\n"}
+,{"stream_name":"stdout","time":2399.01066105,"data":"\\newcommand{\\vReconCvaeTrueVsPlsWilcoxonP}{0}\n"}
+,{"stream_name":"stdout","time":2399.010664977,"data":"\\newcommand{\\vReconCvaeTrueVsPlsTtestP}{0}\n"}
+,{"stream_name":"stdout","time":2399.010668944,"data":"\\newcommand{\\vReconCvaeTrueVsPlsCohenDz}{1.179}\n"}
+,{"stream_name":"stdout","time":2399.010672923,"data":"\\newcommand{\\vReconCvaeTrueVsPlsRankBiserial}{0.997}\n"}
+,{"stream_name":"stdout","time":2399.010676928,"data":"\\newcommand{\\vReconCvaeNeutralVsPlsWilcoxonP}{0}\n"}
+,{"stream_name":"stdout","time":2399.010680844,"data":"\\newcommand{\\vReconCvaeNeutralVsPlsTtestP}{0}\n"}
+,{"stream_name":"stdout","time":2399.010684762,"data":"\\newcommand{\\vReconCvaeNeutralVsPlsCohenDz}{1.183}\n"}
+,{"stream_name":"stdout","time":2399.010688727,"data":"\\newcommand{\\vReconCvaeNeutralVsPlsRankBiserial}{0.997}\n"}
+,{"stream_name":"stdout","time":2399.010692599,"data":"\\newcommand{\\vReconNOofSamples}{6{,}262}\n"}
+,{"stream_name":"stdout","time":2399.010698483,"data":"\\newcommand{\\vReconMsePlsControlMean}{0.636}\n"}
+,{"stream_name":"stdout","time":2399.010706729,"data":"\\newcommand{\\vReconMsePlsControlSd}{0.334}\n"}
+,{"stream_name":"stdout","time":2399.010723041,"data":"\\newcommand{\\vReconMseCvaeTrueControlMean}{0.875}\n"}
+,{"stream_name":"stdout","time":2399.010727814,"data":"\\newcommand{\\vReconMseCvaeTrueControlSd}{0.451}\n"}
+,{"stream_name":"stdout","time":2399.010737039,"data":"\\newcommand{\\vReconNControl}{2{,}099}\n"}
+,{"stream_name":"stdout","time":2399.010741978,"data":"\\newcommand{\\vReconMsePlsADMean}{0.682}\n"}
+,{"stream_name":"stdout","time":2399.010746581,"data":"\\newcommand{\\vReconMsePlsADSd}{0.351}\n"}
+,{"stream_name":"stdout","time":2399.010750515,"data":"\\newcommand{\\vReconMseCvaeTrueADMean}{0.933}\n"}
+,{"stream_name":"stdout","time":2399.010754347,"data":"\\newcommand{\\vReconMseCvaeTrueADSd}{0.474}\n"}
+,{"stream_name":"stdout","time":2399.010758224,"data":"\\newcommand{\\vReconNAD}{4{,}163}\n"}
+,{"stream_name":"stdout","time":2399.010762036,"data":"\\newcommand{\\vReconGroupPlsMannwhitneyP}{5.4\\times 10^{-17}}\n"}
+,{"stream_name":"stdout","time":2399.010765998,"data":"\\newcommand{\\vReconGroupCvaetrueMannwhitneyP}{5.5\\times 10^{-14}}\n"}
+,{"stream_name":"stdout","time":2399.010770396,"data":"\\newcommand{\\vReconGroupCvaeneutralMannwhitneyP}{1.1\\times 10^{-12}}\n"}
+,{"stream_name":"stdout","time":2399.010774486,"data":"\\newcommand{\\vCmPlsSensitivity}{0.830}\n"}
+,{"stream_name":"stdout","time":2399.01077839,"data":"\\newcommand{\\vCmPlsSpecificity}{0.647}\n"}
+,{"stream_name":"stdout","time":2399.01078526,"data":"\\newcommand{\\vCmPlsPrecision}{0.823}\n"}
+,{"stream_name":"stdout","time":2399.010789087,"data":"\\newcommand{\\vCmPlsBalancedAccuracy}{0.738}\n"}
+,{"stream_name":"stdout","time":2399.010792969,"data":"\\newcommand{\\vCmCvaetrueSensitivity}{0.891}\n"}
+,{"stream_name":"stdout","time":2399.010796816,"data":"\\newcommand{\\vCmCvaetrueSpecificity}{0.633}\n"}
+,{"stream_name":"stdout","time":2399.010807052,"data":"\\newcommand{\\vCmCvaetruePrecision}{0.828}\n"}
+,{"stream_name":"stdout","time":2399.010824482,"data":"\\newcommand{\\vCmCvaetrueBalancedAccuracy}{0.762}\n"}
+,{"stream_name":"stdout","time":2399.010830413,"data":"\\newcommand{\\vCmCvaeneutralSensitivity}{0.880}\n"}
+,{"stream_name":"stdout","time":2399.01083494,"data":"\\newcommand{\\vCmCvaeneutralSpecificity}{0.610}\n"}
+,{"stream_name":"stdout","time":2399.010839262,"data":"\\newcommand{\\vCmCvaeneutralPrecision}{0.817}\n"}
+,{"stream_name":"stdout","time":2399.010844077,"data":"\\newcommand{\\vCmCvaeneutralBalancedAccuracy}{0.745}\n"}
+,{"stream_name":"stdout","time":2399.010848447,"data":"\\newcommand{\\vProbPlsADMean}{0.808}\n"}
+,{"stream_name":"stdout","time":2399.010852251,"data":"\\newcommand{\\vProbPlsControlMean}{0.355}\n"}
+,{"stream_name":"stdout","time":2399.010856167,"data":"\\newcommand{\\vProbPlsGap}{0.453}\n"}
+,{"stream_name":"stdout","time":2399.010860408,"data":"\\newcommand{\\vProbPlsMannwhitneyP}{0}\n"}
+,{"stream_name":"stdout","time":2399.010864239,"data":"\\newcommand{\\vProbPlsFracAmbiguous}{0.052}\n"}
+,{"stream_name":"stdout","time":2399.010868064,"data":"\\newcommand{\\vProbCvaelatADMean}{0.858}\n"}
+,{"stream_name":"stdout","time":2399.010871867,"data":"\\newcommand{\\vProbCvaelatControlMean}{0.384}\n"}
+,{"stream_name":"stdout","time":2399.010875734,"data":"\\newcommand{\\vProbCvaelatGap}{0.474}\n"}
+,{"stream_name":"stdout","time":2399.010879546,"data":"\\newcommand{\\vProbCvaelatMannwhitneyP}{0}\n"}
+,{"stream_name":"stdout","time":2399.010883387,"data":"\\newcommand{\\vProbCvaelatFracAmbiguous}{0.057}\n"}
+,{"stream_name":"stdout","time":2399.010887313,"data":"\\newcommand{\\vProbCvaeheadADMean}{0.864}\n"}
+,{"stream_name":"stdout","time":2399.01089131,"data":"\\newcommand{\\vProbCvaeheadControlMean}{0.342}\n"}
+,{"stream_name":"stdout","time":2399.010895134,"data":"\\newcommand{\\vProbCvaeheadGap}{0.522}\n"}
+,{"stream_name":"stdout","time":2399.010898979,"data":"\\newcommand{\\vProbCvaeheadMannwhitneyP}{0}\n"}
+,{"stream_name":"stdout","time":2399.010908561,"data":"\\newcommand{\\vProbCvaeheadFracAmbiguous}{0.034}\n"}
+,{"stream_name":"stdout","time":2399.01092855,"data":"\\newcommand{\\vKlTrueADMean}{1.071}\n"}
+,{"stream_name":"stdout","time":2399.010933641,"data":"\\newcommand{\\vKlTrueADMedian}{0.275}\n"}
+,{"stream_name":"stdout","time":2399.010938399,"data":"\\newcommand{\\vKlTrueControlMean}{0.846}\n"}
+,{"stream_name":"stdout","time":2399.010943022,"data":"\\newcommand{\\vKlTrueControlMedian}{0.315}\n"}
+,{"stream_name":"stdout","time":2399.01094749,"data":"\\newcommand{\\vKlTrueMannwhitneyP}{0.0002}\n"}
+,{"stream_name":"stdout","time":2399.010951431,"data":"\\newcommand{\\vKlTruePctIncreaseAD}{26.56}\n"}
+,{"stream_name":"stdout","time":2399.010955018,"data":"\\newcommand{\\vMeanvarTrueADMean}{0.904}\n"}
+,{"stream_name":"stdout","time":2399.010958858,"data":"\\newcommand{\\vMeanvarTrueADMedian}{0.943}\n"}
+,{"stream_name":"stdout","time":2399.010962666,"data":"\\newcommand{\\vMeanvarTrueControlMean}{0.912}\n"}
+,{"stream_name":"stdout","time":2399.01096657,"data":"\\newcommand{\\vMeanvarTrueControlMedian}{0.946}\n"}
+,{"stream_name":"stdout","time":2399.010970373,"data":"\\newcommand{\\vMeanvarTrueMannwhitneyP}{0.1244}\n"}
+,{"stream_name":"stdout","time":2399.010974781,"data":"\\newcommand{\\vMeanvarTruePctIncreaseAD}{-0.812}\n"}
+,{"stream_name":"stdout","time":2399.011007007,"data":"\\newcommand{\\vKlNeutralADMean}{1.059}\n"}
+,{"stream_name":"stdout","time":2399.011013049,"data":"\\newcommand{\\vKlNeutralADMedian}{0.272}\n"}
+,{"stream_name":"stdout","time":2399.011016939,"data":"\\newcommand{\\vKlNeutralControlMean}{0.834}\n"}
+,{"stream_name":"stdout","time":2399.011020939,"data":"\\newcommand{\\vKlNeutralControlMedian}{0.313}\n"}
+,{"stream_name":"stdout","time":2399.011024856,"data":"\\newcommand{\\vKlNeutralMannwhitneyP}{0.0004}\n"}
+,{"stream_name":"stdout","time":2399.01102878,"data":"\\newcommand{\\vKlNeutralPctIncreaseAD}{27.05}\n"}
+,{"stream_name":"stdout","time":2399.011032622,"data":"\\newcommand{\\vMeanvarNeutralADMean}{0.905}\n"}
+,{"stream_name":"stdout","time":2399.011036596,"data":"\\newcommand{\\vMeanvarNeutralADMedian}{0.943}\n"}
+,{"stream_name":"stdout","time":2399.011040452,"data":"\\newcommand{\\vMeanvarNeutralControlMean}{0.912}\n"}
+,{"stream_name":"stdout","time":2399.011044416,"data":"\\newcommand{\\vMeanvarNeutralControlMedian}{0.946}\n"}
+,{"stream_name":"stdout","time":2399.011048407,"data":"\\newcommand{\\vMeanvarNeutralMannwhitneyP}{0.1686}\n"}
+,{"stream_name":"stdout","time":2399.011052299,"data":"\\newcommand{\\vMeanvarNeutralPctIncreaseAD}{-0.772}\n"}
+,{"stream_name":"stdout","time":2399.011058505,"data":"\\newcommand{\\vUncNAD}{4{,}163}\n"}
+,{"stream_name":"stdout","time":2399.011066555,"data":"\\newcommand{\\vUncNControl}{2{,}099}\n"}
+,{"stream_name":"stdout","time":2399.011083739,"data":"\\newcommand{\\vNSigPlsda}{54}\n"}
+,{"stream_name":"stdout","time":2399.011088942,"data":"\\newcommand{\\vNSigCvae}{75}\n"}
+,{"stream_name":"stdout","time":2399.011093493,"data":"\\newcommand{\\vNOverlap}{18}\n"}
+,{"stream_name":"stdout","time":2399.011097633,"data":"\\newcommand{\\vJaccard}{0.162}\n"}
+,{"stream_name":"stdout","time":2399.011102597,"data":"\\newcommand{\\vConsensusGenes}{ADGRA3, AKAP9, ASCL1, BDNF, CARTPT, DGKG, GFAP, HBB, HBD, ITPKB, NAIP, NEBL, NPTX2, PEG10, POLR1D, QPRT, RPH3A, TRIL}\n"}
+,{"stream_name":"stdout","time":2399.011108023,"data":"\\newcommand{\\vSpearmanRhoVipIg}{0.089}\n"}
+,{"stream_name":"stdout","time":2399.011111799,"data":"\\newcommand{\\vSpearmanPVipIg}{5.4\\times 10^{-21}}\n"}
+,{"stream_name":"stdout","time":2399.011115638,"data":"\\newcommand{\\vNTotalDiscovered}{111}\n"}
+,{"stream_name":"stdout","time":2399.011119563,"data":"\\newcommand{\\vNPlsdaOnly}{36}\n"}
+,{"stream_name":"stdout","time":2399.011127554,"data":"\\newcommand{\\vNCvaeOnly}{57}\n"}
+,{"stream_name":"stdout","time":2399.011131582,"data":"\\newcommand{\\vNNotSignificant}{11{,}103}\n"}
+,{"stream_name":"stdout","time":2399.011135413,"data":"\\newcommand{\\vMeanStabilityPlsda}{0.717}\n"}
+,{"stream_name":"stdout","time":2399.011139257,"data":"\\newcommand{\\vMeanStabilityCvae}{0.571}\n"}
+,{"stream_name":"stdout","time":2399.011143427,"data":"\\newcommand{\\vNGenes}{11{,}214}\n"}
+,{"stream_name":"stdout","time":2399.011147248,"data":"\\newcommand{\\vNSubjects}{1{,}596}\n"}
+,{"stream_name":"stdout","time":2399.01115116,"data":"\\newcommand{\\vNAD}{1{,}059}\n"}
+,{"stream_name":"stdout","time":2399.011155156,"data":"\\newcommand{\\vNDonors}{817}\n"}
+,{"stream_name":"stdout","time":2399.011158982,"data":"\\newcommand{\\vNDonorsAD}{545}\n"}
+,{"stream_name":"stdout","time":2399.011169088,"data":"\\newcommand{\\vNDonorsControl}{272}\n"}
+,{"stream_name":"stdout","time":2399.011185387,"data":"\\newcommand{\\vAgeMin}{60.00}\n"}
+,{"stream_name":"stdout","time":2399.011189907,"data":"\\newcommand{\\vMeanTestDonors}{164.0}\n"}
+,{"stream_name":"stdout","time":2399.011194551,"data":"\\newcommand{\\vNCohorts}{5}\n"}
+,{"stream_name":"stdout","time":2399.011206305,"data":"\\newcommand{\\vAucAgeOnlyMean}{0.654}\n"}
+,{"stream_name":"stdout","time":2399.011211239,"data":"\\newcommand{\\vAucAgeOnlySd}{0.055}\n"}
+,{"stream_name":"stdout","time":2399.011215092,"data":"\\newcommand{\\vAucCohortOnlyMean}{0.609}\n"}
+,{"stream_name":"stdout","time":2399.011218948,"data":"\\newcommand{\\vAucCohortOnlySd}{0.014}\n"}
+,{"stream_name":"stdout","time":2399.011222793,"data":"\\newcommand{\\vAucPlsDonorMean}{0.889}\n"}
+,{"stream_name":"stdout","time":2399.011226661,"data":"\\newcommand{\\vAucPlsDonorSd}{0.019}\n"}
+,{"stream_name":"stdout","time":2399.011230487,"data":"\\newcommand{\\vAucCvaeLatTrueDonorMean}{0.946}\n"}
+,{"stream_name":"stdout","time":2399.011234421,"data":"\\newcommand{\\vAucCvaeLatTrueDonorSd}{0.026}\n"}
+,{"stream_name":"stdout","time":2399.011238344,"data":"\\newcommand{\\vAucCvaeLatNeutralDonorMean}{0.937}\n"}
+,{"stream_name":"stdout","time":2399.011242294,"data":"\\newcommand{\\vAucCvaeLatNeutralDonorSd}{0.025}\n"}
+,{"stream_name":"stdout","time":2399.011246108,"data":"\\newcommand{\\vCohortGseOneOneEightFiveFiveThreeN}{744}\n"}
+,{"stream_name":"stdout","time":2399.011250096,"data":"\\newcommand{\\vCohortGseOneOneEightFiveFiveThreeAucPls}{0.989}\n"}
+,{"stream_name":"stdout","time":2399.011254037,"data":"\\newcommand{\\vCohortGseOneOneEightFiveFiveThreeAucCvae}{0.970}\n"}
+,{"stream_name":"stdout","time":2399.011260254,"data":"\\newcommand{\\vCohortGseOneThreeTwoNineZeroThreeN}{800}\n"}
+,{"stream_name":"stdout","time":2399.01126445,"data":"\\newcommand{\\vCohortGseOneThreeTwoNineZeroThreeAucPls}{0.939}\n"}
+,{"stream_name":"stdout","time":2399.011268149,"data":"\\newcommand{\\vCohortGseOneThreeTwoNineZeroThreeAucCvae}{0.949}\n"}
+,{"stream_name":"stdout","time":2399.01127406,"data":"\\newcommand{\\vCohortGseThreeThreeZeroZeroZeroN}{1{,}620}\n"}
+,{"stream_name":"stdout","time":2399.011280093,"data":"\\newcommand{\\vCohortGseThreeThreeZeroZeroZeroAucPls}{0.952}\n"}
+,{"stream_name":"stdout","time":2399.011284587,"data":"\\newcommand{\\vCohortGseThreeThreeZeroZeroZeroAucCvae}{0.963}\n"}
+,{"stream_name":"stdout","time":2399.011288924,"data":"\\newcommand{\\vCohortGseFourEightThreeFiveZeroN}{647}\n"}
+,{"stream_name":"stdout","time":2399.011293771,"data":"\\newcommand{\\vCohortGseFourEightThreeFiveZeroAucPls}{0.716}\n"}
+,{"stream_name":"stdout","time":2399.011298721,"data":"\\newcommand{\\vCohortGseFourEightThreeFiveZeroAucCvae}{0.732}\n"}
+,{"stream_name":"stdout","time":2399.011307392,"data":"\\newcommand{\\vCohortGseEightFourFourTwoTwoN}{2{,}451}\n"}
+,{"stream_name":"stdout","time":2399.011311366,"data":"\\newcommand{\\vCohortGseEightFourFourTwoTwoAucPls}{0.694}\n"}
+,{"stream_name":"stdout","time":2399.011315364,"data":"\\newcommand{\\vCohortGseEightFourFourTwoTwoAucCvae}{0.698}\n"}
+,{"stream_name":"stdout","time":2399.011319353,"data":"\\newcommand{\\vRegionAnteriorCingulateN}{184}\n"}
+,{"stream_name":"stdout","time":2399.011323234,"data":"\\newcommand{\\vRegionAnteriorCingulateAucPls}{0.757}\n"}
+,{"stream_name":"stdout","time":2399.011327148,"data":"\\newcommand{\\vRegionAnteriorCingulateAucCvae}{0.709}\n"}
+,{"stream_name":"stdout","time":2399.01133112,"data":"\\newcommand{\\vRegionDorsolateralPrefrontalCortexN}{166}\n"}
+,{"stream_name":"stdout","time":2399.011334984,"data":"\\newcommand{\\vRegionDorsolateralPrefrontalCortexAucPls}{0.652}\n"}
+,{"stream_name":"stdout","time":2399.011338874,"data":"\\newcommand{\\vRegionDorsolateralPrefrontalCortexAucCvae}{0.682}\n"}
+,{"stream_name":"stdout","time":2399.011342918,"data":"\\newcommand{\\vRegionEntorhinalCortexN}{342}\n"}
+,{"stream_name":"stdout","time":2399.011346736,"data":"\\newcommand{\\vRegionEntorhinalCortexAucPls}{0.855}\n"}
+,{"stream_name":"stdout","time":2399.011350813,"data":"\\newcommand{\\vRegionEntorhinalCortexAucCvae}{0.873}\n"}
+,{"stream_name":"stdout","time":2399.011354738,"data":"\\newcommand{\\vRegionFrontalCortexN}{214}\n"}
+,{"stream_name":"stdout","time":2399.011358773,"data":"\\newcommand{\\vRegionFrontalCortexAucPls}{0.978}\n"}
+,{"stream_name":"stdout","time":2399.01136931,"data":"\\newcommand{\\vRegionFrontalCortexAucCvae}{0.956}\n"}
+,{"stream_name":"stdout","time":2399.01138658,"data":"\\newcommand{\\vRegionFrontalPoleN}{184}\n"}
+,{"stream_name":"stdout","time":2399.011391331,"data":"\\newcommand{\\vRegionFrontalPoleAucPls}{0.668}\n"}
+,{"stream_name":"stdout","time":2399.011395918,"data":"\\newcommand{\\vRegionFrontalPoleAucCvae}{0.689}\n"}
+,{"stream_name":"stdout","time":2399.011400644,"data":"\\newcommand{\\vRegionHippocampusN}{331}\n"}
+,{"stream_name":"stdout","time":2399.011405387,"data":"\\newcommand{\\vRegionHippocampusAucPls}{0.606}\n"}
+,{"stream_name":"stdout","time":2399.011409508,"data":"\\newcommand{\\vRegionHippocampusAucCvae}{0.691}\n"}
+,{"stream_name":"stdout","time":2399.011413357,"data":"\\newcommand{\\vRegionInferiorFrontalGyrusN}{142}\n"}
+,{"stream_name":"stdout","time":2399.011417208,"data":"\\newcommand{\\vRegionInferiorFrontalGyrusAucPls}{0.725}\n"}
+,{"stream_name":"stdout","time":2399.01142109,"data":"\\newcommand{\\vRegionInferiorFrontalGyrusAucCvae}{0.746}\n"}
+,{"stream_name":"stdout","time":2399.011424919,"data":"\\newcommand{\\vRegionInferiorTemporalGyrusN}{166}\n"}
+,{"stream_name":"stdout","time":2399.01142875,"data":"\\newcommand{\\vRegionInferiorTemporalGyrusAucPls}{0.761}\n"}
+,{"stream_name":"stdout","time":2399.011432585,"data":"\\newcommand{\\vRegionInferiorTemporalGyrusAucCvae}{0.754}\n"}
+,{"stream_name":"stdout","time":2399.011436487,"data":"\\newcommand{\\vRegionMiddleTemporalGyrusN}{979}\n"}
+,{"stream_name":"stdout","time":2399.011440257,"data":"\\newcommand{\\vRegionMiddleTemporalGyrusAucPls}{0.886}\n"}
+,{"stream_name":"stdout","time":2399.01144409,"data":"\\newcommand{\\vRegionMiddleTemporalGyrusAucCvae}{0.916}\n"}
+,{"stream_name":"stdout","time":2399.011448259,"data":"\\newcommand{\\vRegionOccipitalVisualCortexN}{143}\n"}
+,{"stream_name":"stdout","time":2399.011452188,"data":"\\newcommand{\\vRegionOccipitalVisualCortexAucPls}{0.660}\n"}
+,{"stream_name":"stdout","time":2399.011456193,"data":"\\newcommand{\\vRegionOccipitalVisualCortexAucCvae}{0.643}\n"}
+,{"stream_name":"stdout","time":2399.011460141,"data":"\\newcommand{\\vRegionParahippocampalGyrusN}{184}\n"}
+,{"stream_name":"stdout","time":2399.011486087,"data":"\\newcommand{\\vRegionParahippocampalGyrusAucPls}{0.768}\n"}
+,{"stream_name":"stdout","time":2399.01149773,"data":"\\newcommand{\\vRegionParahippocampalGyrusAucCvae}{0.777}\n"}
+,{"stream_name":"stdout","time":2399.011502871,"data":"\\newcommand{\\vRegionPostcentralGyrusN}{184}\n"}
+,{"stream_name":"stdout","time":2399.011507612,"data":"\\newcommand{\\vRegionPostcentralGyrusAucPls}{0.717}\n"}
+,{"stream_name":"stdout","time":2399.01151211,"data":"\\newcommand{\\vRegionPostcentralGyrusAucCvae}{0.727}\n"}
+,{"stream_name":"stdout","time":2399.011516103,"data":"\\newcommand{\\vRegionPosteriorCingulateCortexN}{153}\n"}
+,{"stream_name":"stdout","time":2399.011520078,"data":"\\newcommand{\\vRegionPosteriorCingulateCortexAucPls}{0.642}\n"}
+,{"stream_name":"stdout","time":2399.011523987,"data":"\\newcommand{\\vRegionPosteriorCingulateCortexAucCvae}{0.672}\n"}
+,{"stream_name":"stdout","time":2399.011527918,"data":"\\newcommand{\\vRegionPrecentralGyrusN}{145}\n"}
+,{"stream_name":"stdout","time":2399.011531934,"data":"\\newcommand{\\vRegionPrecentralGyrusAucPls}{0.659}\n"}
+,{"stream_name":"stdout","time":2399.011535874,"data":"\\newcommand{\\vRegionPrecentralGyrusAucCvae}{0.659}\n"}
+,{"stream_name":"stdout","time":2399.011539841,"data":"\\newcommand{\\vRegionPrefrontalCortexN}{1{,}798}\n"}
+,{"stream_name":"stdout","time":2399.011543656,"data":"\\newcommand{\\vRegionPrefrontalCortexAucPls}{0.927}\n"}
+,{"stream_name":"stdout","time":2399.011547459,"data":"\\newcommand{\\vRegionPrefrontalCortexAucCvae}{0.946}\n"}
+,{"stream_name":"stdout","time":2399.011551444,"data":"\\newcommand{\\vRegionSuperiorFrontalGyrusN}{172}\n"}
+,{"stream_name":"stdout","time":2399.011555429,"data":"\\newcommand{\\vRegionSuperiorFrontalGyrusAucPls}{0.754}\n"}
+,{"stream_name":"stdout","time":2399.011559294,"data":"\\newcommand{\\vRegionSuperiorFrontalGyrusAucCvae}{0.752}\n"}
+,{"stream_name":"stdout","time":2399.01156319,"data":"\\newcommand{\\vRegionSuperiorParietalLobuleN}{124}\n"}
+,{"stream_name":"stdout","time":2399.011574194,"data":"\\newcommand{\\vRegionSuperiorParietalLobuleAucPls}{0.630}\n"}
+,{"stream_name":"stdout","time":2399.011590769,"data":"\\newcommand{\\vRegionSuperiorParietalLobuleAucCvae}{0.714}\n"}
+,{"stream_name":"stdout","time":2399.011595487,"data":"\\newcommand{\\vRegionSuperiorTemporalGyrusN}{177}\n"}
+,{"stream_name":"stdout","time":2399.011600242,"data":"\\newcommand{\\vRegionSuperiorTemporalGyrusAucPls}{0.563}\n"}
+,{"stream_name":"stdout","time":2399.011604316,"data":"\\newcommand{\\vRegionSuperiorTemporalGyrusAucCvae}{0.603}\n"}
+,{"stream_name":"stdout","time":2399.011609149,"data":"\\newcommand{\\vRegionTemporalCortexN}{310}\n"}
+,{"stream_name":"stdout","time":2399.011618991,"data":"\\newcommand{\\vRegionTemporalCortexAucPls}{0.997}\n"}
+,{"stream_name":"stdout","time":2399.011622945,"data":"\\newcommand{\\vRegionTemporalCortexAucCvae}{0.977}\n"}
+,{"stream_name":"stdout","time":2399.011626912,"data":"\\newcommand{\\vRegionTemporalPoleN}{164}\n"}
+,{"stream_name":"stdout","time":2399.011630741,"data":"\\newcommand{\\vRegionTemporalPoleAucPls}{0.809}\n"}
+,{"stream_name":"stdout","time":2399.011634607,"data":"\\newcommand{\\vRegionTemporalPoleAucCvae}{0.762}\n"}
+,{"stream_name":"stdout","time":2399.01163865,"data":"\\newcommand{\\vMeanEpochsRun}{51.25}\n"}
+,{"stream_name":"stdout","time":2399.01164245,"data":"\\newcommand{\\vReproCvaeNReference}{12.00}\n"}
+,{"stream_name":"stdout","time":2399.011646296,"data":"\\newcommand{\\vReproCvaeNCurrent}{75.00}\n"}
+,{"stream_name":"stdout","time":2399.011650182,"data":"\\newcommand{\\vReproCvaeNShared}{1.000}\n"}
+,{"stream_name":"stdout","time":2399.011657835,"data":"\\newcommand{\\vReproCvaeJaccard}{0.012}\n"}
+,{"stream_name":"stdout","time":2399.011661862,"data":"\\newcommand{\\vReproCvaeFracCurrentInReference}{0.013}\n"}
+,{"stream_name":"stdout","time":2399.011665856,"data":"\\newcommand{\\vReproCvaeReferenceMedianRankHere}{713.0}\n"}
+,{"stream_name":"stdout","time":2399.01167548,"data":"\\newcommand{\\vReproCvaeReferenceMaxRankHere}{1{,}767.0}\n"}
+,{"stream_name":"stdout","time":2399.011692329,"data":"\\newcommand{\\vReproCvaeReferenceFracInTopFifty}{0.333}\n"}
+,{"stream_name":"stdout","time":2399.011697088,"data":"\\newcommand{\\vReproCvaeReferenceFracInTopHundred}{0.333}\n"}
+,{"stream_name":"stdout","time":2399.011701875,"data":"\\newcommand{\\vReproPlsdaNReference}{45.00}\n"}
+,{"stream_name":"stdout","time":2399.01170624,"data":"\\newcommand{\\vReproPlsdaNCurrent}{54.00}\n"}
+,{"stream_name":"stdout","time":2399.011710898,"data":"\\newcommand{\\vReproPlsdaNShared}{2.000}\n"}
+,{"stream_name":"stdout","time":2399.011715372,"data":"\\newcommand{\\vReproPlsdaJaccard}{0.021}\n"}
+,{"stream_name":"stdout","time":2399.011719311,"data":"\\newcommand{\\vReproPlsdaFracCurrentInReference}{0.037}\n"}
+,{"stream_name":"stdout","time":2399.011723164,"data":"\\newcommand{\\vReproPlsdaReferenceMedianRankHere}{878.0}\n"}
+,{"stream_name":"stdout","time":2399.011727112,"data":"\\newcommand{\\vReproPlsdaReferenceMaxRankHere}{5{,}450.0}\n"}
+,{"stream_name":"stdout","time":2399.011731135,"data":"\\newcommand{\\vReproPlsdaReferenceFracInTopFifty}{0.071}\n"}
+,{"stream_name":"stdout","time":2399.011735221,"data":"\\newcommand{\\vReproPlsdaReferenceFracInTopHundred}{0.143}\n"}
+,{"stream_name":"stdout","time":2399.011739267,"data":"\\newcommand{\\vEnrPlsdaUpNGenes}{34.00}\n"}
+,{"stream_name":"stdout","time":2399.011743187,"data":"\\newcommand{\\vEnrPlsdaUpNTerms}{23.00}\n"}
+,{"stream_name":"stdout","time":2399.011747128,"data":"\\newcommand{\\vEnrPlsdaDownNGenes}{16.00}\n"}
+,{"stream_name":"stdout","time":2399.01175092,"data":"\\newcommand{\\vEnrPlsdaDownNTerms}{153.0}\n"}
+,{"stream_name":"stdout","time":2399.011754797,"data":"\\newcommand{\\vEnrCvaeUpNGenes}{35.00}\n"}
+,{"stream_name":"stdout","time":2399.011758826,"data":"\\newcommand{\\vEnrCvaeUpNTerms}{2.000}\n"}
+,{"stream_name":"stdout","time":2399.011762736,"data":"\\newcommand{\\vEnrCvaeDownNGenes}{23.00}\n"}
+,{"stream_name":"stdout","time":2399.011766717,"data":"\\newcommand{\\vEnrCvaeDownNTerms}{33.00}\n"}
+,{"stream_name":"stdout","time":2399.011772598,"data":"\n"}
+,{"stream_name":"stdout","time":2399.102650231,"data":"comparison with v5: 10/263 scalars unchanged from v5 (rel. tol 0.001)\n"}
+,{"stream_name":"stdout","time":2399.102689197,"data":"  close      10\n"}
+,{"stream_name":"stdout","time":2399.102695135,"data":"  drifted    161\n"}
+,{"stream_name":"stdout","time":2399.10269995,"data":"  new key    92\n"}
+,{"stream_name":"stdout","time":2399.102704694,"data":"\n"}
+,{"stream_name":"stdout","time":2399.102709053,"data":"headline values\n"}
+,{"stream_name":"stdout","time":2399.102713051,"data":"                                          published                                                                                             this_run   status\n"}
+,{"stream_name":"stdout","time":2399.102718332,"data":"key                                                                                                                                                              \n"}
+,{"stream_name":"stdout","time":2399.102722978,"data":"n_subjects                                      253                                                                                                 1596  drifted\n"}
+,{"stream_name":"stdout","time":2399.102727507,"data":"n_genes                                       21462                                                                                                11214  drifted\n"}
+,{"stream_name":"stdout","time":2399.102750396,"data":"acc_pls_mean                     0.8127450980392158                                                                                   0.7691829881851252  drifted\n"}
+,{"stream_name":"stdout","time":2399.102754751,"data":"auc_pls_mean                     0.8653571428571428                                                                                   0.8136567296586514  drifted\n"}
+,{"stream_name":"stdout","time":2399.102759104,"data":"acc_cvae_lat_true_mean           0.7921568627450982                                                                                   0.8046629284507987  drifted\n"}
+,{"stream_name":"stdout","time":2399.10276327,"data":"auc_cvae_lat_true_mean           0.8421428571428571                                                                                   0.8635421555187488  drifted\n"}
+,{"stream_name":"stdout","time":2399.10276754,"data":"sil_cvae_true_mean                       0.41243404                                                                                           0.17563327  drifted\n"}
+,{"stream_name":"stdout","time":2399.102772679,"data":"sil_pls_mean                    0.13979629158690474                                                                                  0.06660180461834954  drifted\n"}
+,{"stream_name":"stdout","time":2399.102777732,"data":"mse_pls_mean_mean                0.5410778384320537                                                                                   0.6674660609650196  drifted\n"}
+,{"stream_name":"stdout","time":2399.102784871,"data":"mse_cvae_true_mean_mean                  0.84534216                                                                                           0.91329926  drifted\n"}
+,{"stream_name":"stdout","time":2399.102789343,"data":"n_sig_plsda                                      45                                                                                                   54  drifted\n"}
+,{"stream_name":"stdout","time":2399.102793682,"data":"n_sig_cvae                                       12                                                                                                   75  drifted\n"}
+,{"stream_name":"stdout","time":2399.102797948,"data":"n_overlap                                         4                                                                                                   18  drifted\n"}
+,{"stream_name":"stdout","time":2399.10280221,"data":"jaccard                         0.07547169811320754                                                                                  0.16216216216216217  drifted\n"}
+,{"stream_name":"stdout","time":2399.102807373,"data":"consensus_genes          AHRR|C2orf74|HLA-DQA2|SLX4  ADGRA3|AKAP9|ASCL1|BDNF|CARTPT|DGKG|GFAP|HBB|HBD|ITPKB|NAIP|NEBL|NPTX2|PEG10|POLR1D|QPRT|RPH3A|TRIL  drifted\n"}
+,{"stream_name":"stdout","time":2399.102812939,"data":"spearman_rho_vip_ig             0.10060672494625085                                                                                  0.08860397455122057  drifted\n"}
+,{"stream_name":"stdout","time":2399.102818109,"data":"\n"}
+,{"stream_name":"stdout","time":2399.102821832,"data":"161 drifted scalars, largest relative change first\n"}
+,{"stream_name":"stdout","time":2399.102825736,"data":"                              key              published              this_run     rel_diff\n"}
+,{"stream_name":"stdout","time":2399.102829776,"data":"    meanvar_neutral_mannwhitney_p 1.1282479035118865e-05   0.16861825144079656 14944.142013\n"}
+,{"stream_name":"stdout","time":2399.102833985,"data":"       meanvar_true_mannwhitney_p 1.0238000622109085e-05    0.1243958852733889 12149.408060\n"}
+,{"stream_name":"stdout","time":2399.10284179,"data":"acc_cvae_true_vs_neutral_cohen_dz    0.22360679769897895    3.3665985883351937    14.055887\n"}
+,{"stream_name":"stdout","time":2399.102845888,"data":"       acc_cvae_true_vs_neutral_t                    1.0    15.055886596323699    14.055887\n"}
+,{"stream_name":"stdout","time":2399.10284988,"data":"                       recon_n_AD                    320                  4163    12.009375\n"}
+,{"stream_name":"stdout","time":2399.10285389,"data":"                         unc_n_AD                    320                  4163    12.009375\n"}
+,{"stream_name":"stdout","time":2399.102858386,"data":"                      n_cvae_only                      8                    57     6.125000\n"}
+,{"stream_name":"stdout","time":2399.102862407,"data":"                        db_pls_sd   0.059467219084365606    0.4054930930323241     5.818767\n"}
+,{"stream_name":"stdout","time":2399.102866488,"data":"                       n_subjects                    253                  1596     5.308300\n"}
+,{"stream_name":"stdout","time":2399.102871127,"data":"                       n_sig_cvae                     12                    75     5.250000\n"}
+,{"stream_name":"stdout","time":2399.102877149,"data":"              recon_n_oof_samples                   1020                  6262     5.139216\n"}
+,{"stream_name":"stdout","time":2399.10288123,"data":"auc_cvae_true_vs_neutral_cohen_dz     0.7758738282516776     3.673400170214539     3.734533\n"}
+,{"stream_name":"stdout","time":2399.102886993,"data":"       auc_cvae_true_vs_neutral_t      3.469813245751993    16.427944982033157     3.734533\n"}
+,{"stream_name":"stdout","time":2399.102890916,"data":"               db_cvae_neutral_sd    0.08306436680615459   0.38461481388055324     3.630323\n"}
+,{"stream_name":"stdout","time":2399.102895539,"data":"                        n_overlap                      4                    18     3.500000\n"}
+,{"stream_name":"stdout","time":2399.102900669,"data":"                  db_cvae_true_sd    0.08370953355075654    0.3660903623913946     3.373341\n"}
+,{"stream_name":"stdout","time":2399.102904511,"data":"    auc_cvae_true_vs_pls_cohen_dz    -0.5857094463454089     1.241052771476832     3.118888\n"}
+,{"stream_name":"stdout","time":2399.102908348,"data":"           auc_cvae_true_vs_pls_t     -2.619372274250288     5.550156721511494     3.118888\n"}
+,{"stream_name":"stdout","time":2399.1029121,"data":"           acc_cvae_true_vs_pls_t    -2.1462472202175036     4.322249182673332     3.013864\n"}
+,{"stream_name":"stdout","time":2399.102915939,"data":"    acc_cvae_true_vs_pls_cohen_dz     -0.479915468081443    0.9664842987887202     3.013864\n"}
+,{"stream_name":"stdout","time":2399.102919833,"data":"        auc_cvae_neutral_vs_pls_t     -2.747992915540682     4.025647388651047     2.464941\n"}
+,{"stream_name":"stdout","time":2399.102923609,"data":" auc_cvae_neutral_vs_pls_cohen_dz    -0.6144698960683586      0.90016212142274     2.464941\n"}
+,{"stream_name":"stdout","time":2399.102927307,"data":"            prob_pls_control_mean     0.1053383207914857   0.35505642695265605     2.370629\n"}
+,{"stream_name":"stdout","time":2399.102930975,"data":"        acc_cvae_neutral_vs_pls_t     -2.238015772274602    2.5891617335296107     2.156901\n"}
+,{"stream_name":"stdout","time":2399.102934913,"data":" acc_cvae_neutral_vs_pls_cohen_dz    -0.5004355401406588    0.5789541640749738     2.156901\n"}
+,{"stream_name":"stdout","time":2399.102938635,"data":"             db_cvae_neutral_mean      0.650215481544377     1.998262539758776     2.073231\n"}
+,{"stream_name":"stdout","time":2399.102942553,"data":"                    unc_n_control                    700                  2099     1.998571\n"}
+,{"stream_name":"stdout","time":2399.102946333,"data":"                  recon_n_Control                    700                  2099     1.998571\n"}
+,{"stream_name":"stdout","time":2399.102954775,"data":"                db_cvae_true_mean     0.6486732695327644    1.8845863303347148     1.905294\n"}
+,{"stream_name":"stdout","time":2399.102958464,"data":"       kl_neutral_pct_increase_AD    -32.143897517550954     27.04521526154508     1.841379\n"}
+,{"stream_name":"stdout","time":2399.102962495,"data":"          kl_true_pct_increase_AD    -32.110271810263725    26.561459927576653     1.827195\n"}
+,{"stream_name":"stdout","time":2399.10296642,"data":"                       iir_pls_sd   0.030914281713978742   0.08593598196924697     1.779815\n"}
+,{"stream_name":"stdout","time":2399.102972208,"data":"        prob_cvaelat_control_mean     0.1652155698305138    0.3837238446323273     1.322565\n"}
+,{"stream_name":"stdout","time":2399.102981388,"data":"     meanvar_true_pct_increase_AD     3.2551553257288504   -0.8123820078733169     1.249568\n"}
+,{"stream_name":"stdout","time":2399.103004849,"data":"  meanvar_neutral_pct_increase_AD     3.2370135892713146   -0.7724965087536749     1.238645\n"}
+,{"stream_name":"stdout","time":2399.103009167,"data":"                      db_pls_mean     1.4164704817029166    3.0574085449779638     1.158470\n"}
+,{"stream_name":"stdout","time":2399.103013286,"data":"                          jaccard    0.07547169811320754   0.16216216216216217     1.148649\n"}
+,{"stream_name":"stdout","time":2399.103017371,"data":"          prob_pls_frac_ambiguous   0.024509803921568627   0.05158096454806771     1.104503\n"}
+,{"stream_name":"stdout","time":2399.103021216,"data":"               n_total_discovered                     53                   111     1.094340\n"}
+,{"stream_name":"stdout","time":2399.10302519,"data":"    recon_group_pls_mannwhitney_p    0.16569471725747542 5.439691086021097e-17     1.000000\n"}
+,{"stream_name":"stdout","time":2399.253757148,"data":"263 scalars, 20 runs\n"}
+,{"stream_name":"stdout","time":2403.608648116,"data":"  figures/fig1_design.pdf + .png\n"}
+,{"stream_name":"stdout","time":2406.405927549,"data":"  figures/fig2_classification.pdf + .png\n"}
+,{"stream_name":"stdout","time":2408.597952466,"data":"  figures/fig3_latent_geometry.pdf + .png\n"}
+,{"stream_name":"stdout","time":2410.294319042,"data":"  figures/fig4_latent_separation.pdf + .png\n"}
+,{"stream_name":"stdout","time":2425.365813443,"data":"  figures/fig5_probability_landscape.pdf + .png\n"}
+,{"stream_name":"stdout","time":2427.62514532,"data":"  figures/fig6_reconstruction.pdf + .png\n"}
+,{"stream_name":"stdout","time":2429.772922898,"data":"  figures/fig7_uncertainty.pdf + .png\n"}
+,{"stream_name":"stdout","time":2430.901862511,"data":"  repel_labels: 1 label(s) had no collision-free spot\n"}
+,{"stream_name":"stdout","time":2438.974755631,"data":"  figures/fig8_gene_discovery.pdf + .png\n"}
+,{"stream_name":"stdout","time":2442.544408676,"data":"  figures/fig9_expression_profile.pdf + .png\n"}
+,{"stream_name":"stdout","time":2447.746894522,"data":"  figures/fig10_latent_gene_map.pdf + .png\n"}
+,{"stream_name":"stdout","time":2451.264136632,"data":"  figures/fig11_enrichment.pdf + .png\n"}
+,{"stream_name":"stdout","time":2451.388728823,"data":"Background: 11,214 genes; every set tested against the same domain.\n"}
+,{"stream_name":"stdout","time":2451.388769454,"data":"\n"}
+,{"stream_name":"stdout","time":2451.388776429,"data":"PLS-DA, up in AD: 34 genes -\u003e 23 terms (23 unique), 20 rest on a single gene, 3 on two or more.\n"}
+,{"stream_name":"stdout","time":2451.388782852,"data":"    single-gene terms are driven mainly by: RAF1 (11), TAB2 (5), KIF5A (2)\n"}
+,{"stream_name":"stdout","time":2451.388788516,"data":"PLS-DA, down in AD: 16 genes -\u003e 153 terms (153 unique), 43 rest on a single gene, 110 on two or more.\n"}
+,{"stream_name":"stdout","time":2451.388812735,"data":"    single-gene terms are driven mainly by: HBB (23), TUBB2B (13), ELMO2 (2)\n"}
+,{"stream_name":"stdout","time":2451.38881743,"data":"CVAE, up in AD: 35 genes -\u003e 2 terms (1 unique), 1 rest on a single gene, 0 on two or more.\n"}
+,{"stream_name":"stdout","time":2451.3888219,"data":"    single-gene terms are driven mainly by: MSL2 (1)\n"}
+,{"stream_name":"stdout","time":2451.388826029,"data":"CVAE, down in AD: 23 genes -\u003e 33 terms (32 unique), 13 rest on a single gene, 19 on two or more.\n"}
+,{"stream_name":"stdout","time":2451.388829888,"data":"    single-gene terms are driven mainly by: CPSF6 (5), ASF1B (4), YEATS4 (4)\n"}
+,{"stream_name":"stdout","time":2451.388833638,"data":"\n"}
+,{"stream_name":"stdout","time":2451.388837465,"data":"Only terms with two or more query genes are interpreted in the text.\n"}
+,{"stream_name":"stdout","time":2451.622263335,"data":"                                  file   bytes\n"}
+,{"stream_name":"stdout","time":2451.622297019,"data":"          CVAE_downregulated_genes.csv    4545\n"}
+,{"stream_name":"stdout","time":2451.622302277,"data":"            CVAE_gene_significance.csv 2098886\n"}
+,{"stream_name":"stdout","time":2451.622306467,"data":"            CVAE_upregulated_genes.csv    6757\n"}
+,{"stream_name":"stdout","time":2451.622310391,"data":"         PLSDA_downregulated_genes.csv    3210\n"}
+,{"stream_name":"stdout","time":2451.622314318,"data":"           PLSDA_gene_significance.csv 2097841\n"}
+,{"stream_name":"stdout","time":2451.622318304,"data":"           PLSDA_upregulated_genes.csv    6596\n"}
+,{"stream_name":"stdout","time":2451.622322138,"data":"                    cohort_summary.csv     204\n"}
+,{"stream_name":"stdout","time":2451.622325956,"data":"                confusion_matrices.csv     123\n"}
+,{"stream_name":"stdout","time":2451.622329783,"data":"       consensus_significant_genes.csv     797\n"}
+,{"stream_name":"stdout","time":2451.622333633,"data":"              enrichment/cvae_down.csv    3544\n"}
+,{"stream_name":"stdout","time":2451.622337487,"data":"                enrichment/cvae_up.csv     289\n"}
+,{"stream_name":"stdout","time":2451.622341212,"data":"             enrichment/plsda_down.csv   15967\n"}
+,{"stream_name":"stdout","time":2451.622344847,"data":"               enrichment/plsda_up.csv    2559\n"}
+,{"stream_name":"stdout","time":2451.622350364,"data":"                 enrichment_counts.csv      82\n"}
+,{"stream_name":"stdout","time":2451.622358936,"data":"                        env_report.csv     224\n"}
+,{"stream_name":"stdout","time":2451.622361513,"data":"     figures/fig10_latent_gene_map.pdf   42743\n"}
+,{"stream_name":"stdout","time":2451.622364243,"data":"     figures/fig10_latent_gene_map.png  858946\n"}
+,{"stream_name":"stdout","time":2451.622366971,"data":"          figures/fig11_enrichment.pdf   31318\n"}
+,{"stream_name":"stdout","time":2451.622369587,"data":"          figures/fig11_enrichment.png  961157\n"}
+,{"stream_name":"stdout","time":2451.622372267,"data":"               figures/fig1_design.pdf   41694\n"}
+,{"stream_name":"stdout","time":2451.622375,"data":"               figures/fig1_design.png  584902\n"}
+,{"stream_name":"stdout","time":2451.62237769,"data":"       figures/fig2_classification.pdf   49085\n"}
+,{"stream_name":"stdout","time":2451.622380262,"data":"       figures/fig2_classification.png  662700\n"}
+,{"stream_name":"stdout","time":2451.622383295,"data":"      figures/fig3_latent_geometry.pdf  200605\n"}
+,{"stream_name":"stdout","time":2451.622387264,"data":"      figures/fig3_latent_geometry.png 2664457\n"}
+,{"stream_name":"stdout","time":2451.622411804,"data":"    figures/fig4_latent_separation.pdf   23878\n"}
+,{"stream_name":"stdout","time":2451.622414695,"data":"    figures/fig4_latent_separation.png  277047\n"}
+,{"stream_name":"stdout","time":2451.622417228,"data":"figures/fig5_probability_landscape.pdf  327469\n"}
+,{"stream_name":"stdout","time":2451.622419875,"data":"figures/fig5_probability_landscape.png 2752876\n"}
+,{"stream_name":"stdout","time":2451.622422412,"data":"       figures/fig6_reconstruction.pdf   45563\n"}
+,{"stream_name":"stdout","time":2451.622424932,"data":"       figures/fig6_reconstruction.png  510653\n"}
+,{"stream_name":"stdout","time":2451.622427935,"data":"          figures/fig7_uncertainty.pdf   63200\n"}
+,{"stream_name":"stdout","time":2451.622451705,"data":"          figures/fig7_uncertainty.png  719332\n"}
+,{"stream_name":"stdout","time":2451.622456645,"data":"       figures/fig8_gene_discovery.pdf   55342\n"}
+,{"stream_name":"stdout","time":2451.622461118,"data":"       figures/fig8_gene_discovery.png 1381821\n"}
+,{"stream_name":"stdout","time":2451.622465039,"data":"   figures/fig9_expression_profile.pdf   42267\n"}
+,{"stream_name":"stdout","time":2451.622469319,"data":"   figures/fig9_expression_profile.png 1841280\n"}
+,{"stream_name":"stdout","time":2451.62247377,"data":"                     gene_de_stats.csv  938972\n"}
+,{"stream_name":"stdout","time":2451.622477649,"data":"                           ig_null.npy  897248\n"}
+,{"stream_name":"stdout","time":2451.622481501,"data":"                           ig_real.npy 1794368\n"}
+,{"stream_name":"stdout","time":2451.622485382,"data":"      latent_coords_representative.csv  691609\n"}
+,{"stream_name":"stdout","time":2451.622489293,"data":"                 latent_embeddings.csv  382828\n"}
+,{"stream_name":"stdout","time":2451.622495013,"data":"  latent_gene_weights_CVAE_neutral.npy  717824\n"}
+,{"stream_name":"stdout","time":2451.622498948,"data":"     latent_gene_weights_CVAE_true.npy  717824\n"}
+,{"stream_name":"stdout","time":2451.622502855,"data":"        latent_gene_weights_PLS-DA.npy  717824\n"}
+,{"stream_name":"stdout","time":2451.622507415,"data":"                        latent_snr.csv    1829\n"}
+,{"stream_name":"stdout","time":2451.622512087,"data":"                   oof_predictions.csv 1036565\n"}
+,{"stream_name":"stdout","time":2451.622544593,"data":"                oof_reconstruction.csv  361064\n"}
+,{"stream_name":"stdout","time":2451.622550695,"data":"                   oof_uncertainty.csv  848678\n"}
+,{"stream_name":"stdout","time":2451.622555531,"data":"                     pr_curves_raw.csv  103534\n"}
+,{"stream_name":"stdout","time":2451.62255935,"data":"      recon_scatter_representative.csv 2551669\n"}
+,{"stream_name":"stdout","time":2451.622563165,"data":"                   reproducibility.csv     781\n"}
+,{"stream_name":"stdout","time":2451.622567097,"data":"                reproduction_check.csv   22446\n"}
+,{"stream_name":"stdout","time":2451.62257094,"data":"                    roc_curves_raw.csv  102940\n"}
+,{"stream_name":"stdout","time":2451.622575186,"data":"                       run_metrics.csv   13555\n"}
+,{"stream_name":"stdout","time":2451.622579037,"data":"                   sample_metadata.csv  126807\n"}
+,{"stream_name":"stdout","time":2451.622582861,"data":"                   summary_scalars.csv   10990\n"}
+,{"stream_name":"stdout","time":2451.622586779,"data":"                            values.tex   13082\n"}
+,{"stream_name":"stdout","time":2451.62259057,"data":"                          vip_null.npy  897248\n"}
+,{"stream_name":"stdout","time":2451.622594401,"data":"                          vip_real.npy 1794368\n"}
+,{"stream_name":"stdout","time":2451.622603121,"data":"\n"}
+,{"stream_name":"stdout","time":2451.622606882,"data":"60 files, 33.1 MB\n"}
+,{"stream_name":"stdout","time":2451.622610571,"data":"no empty files\n"}
+,{"stream_name":"stderr","time":2457.803551428,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2457.803597826,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2458.046781957,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2458.046817159,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2459.035409926,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":2459.225446376,"data":"[NbConvertApp] Writing 2881794 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":2462.630291639,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2464.256810602,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":2464.256864729,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2464.257410127,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2464.257696469,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2464.258140794,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2464.258221908,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2464.258716565,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2464.25888871,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2464.259250402,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2464.259520545,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2464.25980398,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2464.260075514,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2464.26040338,"data":"[NbConvertApp] Writing 1166954 bytes to __results__.html\n"}
+]

@@ -1,0 +1,15 @@
+file,bytes
+ROBUSTNESS_REPORT.txt,6640
+cell_composition_qc.csv,2621
+dose_response_composition_adjusted.csv,3648
+dose_response_points_v11.csv,19864
+figures/figR1_composition.pdf,18766
+figures/figR1_composition.png,324226
+figures/figR2_core_composition.pdf,19264
+figures/figR2_core_composition.png,286164
+figures/figR3_rnaseq_dose.pdf,29403
+figures/figR3_rnaseq_dose.png,312165
+gene_effects_composition_adjusted.csv,34007
+rnaseq_signature.csv,515
+signature_beyond_composition.csv,3439
+validation_cohorts.csv,313

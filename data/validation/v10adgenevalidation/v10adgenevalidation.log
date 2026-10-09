@@ -1,0 +1,200 @@
+[{"stream_name":"stderr","time":9.782325438,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.782511668,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.782522115999999,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.782526551,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.564634775,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.564712185,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.564718105,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.5647225,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":14.532627286,"data":"downloaded Homo_sapiens.gene_info.gz: 5.2 MB\n"}
+,{"stream_name":"stdout","time":15.277439786,"data":"NCBI Gene: 193,818 official symbols, 65,623 unambiguous synonyms\n"}
+,{"stream_name":"stdout","time":15.277476093,"data":"parsers ready\n"}
+,{"stream_name":"stdout","time":17.67773313,"data":"frozen gene lists: /kaggle/input/notebooks/alisaremi/v9adexternal/loco_selected_genes.csv\n"}
+,{"stream_name":"stdout","time":17.677781682,"data":"SHA-256: b5383a49244784b16efc31c671086dcb95a5462a207d28445f5247b35bb9e69f\n"}
+,{"stream_name":"stdout","time":17.677787566,"data":"PLS-DA    67 genes  (44 up / 23 down)\n"}
+,{"stream_name":"stdout","time":17.677791662,"data":"CVAE     105 genes  (63 up / 42 down)\n"}
+,{"stream_name":"stdout","time":17.677795566,"data":"Core      13 genes  (8 up / 5 down)\n"}
+,{"stream_name":"stdout","time":17.677799524,"data":"Core genes: ADGRA3, ASCL1, CARTPT, DGKG, GFAP, HOPX, KIF5A, NEBL, NINL, NPTX2, RPH3A, TRIL, ZNF184\n"}
+,{"stream_name":"stdout","time":24.42614875,"data":"training statistics: 1401 arrays, 11,214 genes\n"}
+,{"stream_name":"stdout","time":28.712574903,"data":"GSE132903: 195 arrays -\u003e 195 donors, 11,214 genes; dx {'Control': 98, 'AD': 97}\n"}
+,{"stream_name":"stdout","time":34.508803352,"data":"  retry 1 for GSE15222_series_matrix.txt.gz: ('Connection broken: IncompleteRead(1720320 bytes read, 15244788 more expected)', IncompleteRead(1720320 bytes read, 15244788 more expected))\n"}
+,{"stream_name":"stdout","time":35.720297767,"data":"downloaded GSE15222_series_matrix.txt.gz: 17.0 MB\n"}
+,{"stream_name":"stdout","time":38.139074484,"data":"downloaded GPL2700.txt: 0.8 MB\n"}
+,{"stream_name":"stdout","time":40.396331264,"data":"downloaded refGene_hg19.txt.gz: 8.0 MB\n"}
+,{"stream_name":"stdout","time":43.23676344,"data":"downloaded ncbiRefSeq_hg38.txt.gz: 7.3 MB\n"}
+,{"stream_name":"stdout","time":44.872898683,"data":"GSE15222: quantiles [-1.051000e+02  1.500000e+00  1.760000e+01  1.237000e+02  3.695600e+03\n"}
+,{"stream_name":"stdout","time":44.872942309,"data":"  1.427693e+05] -\u003e log2 applied\n"}
+,{"stream_name":"stdout","time":45.088187687,"data":"GSE15222: 24,354 probes -\u003e 17,540 single-gene probes -\u003e 15,469 genes\n"}
+,{"stream_name":"stdout","time":52.307215522,"data":"GSE15222: 363 arrays -\u003e 363 donors, 15,469 genes; dx {'Control': 187, 'AD': 176}\n"}
+,{"stream_name":"stdout","time":57.70247652,"data":"  retry 1 for GSE29378_series_matrix.txt.gz: ('Connection broken: IncompleteRead(12288 bytes read, 16393042 more expected)', IncompleteRead(12288 bytes read, 16393042 more expected))\n"}
+,{"stream_name":"stdout","time":58.748988233,"data":"downloaded GSE29378_series_matrix.txt.gz: 16.4 MB\n"}
+,{"stream_name":"stdout","time":59.953875084,"data":"GSE29378: quantiles [   94.87   141.1    165.14   272.23  7873.41 34366.37] -\u003e log2 applied\n"}
+,{"stream_name":"stdout","time":62.393311409,"data":"downloaded GPL6947.txt: 25.4 MB\n"}
+,{"stream_name":"stdout","time":63.644535061,"data":"GSE29378: 48,803 probes -\u003e 31,012 single-gene probes -\u003e 20,177 genes\n"}
+,{"stream_name":"stdout","time":73.478044437,"data":"GSE29378: 63 arrays -\u003e 33 donors, 20,177 genes; dx {'AD': 17, 'Control': 16}\n"}
+,{"stream_name":"stdout","time":74.706005934,"data":"downloaded GSE122063_series_matrix.txt.gz: 38.6 MB\n"}
+,{"stream_name":"stdout","time":77.640508734,"data":"GSE122063: quantiles [-1.99  3.5   5.48  8.15 13.83 18.06] -\u003e already log scale\n"}
+,{"stream_name":"stdout","time":80.236549419,"data":"downloaded GPL16699.txt: 36.9 MB\n"}
+,{"stream_name":"stdout","time":81.488614215,"data":"GSE122063: 58,717 probes -\u003e 39,063 single-gene probes -\u003e 21,446 genes\n"}
+,{"stream_name":"stdout","time":92.713396751,"data":"GSE122063: 100 arrays -\u003e 23 donors, 21,446 genes; dx {'AD': 12, 'Control': 11}\n"}
+,{"stream_name":"stdout","time":93.861952366,"data":"downloaded GSE36980_series_matrix.txt.gz: 8.9 MB\n"}
+,{"stream_name":"stdout","time":99.281955906,"data":"downloaded GPL6244.txt: 99.4 MB\n"}
+,{"stream_name":"stdout","time":101.781832544,"data":"GSE36980: quantiles [ 1.06  6.17  7.57  8.85 12.43 14.75] -\u003e already log scale\n"}
+,{"stream_name":"stdout","time":101.781870621,"data":"GSE36980: 33,297 probes -\u003e 19,229 single-gene probes -\u003e 18,359 genes\n"}
+,{"stream_name":"stdout","time":110.682649853,"data":"GSE36980: 32 arrays -\u003e 32 donors, 18,359 genes; dx {'Control': 17, 'AD': 15}\n"}
+,{"stream_name":"stdout","time":116.064491314,"data":"  retry 1 for GSE106241_series_matrix.txt.gz: ('Connection broken: IncompleteRead(0 bytes read, 5187624 more expected)', IncompleteRead(0 bytes read, 5187624 more expected))\n"}
+,{"stream_name":"stdout","time":116.933669282,"data":"downloaded GSE106241_series_matrix.txt.gz: 5.2 MB\n"}
+,{"stream_name":"stdout","time":117.383300816,"data":"GSE106241: quantiles [3.1000000e-01 5.4210000e+01 2.1707000e+02 7.3989000e+02 2.4231110e+04\n"}
+,{"stream_name":"stdout","time":117.383348734,"data":" 6.1468741e+05] -\u003e log2 applied\n"}
+,{"stream_name":"stdout","time":118.687863407,"data":"downloaded GPL24170.txt: 4.4 MB\n"}
+,{"stream_name":"stdout","time":118.904168099,"data":"GSE106241: 19,367 probes -\u003e 18,094 single-gene probes -\u003e 18,043 genes\n"}
+,{"stream_name":"stdout","time":127.030649654,"data":"GSE106241: 58 arrays -\u003e 58 donors, 18,043 genes; dx {'severity': 58}\n"}
+,{"stream_name":"stdout","time":127.920833757,"data":"downloaded GSE1297_series_matrix.txt.gz: 1.6 MB\n"}
+,{"stream_name":"stdout","time":127.920870914,"data":"GSE1297: quantiles [4.000000e-01 6.900000e+01 2.239000e+02 6.055000e+02 8.311400e+03\n"}
+,{"stream_name":"stdout","time":127.920877609,"data":" 1.184178e+05] -\u003e log2 applied\n"}
+,{"stream_name":"stdout","time":130.901931771,"data":"downloaded GPL96.txt: 45.1 MB\n"}
+,{"stream_name":"stdout","time":131.901116126,"data":"GSE1297: 22,283 probes -\u003e 19,681 single-gene probes -\u003e 12,387 genes\n"}
+,{"stream_name":"stdout","time":136.130241468,"data":"GSE1297: 31 arrays -\u003e 31 donors, 12,387 genes; dx {'severity': 31}\n"}
+,{"stream_name":"stdout","time":136.130275731,"data":"\n"}
+,{"stream_name":"stdout","time":136.130283744,"data":"AD-vs-control cohorts: ['GSE132903', 'GSE15222', 'GSE29378', 'GSE122063', 'GSE36980'] | severity cohorts: ['GSE106241', 'GSE1297', 'GSE29378'] | failed: {}\n"}
+,{"stream_name":"stdout","time":137.056593574,"data":"GSE132903: 195 donors, 6,955 genes at FDR\u003c0.05 (age/sex adjusted)\n"}
+,{"stream_name":"stdout","time":137.664599589,"data":"GSE15222: 363 donors, 5,898 genes at FDR\u003c0.05 (age/sex adjusted)\n"}
+,{"stream_name":"stdout","time":138.289643382,"data":"GSE29378: 33 donors, 413 genes at FDR\u003c0.05 (age/sex adjusted)\n"}
+,{"stream_name":"stdout","time":138.99932083,"data":"GSE122063: 23 donors, 9 genes at FDR\u003c0.05 (age/sex adjusted)\n"}
+,{"stream_name":"stdout","time":139.489247217,"data":"GSE36980: 32 donors, 0 genes at FDR\u003c0.05 (age/sex adjusted)\n"}
+,{"stream_name":"stdout","time":140.540634848,"data":"meta-analysis over 5 cohorts: 5,027 genes at FDR\u003c0.05\n"}
+,{"stream_name":"stdout","time":151.469780916,"data":"PLS-DA  GSE132903  n= 67  concord 0.84 (null 0.84, p 0.625)  replic 0.66 (null 0.69, p 0.785)  AUC 0.886 (null 0.791, p 0.000999; topDE 0.846)\n"}
+,{"stream_name":"stdout","time":162.718438358,"data":"PLS-DA  GSE15222   n= 64  concord 0.88 (null 0.87, p 0.562)  replic 0.55 (null 0.58, p 0.79)  AUC 0.839 (null 0.776, p 0.000999; topDE 0.814)\n"}
+,{"stream_name":"stdout","time":173.441740846,"data":"PLS-DA  GSE29378   n= 66  concord 0.70 (null 0.79, p 0.982)  replic 0.08 (null 0.05, p 0.265)  AUC 0.882 (null 0.709, p 0.000999; topDE 0.746)\n"}
+,{"stream_name":"stdout","time":183.860172059,"data":"PLS-DA  GSE122063  n= 67  concord 0.79 (null 0.89, p 0.999)  replic 0.00 (null 0.00, p 1)  AUC 0.902 (null 0.855, p 0.014; topDE 0.894)\n"}
+,{"stream_name":"stdout","time":194.251773732,"data":"PLS-DA  GSE36980   n= 64  concord 0.53 (null 0.70, p 1)  replic 0.00 (null 0.00, p 1)  AUC 0.749 (null 0.697, p 0.0979; topDE 0.769)\n"}
+,{"stream_name":"stdout","time":205.558857549,"data":"PLS-DA  META       n= 67  concord 0.88 (null 0.93, p 0.964)  replic 0.43 (null 0.57, p 0.995)\n"}
+,{"stream_name":"stdout","time":218.419281398,"data":"CVAE    GSE132903  n=105  concord 0.72 (null 0.80, p 0.97)  replic 0.52 (null 0.62, p 0.989)  AUC 0.852 (null 0.790, p 0.000999; topDE 0.832)\n"}
+,{"stream_name":"stdout","time":231.690169035,"data":"CVAE    GSE15222   n=100  concord 0.72 (null 0.82, p 0.998)  replic 0.42 (null 0.49, p 0.949)  AUC 0.791 (null 0.772, p 0.0979; topDE 0.809)\n"}
+,{"stream_name":"stdout","time":244.615267541,"data":"CVAE    GSE29378   n=104  concord 0.63 (null 0.73, p 0.995)  replic 0.05 (null 0.04, p 0.365)  AUC 0.702 (null 0.701, p 0.512; topDE 0.743)\n"}
+,{"stream_name":"stdout","time":257.524085729,"data":"CVAE    GSE122063  n=105  concord 0.83 (null 0.84, p 0.732)  replic 0.01 (null 0.00, p 0.102)  AUC 0.886 (null 0.857, p 0.0919; topDE 0.886)\n"}
+,{"stream_name":"stdout","time":270.4151847,"data":"CVAE    GSE36980   n=100  concord 0.61 (null 0.68, p 0.945)  replic 0.00 (null 0.00, p 1)  AUC 0.835 (null 0.694, p 0.000999; topDE 0.753)\n"}
+,{"stream_name":"stdout","time":286.816991185,"data":"CVAE    META       n=105  concord 0.79 (null 0.88, p 1)  replic 0.38 (null 0.46, p 0.978)\n"}
+,{"stream_name":"stdout","time":292.148120186,"data":"Core    GSE15222   n= 12  concord 1.00 (null 0.92, p 0.377)  replic 0.83 (null 0.69, p 0.229)  AUC 0.785 (null 0.751, p 0.146; topDE 0.737)\n"}
+,{"stream_name":"stdout","time":297.14901478,"data":"Core    GSE29378   n= 13  concord 0.69 (null 0.87, p 0.982)  replic 0.08 (null 0.07, p 0.599)  AUC 0.651 (null 0.709, p 0.902; topDE 0.890)\n"}
+,{"stream_name":"stdout","time":302.257549124,"data":"Core    GSE122063  n= 13  concord 0.92 (null 0.95, p 0.882)  replic 0.00 (null 0.00, p 1)  AUC 0.826 (null 0.851, p 0.79; topDE 0.879)\n"}
+,{"stream_name":"stdout","time":309.157814957,"data":"Core    GSE36980   n= 13  concord 0.77 (null 0.75, p 0.58)  replic 0.00 (null 0.00, p 1)  AUC 0.847 (null 0.683, p 0.003; topDE 0.655)\n"}
+,{"stream_name":"stdout","time":309.217060415,"data":"Core    META       n= 13  concord 1.00 (null 0.98, p 0.753)  replic 0.54 (null 0.56, p 0.693)\n"}
+,{"stream_name":"stdout","time":309.217095112,"data":"\n"}
+,{"stream_name":"stdout","time":309.217100215,"data":"56 of 152 selected genes replicate in the meta-analysis (same direction, meta FDR\u003c0.05)\n"}
+,{"stream_name":"stdout","time":324.788077589,"data":"GSE106241 braak  PLS-DA  n= 58 partial rho=+0.524 (p 2.4e-05; vs matched-random p 0.000999)\n"}
+,{"stream_name":"stdout","time":338.967104602,"data":"GSE106241 braak  CVAE    n= 58 partial rho=+0.510 (p 4.3e-05; vs matched-random p 0.000999)\n"}
+,{"stream_name":"stdout","time":345.102661785,"data":"GSE106241 braak  Core    n= 58 partial rho=+0.448 (p 0.00042; vs matched-random p 0.00899)\n"}
+,{"stream_name":"stdout","time":358.483465967,"data":"GSE1297 braak  PLS-DA  n= 31 partial rho=+0.428 (p 0.016; vs matched-random p 0.492)\n"}
+,{"stream_name":"stdout","time":373.563138371,"data":"GSE1297 braak  CVAE    n= 31 partial rho=+0.352 (p 0.052; vs matched-random p 0.858)\n"}
+,{"stream_name":"stdout","time":378.668744842,"data":"GSE1297 braak  Core    n= 31 partial rho=+0.491 (p 0.005; vs matched-random p 0.155)\n"}
+,{"stream_name":"stdout","time":390.122208296,"data":"GSE1297 mmse   PLS-DA  n= 31 partial rho=-0.583 (p 0.00058; vs matched-random p 0.214)\n"}
+,{"stream_name":"stdout","time":405.539274773,"data":"GSE1297 mmse   CVAE    n= 31 partial rho=-0.415 (p 0.02; vs matched-random p 0.974)\n"}
+,{"stream_name":"stdout","time":410.674933131,"data":"GSE1297 mmse   Core    n= 31 partial rho=-0.470 (p 0.0077; vs matched-random p 0.614)\n"}
+,{"stream_name":"stdout","time":422.356958966,"data":"GSE1297 nft    PLS-DA  n= 31 partial rho=+0.410 (p 0.022; vs matched-random p 0.678)\n"}
+,{"stream_name":"stdout","time":437.461598133,"data":"GSE1297 nft    CVAE    n= 31 partial rho=+0.340 (p 0.061; vs matched-random p 0.933)\n"}
+,{"stream_name":"stdout","time":442.756829613,"data":"GSE1297 nft    Core    n= 31 partial rho=+0.527 (p 0.0023; vs matched-random p 0.0989)\n"}
+,{"stream_name":"stdout","time":459.117813247,"data":"GSE29378 braak  PLS-DA  n= 27 partial rho=+0.688 (p 7.3e-05; vs matched-random p 0.000999)\n"}
+,{"stream_name":"stdout","time":476.614819022,"data":"GSE29378 braak  CVAE    n= 27 partial rho=+0.383 (p 0.048; vs matched-random p 0.238)\n"}
+,{"stream_name":"stdout","time":483.713102533,"data":"GSE29378 braak  Core    n= 27 partial rho=+0.425 (p 0.027; vs matched-random p 0.217)\n"}
+,{"stream_name":"stdout","time":497.719517844,"data":"GSE29378 plaque PLS-DA  n= 29 partial rho=+0.589 (p 0.00078; vs matched-random p 0.000999)\n"}
+,{"stream_name":"stdout","time":515.252844361,"data":"GSE29378 plaque CVAE    n= 29 partial rho=+0.263 (p 0.17; vs matched-random p 0.74)\n"}
+,{"stream_name":"stdout","time":522.180050798,"data":"GSE29378 plaque Core    n= 29 partial rho=+0.306 (p 0.11; vs matched-random p 0.458)\n"}
+,{"stream_name":"stdout","time":522.228407117,"data":"INDEPENDENT VALIDATION OF THE FROZEN GENE LISTS\n"}
+,{"stream_name":"stdout","time":522.22844443,"data":"gene-list file SHA-256: b5383a49244784b16efc31c671086dcb95a5462a207d28445f5247b35bb9e69f\n"}
+,{"stream_name":"stdout","time":522.228457871,"data":"\n"}
+,{"stream_name":"stdout","time":522.228461634,"data":"Cohorts: GSE132903 (195 donors), GSE15222 (363 donors), GSE29378 (33 donors), GSE122063 (23 donors), GSE36980 (32 donors), GSE106241 (58 donors), GSE1297 (31 donors)\n"}
+,{"stream_name":"stdout","time":522.22846567,"data":"\n"}
+,{"stream_name":"stdout","time":522.228468885,"data":"Set-level replication (adjusted for age and sex, donor level). Baselines: matched random = genes equally AD-associated in training; topDE = plain differential expression.\n"}
+,{"stream_name":"stdout","time":522.2285068,"data":"\n"}
+,{"stream_name":"stdout","time":522.228511704,"data":"  PLS-DA  GSE132903  n= 67  same direction 83.6% [matched 84.1%, p 0.625; topDE 98.5%]  replicated 65.7% [matched 69.1%, p 0.785; topDE 88.1%]  signature AUC 0.886 [matched 0.791, p 0.000999; topDE 0.846; beyond age+sex p 7.7e-25]\n"}
+,{"stream_name":"stdout","time":522.228522084,"data":"  PLS-DA  GSE15222   n= 64  same direction 87.5% [matched 87.2%, p 0.562; topDE 93.8%]  replicated 54.7% [matched 58.4%, p 0.79; topDE 76.6%]  signature AUC 0.839 [matched 0.776, p 0.000999; topDE 0.814; beyond age+sex p 1.8e-20]\n"}
+,{"stream_name":"stdout","time":522.228527235,"data":"  PLS-DA  GSE29378   n= 66  same direction 69.7% [matched 79.4%, p 0.982; topDE 93.9%]  replicated  7.6% [matched  5.2%, p 0.265; topDE 16.7%]  signature AUC 0.882 [matched 0.709, p 0.000999; topDE 0.746; beyond age+sex p 3.9e-05]\n"}
+,{"stream_name":"stdout","time":522.228531555,"data":"  PLS-DA  GSE122063  n= 67  same direction 79.1% [matched 89.4%, p 0.999; topDE 97.0%]  replicated  0.0% [matched  0.1%, p 1; topDE  0.0%]  signature AUC 0.902 [matched 0.855, p 0.014; topDE 0.894; beyond age+sex p 0.00019]\n"}
+,{"stream_name":"stdout","time":522.228535953,"data":"  PLS-DA  GSE36980   n= 64  same direction 53.1% [matched 70.4%, p 1; topDE 73.4%]  replicated  0.0% [matched  0.0%, p 1; topDE  0.0%]  signature AUC 0.749 [matched 0.697, p 0.0979; topDE 0.769; beyond age+sex p 0.18]\n"}
+,{"stream_name":"stdout","time":522.228540618,"data":"  PLS-DA  META       n= 67  same direction 88.1% [matched 93.0%, p 0.964; topDE 100.0%]  replicated 43.3% [matched 56.7%, p 0.995; topDE 83.6%]\n"}
+,{"stream_name":"stdout","time":522.228544858,"data":"  CVAE    GSE132903  n=105  same direction 72.4% [matched 79.6%, p 0.97; topDE 95.2%]  replicated 52.4% [matched 61.9%, p 0.989; topDE 86.7%]  signature AUC 0.852 [matched 0.790, p 0.000999; topDE 0.832; beyond age+sex p 1.4e-19]\n"}
+,{"stream_name":"stdout","time":522.228551483,"data":"  CVAE    GSE15222   n=100  same direction 72.0% [matched 81.9%, p 0.998; topDE 95.0%]  replicated 42.0% [matched 49.0%, p 0.949; topDE 78.0%]  signature AUC 0.791 [matched 0.772, p 0.0979; topDE 0.809; beyond age+sex p 2e-14]\n"}
+,{"stream_name":"stdout","time":522.228562525,"data":"  CVAE    GSE29378   n=104  same direction 63.5% [matched 73.1%, p 0.995; topDE 91.3%]  replicated  4.8% [matched  3.8%, p 0.365; topDE 16.3%]  signature AUC 0.702 [matched 0.701, p 0.512; topDE 0.743; beyond age+sex p 0.0088]\n"}
+,{"stream_name":"stdout","time":522.228565843,"data":"  CVAE    GSE122063  n=105  same direction 82.9% [matched 84.4%, p 0.732; topDE 97.1%]  replicated  1.0% [matched  0.1%, p 0.102; topDE  0.0%]  signature AUC 0.886 [matched 0.857, p 0.0919; topDE 0.886; beyond age+sex p 0.00055]\n"}
+,{"stream_name":"stdout","time":522.228568741,"data":"  CVAE    GSE36980   n=100  same direction 61.0% [matched 67.7%, p 0.945; topDE 72.0%]  replicated  0.0% [matched  0.0%, p 1; topDE  0.0%]  signature AUC 0.835 [matched 0.694, p 0.000999; topDE 0.753; beyond age+sex p 0.064]\n"}
+,{"stream_name":"stdout","time":522.228571661,"data":"  CVAE    META       n=105  same direction 79.0% [matched 88.4%, p 1; topDE 100.0%]  replicated 38.1% [matched 46.4%, p 0.978; topDE 82.9%]\n"}
+,{"stream_name":"stdout","time":522.228574444,"data":"  Core    GSE15222   n= 12  same direction 100.0% [matched 92.4%, p 0.377; topDE 100.0%]  replicated 83.3% [matched 69.0%, p 0.229; topDE 83.3%]  signature AUC 0.785 [matched 0.751, p 0.146; topDE 0.737; beyond age+sex p 9.1e-15]\n"}
+,{"stream_name":"stdout","time":522.228577432,"data":"  Core    GSE29378   n= 13  same direction 69.2% [matched 86.9%, p 0.982; topDE 84.6%]  replicated  7.7% [matched  7.0%, p 0.599; topDE 30.8%]  signature AUC 0.651 [matched 0.709, p 0.902; topDE 0.890; beyond age+sex p 0.028]\n"}
+,{"stream_name":"stdout","time":522.228584259,"data":"  Core    GSE122063  n= 13  same direction 92.3% [matched 95.3%, p 0.882; topDE 92.3%]  replicated  0.0% [matched  0.3%, p 1; topDE  0.0%]  signature AUC 0.826 [matched 0.851, p 0.79; topDE 0.879; beyond age+sex p 0.0023]\n"}
+,{"stream_name":"stdout","time":522.228609711,"data":"  Core    GSE36980   n= 13  same direction 76.9% [matched 75.0%, p 0.58; topDE 69.2%]  replicated  0.0% [matched  0.0%, p 1; topDE  0.0%]  signature AUC 0.847 [matched 0.683, p 0.003; topDE 0.655; beyond age+sex p 0.0027]\n"}
+,{"stream_name":"stdout","time":522.228615442,"data":"  Core    META       n= 13  same direction 100.0% [matched 97.9%, p 0.753; topDE 100.0%]  replicated 53.8% [matched 56.3%, p 0.693; topDE 61.5%]\n"}
+,{"stream_name":"stdout","time":522.228644676,"data":"\n"}
+,{"stream_name":"stdout","time":522.228649301,"data":"Dose-response (partial Spearman, age removed; sign expected: + for Braak/NFT/plaque, - for MMSE):\n"}
+,{"stream_name":"stdout","time":522.228653446,"data":"  GSE106241  braak  PLS-DA  n= 58 rho=+0.524 (p 2.4e-05); matched-random p 0.000999\n"}
+,{"stream_name":"stdout","time":522.228682856,"data":"  GSE106241  braak  CVAE    n= 58 rho=+0.510 (p 4.3e-05); matched-random p 0.000999\n"}
+,{"stream_name":"stdout","time":522.228687605,"data":"  GSE106241  braak  Core    n= 58 rho=+0.448 (p 0.00042); matched-random p 0.00899\n"}
+,{"stream_name":"stdout","time":522.228691624,"data":"  GSE1297    braak  PLS-DA  n= 31 rho=+0.428 (p 0.016); matched-random p 0.492\n"}
+,{"stream_name":"stdout","time":522.228701029,"data":"  GSE1297    braak  CVAE    n= 31 rho=+0.352 (p 0.052); matched-random p 0.858\n"}
+,{"stream_name":"stdout","time":522.228705141,"data":"  GSE1297    braak  Core    n= 31 rho=+0.491 (p 0.005); matched-random p 0.155\n"}
+,{"stream_name":"stdout","time":522.228709181,"data":"  GSE1297    mmse   PLS-DA  n= 31 rho=-0.583 (p 0.00058); matched-random p 0.214\n"}
+,{"stream_name":"stdout","time":522.228713108,"data":"  GSE1297    mmse   CVAE    n= 31 rho=-0.415 (p 0.02); matched-random p 0.974\n"}
+,{"stream_name":"stdout","time":522.228717108,"data":"  GSE1297    mmse   Core    n= 31 rho=-0.470 (p 0.0077); matched-random p 0.614\n"}
+,{"stream_name":"stdout","time":522.228726419,"data":"  GSE1297    nft    PLS-DA  n= 31 rho=+0.410 (p 0.022); matched-random p 0.678\n"}
+,{"stream_name":"stdout","time":522.228732406,"data":"  GSE1297    nft    CVAE    n= 31 rho=+0.340 (p 0.061); matched-random p 0.933\n"}
+,{"stream_name":"stdout","time":522.228741134,"data":"  GSE1297    nft    Core    n= 31 rho=+0.527 (p 0.0023); matched-random p 0.0989\n"}
+,{"stream_name":"stdout","time":522.228744137,"data":"  GSE29378   braak  PLS-DA  n= 27 rho=+0.688 (p 7.3e-05); matched-random p 0.000999\n"}
+,{"stream_name":"stdout","time":522.228747284,"data":"  GSE29378   braak  CVAE    n= 27 rho=+0.383 (p 0.048); matched-random p 0.238\n"}
+,{"stream_name":"stdout","time":522.228766346,"data":"  GSE29378   braak  Core    n= 27 rho=+0.425 (p 0.027); matched-random p 0.217\n"}
+,{"stream_name":"stdout","time":522.228771198,"data":"  GSE29378   plaque PLS-DA  n= 29 rho=+0.589 (p 0.00078); matched-random p 0.000999\n"}
+,{"stream_name":"stdout","time":522.228776149,"data":"  GSE29378   plaque CVAE    n= 29 rho=+0.263 (p 0.17); matched-random p 0.74\n"}
+,{"stream_name":"stdout","time":522.228780337,"data":"  GSE29378   plaque Core    n= 29 rho=+0.306 (p 0.11); matched-random p 0.458\n"}
+,{"stream_name":"stdout","time":522.228785405,"data":"\n"}
+,{"stream_name":"stdout","time":522.22878962,"data":"Core genes (13); their meta-analysis uses the new cohorts only (GSE132903 helped define them):\n"}
+,{"stream_name":"stdout","time":522.228793824,"data":"  ADGRA3    up    same direction in 2/3 new cohorts, significant in 0/3; meta (new cohorts) +0.39 [-0.27, +1.06] q=0.49 I2=49%\n"}
+,{"stream_name":"stdout","time":522.228802834,"data":"  ASCL1     up    same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) +0.36 [+0.14, +0.59] q=0.014 I2=0%\n"}
+,{"stream_name":"stdout","time":522.228807218,"data":"  CARTPT    down  same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) -0.82 [-1.26, -0.37] q=0.0038 I2=61%\n"}
+,{"stream_name":"stdout","time":522.22881251,"data":"  DGKG      up    same direction in 2/4 new cohorts, significant in 1/4; meta (new cohorts) +0.27 [-0.24, +0.78] q=0.54 I2=62%\n"}
+,{"stream_name":"stdout","time":522.228816813,"data":"  GFAP      up    same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) +0.95 [+0.75, +1.16] q=3.8e-16 I2=0%\n"}
+,{"stream_name":"stdout","time":522.228820935,"data":"  HOPX      down  same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) -0.42 [-0.64, -0.20] q=0.0025 I2=0%\n"}
+,{"stream_name":"stdout","time":522.228825083,"data":"  KIF5A     up    same direction in 2/4 new cohorts, significant in 1/4; meta (new cohorts) +0.19 [-0.47, +0.85] q=0.77 I2=77%\n"}
+,{"stream_name":"stdout","time":522.228829233,"data":"  NEBL      up    same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) +0.56 [-0.06, +1.18] q=0.23 I2=77%\n"}
+,{"stream_name":"stdout","time":522.228833349,"data":"  NINL      up    same direction in 3/4 new cohorts, significant in 1/4; meta (new cohorts) +0.35 [-0.14, +0.83] q=0.38 I2=55%\n"}
+,{"stream_name":"stdout","time":522.228837511,"data":"  NPTX2     down  same direction in 3/4 new cohorts, significant in 1/4; meta (new cohorts) -0.75 [-1.20, -0.29] q=0.011 I2=55%\n"}
+,{"stream_name":"stdout","time":522.228841849,"data":"  RPH3A     down  same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) -0.82 [-1.03, -0.61] q=1.3e-11 I2=0%\n"}
+,{"stream_name":"stdout","time":522.228852441,"data":"  TRIL      up    same direction in 3/4 new cohorts, significant in 0/4; meta (new cohorts) +0.43 [-0.00, +0.87] q=0.18 I2=49%\n"}
+,{"stream_name":"stdout","time":522.228870718,"data":"  ZNF184    down  same direction in 4/4 new cohorts, significant in 1/4; meta (new cohorts) -0.69 [-1.01, -0.38] q=0.00031 I2=23%\n"}
+,{"stream_name":"stdout","time":524.586987711,"data":"  figures/figG1_core_genes.pdf + .png\n"}
+,{"stream_name":"stdout","time":526.497277317,"data":"  figures/figG2_set_validation.pdf + .png\n"}
+,{"stream_name":"stdout","time":529.096132591,"data":"  figures/figG3_dose_response.pdf + .png\n"}
+,{"stream_name":"stdout","time":529.144980658,"data":"                              file   bytes\n"}
+,{"stream_name":"stdout","time":529.145044741,"data":"        GENE_VALIDATION_REPORT.txt    7382\n"}
+,{"stream_name":"stdout","time":529.145052154,"data":"                  de_GSE122063.csv 2304026\n"}
+,{"stream_name":"stdout","time":529.145057291,"data":"                  de_GSE132903.csv 1241313\n"}
+,{"stream_name":"stdout","time":529.145062766,"data":"                   de_GSE15222.csv 1696964\n"}
+,{"stream_name":"stdout","time":529.145068061,"data":"                   de_GSE29378.csv 2159938\n"}
+,{"stream_name":"stdout","time":529.145073621,"data":"                   de_GSE36980.csv 1952202\n"}
+,{"stream_name":"stdout","time":529.145078339,"data":"                 dose_response.csv    2778\n"}
+,{"stream_name":"stdout","time":529.145083232,"data":"          dose_response_points.csv   31990\n"}
+,{"stream_name":"stdout","time":529.145088395,"data":"      figures/figG1_core_genes.pdf   24749\n"}
+,{"stream_name":"stdout","time":529.145093945,"data":"      figures/figG1_core_genes.png  240520\n"}
+,{"stream_name":"stdout","time":529.145098801,"data":"  figures/figG2_set_validation.pdf   21738\n"}
+,{"stream_name":"stdout","time":529.145126342,"data":"  figures/figG2_set_validation.png  327692\n"}
+,{"stream_name":"stdout","time":529.145131091,"data":"   figures/figG3_dose_response.pdf   28780\n"}
+,{"stream_name":"stdout","time":529.145135441,"data":"   figures/figG3_dose_response.png  407746\n"}
+,{"stream_name":"stdout","time":529.145141364,"data":"         gene_validation_table.csv   65705\n"}
+,{"stream_name":"stdout","time":529.145149478,"data":"       meta_analysis_all_genes.csv 3552389\n"}
+,{"stream_name":"stdout","time":529.145152128,"data":"meta_analysis_new_cohorts_only.csv 3522440\n"}
+,{"stream_name":"stdout","time":529.14515465,"data":"                set_validation.csv    5416\n"}
+,{"stream_name":"stdout","time":529.145157282,"data":"            validation_cohorts.csv     313\n"}
+,{"stream_name":"stdout","time":529.145159843,"data":"\n"}
+,{"stream_name":"stdout","time":529.145162478,"data":"19 files, 17.6 MB\n"}
+,{"stream_name":"stdout","time":529.145165079,"data":"no empty files\n"}
+,{"stream_name":"stderr","time":533.356645599,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":533.356706032,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":533.56879266,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":533.56882222,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":534.51919002,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":534.633386661,"data":"[NbConvertApp] Writing 308220 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":537.730237943,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":538.723740187,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":538.723788101,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":538.724175518,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":538.724338113,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":538.724694388,"data":"[NbConvertApp] Writing 642076 bytes to __results__.html\n"}
+]

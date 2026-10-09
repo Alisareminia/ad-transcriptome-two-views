@@ -1,0 +1,20 @@
+EXTERNAL VALIDATION on GSE132903: 195 arrays (97 AD / 98 control), trained on the other four cohorts
+
+  PLS-DA                         AUC 0.856 +/- 0.019   AP 0.885   balanced acc 0.703
+  CVAE (label-agnostic)          AUC 0.841 +/- 0.027   AP 0.840   balanced acc 0.695
+  CVAE (label-conditioned)*      AUC 0.866 +/- 0.026   AP 0.865   balanced acc 0.716
+  age only (trained)             AUC 0.506 +/- 0.000   AP 0.501   balanced acc 0.500
+  CVAE (label-agnostic) vs PLS-DA, paired over 20 runs: p = 0.021
+
+AGE VALIDATION
+  median age AD 86 vs control 85 (Mann-Whitney p = 0.89); raw age AUC 0.506
+  PLS-DA                   risk vs age: rho controls +0.17 (p 0.089), rho AD -0.20 (p 0.053); beyond age: LR p = 2.2e-22
+  CVAE (label-agnostic)    risk vs age: rho controls +0.17 (p 0.1), rho AD -0.12 (p 0.25); beyond age: LR p = 1.1e-23
+  age <80    n= 42 (21 AD/21 C): AUC PLS-DA 0.907, CVAE 0.858, age 0.508
+  age 80-89  n= 98 (49 AD/49 C): AUC PLS-DA 0.876, CVAE 0.869, age 0.529
+  age 90+    n= 55 (27 AD/28 C): AUC PLS-DA 0.776, CVAE 0.791, age 0.521
+  age-associated genes (training controls, FDR<0.05): background 53.5%, PLS-DA set 50.6%, CVAE set 56.7%
+
+GENES SELECTED ON THE FOUR TRAINING COHORTS, TESTED ON THE EXTERNAL ONE
+  PLS-DA   79 genes: same direction 83.6% (random 75.7%, p 0.0835); replicated at FDR<0.05 64.2% (random 56.4%, p 0.123); signature AUC 0.886
+  CVAE    127 genes: same direction 72.4% (random 75.5%, p 0.818); replicated at FDR<0.05 49.5% (random 56.5%, p 0.936); signature AUC 0.852

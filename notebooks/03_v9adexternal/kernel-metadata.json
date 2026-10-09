@@ -1,0 +1,19 @@
+{
+  "id": "alisaremi/v9adexternal",
+  "id_no": 136958463,
+  "title": "V9ADexternal",
+  "code_file": "v9adexternal.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "alisaremi/ad-merged-geo-cohorts"
+  ],
+  "competition_sources": [],
+  "model_sources": []
+}

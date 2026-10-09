@@ -1,0 +1,8 @@
+arm,list,n,frac_age_genes
+all genes,background,11214,0.5068664169787765
+"V7, no age handling",PLS-DA,54,0.6111111111111112
+"V7, no age handling",CVAE,75,0.48
+"A, age-corrected",PLS-DA,41,0.5609756097560976
+"A, age-corrected",CVAE,68,0.4264705882352941
+"B, age-matched",PLS-DA,45,0.5111111111111111
+"B, age-matched",CVAE,53,0.5471698113207547

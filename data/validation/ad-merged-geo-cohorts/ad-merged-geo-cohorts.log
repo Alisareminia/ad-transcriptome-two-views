@@ -1,0 +1,53 @@
+[{"stream_name":"stderr","time":7.137806924,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.137861385,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.137866554,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.137870354,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.709580053,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.709615623,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.709620223,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.709623883,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":12.410415669,"data":"downloaded Homo_sapiens.gene_info.gz: 5.2 MB\n"}
+,{"stream_name":"stdout","time":12.866497227,"data":"NCBI Gene: 193,793 official symbols, 65,622 unambiguous synonyms\n"}
+,{"stream_name":"stdout","time":12.866537897,"data":"parsers ready\n"}
+,{"stream_name":"stdout","time":15.559297155,"data":"GSE48350: quantiles [ 2.43  5.15  6.45  7.71 11.25 14.65] -\u003e already log scale\n"}
+,{"stream_name":"stdout","time":15.559331485,"data":"GSE48350: (21462, 253) {'Control': 173, 'AD': 80}\n"}
+,{"stream_name":"stdout","time":20.276970259,"data":"downloaded GSE33000_series_matrix.txt.gz: 112.1 MB\n"}
+,{"stream_name":"stdout","time":31.149967233,"data":"downloaded GPL4372.txt: 2.2 MB\n"}
+,{"stream_name":"stdout","time":31.963568572,"data":"GSE33000: quantiles [-2.   -0.05  0.01  0.06  0.37  2.  ] -\u003e already log scale\n"}
+,{"stream_name":"stdout","time":31.963607782,"data":"GSE33000: 39,280 probes -\u003e 24,086 single-gene probes -\u003e 19,865 genes\n"}
+,{"stream_name":"stdout","time":32.213157984,"data":"GSE33000: (19865, 624) {'AD': 310, 'Control': 157, nan: 157}\n"}
+,{"stream_name":"stdout","time":35.71210296,"data":"downloaded GSE132903_series_matrix.txt.gz: 42.0 MB\n"}
+,{"stream_name":"stdout","time":44.459413676,"data":"downloaded GPL10558.txt: 72.1 MB\n"}
+,{"stream_name":"stdout","time":45.801111679,"data":"GSE132903: quantiles [ 5.91  6.2   6.33  7.08 11.71 14.2 ] -\u003e already log scale\n"}
+,{"stream_name":"stdout","time":45.801148189,"data":"GSE132903: 42,179 probes -\u003e 32,231 single-gene probes -\u003e 21,744 genes\n"}
+,{"stream_name":"stdout","time":45.919545854,"data":"GSE132903: (21744, 195) {'Control': 98, 'AD': 97}\n"}
+,{"stream_name":"stdout","time":51.005382206,"data":"downloaded GSE118553_series_matrix.txt.gz: 149.5 MB\n"}
+,{"stream_name":"stdout","time":56.824524111,"data":"GSE118553: quantiles [ 0.2   3.09  3.86  4.99  8.71 12.14] -\u003e already log scale\n"}
+,{"stream_name":"stdout","time":56.824568911,"data":"GSE118553: 47,323 probes -\u003e 36,037 single-gene probes -\u003e 23,402 genes\n"}
+,{"stream_name":"stdout","time":57.061416093,"data":"GSE118553: (23402, 401) {nan: 194, 'AD': 129, 'Control': 78}\n"}
+,{"stream_name":"stdout","time":61.578005016,"data":"downloaded GSE84422-GPL96_series_matrix.txt.gz: 91.4 MB\n"}
+,{"stream_name":"stdout","time":72.749799915,"data":"downloaded GPL96.txt: 45.1 MB\n"}
+,{"stream_name":"stdout","time":73.954108392,"data":"GSE84422: quantiles [-1.77  2.6   3.21  4.46 10.59 15.87] -\u003e already log scale\n"}
+,{"stream_name":"stdout","time":73.954145582,"data":"GSE84422: 22,283 probes -\u003e 19,681 single-gene probes -\u003e 12,387 genes\n"}
+,{"stream_name":"stdout","time":74.218095695,"data":"GSE84422: (12387, 951) {'AD': 448, nan: 309, 'Control': 194}\n"}
+,{"stream_name":"stdout","time":74.419074444,"data":"genes measured in every cohort: 11,214\n"}
+,{"stream_name":"stdout","time":92.843479176,"data":"   cohort platform arrays_in_geo after_diagnosis_filter after_age_filter donors AD_arrays control_arrays AD_donors control_donors age_median_AD age_median_control regions genes_measured\n"}
+,{"stream_name":"stdout","time":92.843521566,"data":" GSE48350   GPL570           253                    253              173     63        80             93        28             35          85.5               83.0       4          21462\n"}
+,{"stream_name":"stdout","time":92.843527937,"data":" GSE33000  GPL4372           624                    467              403    403       305             98       305             98          82.0               68.0       1          19865\n"}
+,{"stream_name":"stdout","time":92.843531597,"data":"GSE132903 GPL10558           195                    195              195    195        97             98        97             98          86.0               85.0       1          21744\n"}
+,{"stream_name":"stdout","time":92.843534577,"data":"GSE118553 GPL10558           401                    207              183     70       129             54        51             19          83.0               80.0       3          23402\n"}
+,{"stream_name":"stdout","time":92.843537506,"data":" GSE84422    GPL96           951                    642              642     86       448            194        64             22          88.5               83.5      15          12387\n"}
+,{"stream_name":"stdout","time":92.843540566,"data":"    TOTAL      NaN        2424.0                 1764.0           1596.0  817.0    1059.0          537.0     545.0          272.0          84.0               78.0    24.0          11214\n"}
+,{"stream_name":"stdout","time":179.199863672,"data":"\n"}
+,{"stream_name":"stdout","time":179.199915512,"data":"merged: 1,596 arrays x 11,214 genes, 817 donors\n"}
+,{"stream_name":"stderr","time":189.566694798,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":189.566748728,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":189.724460008,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":189.724495498,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":190.425384675,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":190.496743541,"data":"[NbConvertApp] Writing 227512 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":193.006288088,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":193.587877132,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":193.587903622,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":193.588054782,"data":"[NbConvertApp] Writing 450735 bytes to __results__.html\n"}
+]

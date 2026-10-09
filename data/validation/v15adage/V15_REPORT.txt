@@ -1,0 +1,40 @@
+V15ADage — the merged benchmark with age taken out
+====================================================
+
+V7, no age handling: 817 donors | AUC PLS-DA 0.814 ± 0.044, CVAE agn. 0.847 ± 0.036 (paired p 0.00072, CVAE higher in 17/20) | age alone 0.654 | genes 54 / 75, shared 18
+A, age-corrected: 817 donors | AUC PLS-DA 0.851 ± 0.053, CVAE agn. 0.872 ± 0.038 (paired p 0.00063, CVAE higher in 17/20) | age alone 0.654 | genes 41 / 68, shared 12
+B, age-matched: 505 donors | AUC PLS-DA 0.810 ± 0.054, CVAE agn. 0.845 ± 0.037 (paired p 0.00014, CVAE higher in 17/20) | age alone 0.440 | genes 45 / 53, shared 13
+
+Per cohort (PLS-DA / CVAE agn. / age alone):
+  V7, no age handling    GSE118553  0.989 / 0.965 / 0.630
+  V7, no age handling    GSE132903  0.941 / 0.948 / 0.468
+  V7, no age handling    GSE33000   0.954 / 0.965 / 0.862
+  V7, no age handling    GSE48350   0.721 / 0.717 / 0.602
+  V7, no age handling    GSE84422   0.682 / 0.680 / 0.701
+  A, age-corrected       GSE118553  0.977 / 0.967 / 0.630
+  A, age-corrected       GSE132903  0.945 / 0.950 / 0.468
+  A, age-corrected       GSE33000   0.950 / 0.962 / 0.862
+  A, age-corrected       GSE48350   0.716 / 0.721 / 0.602
+  A, age-corrected       GSE84422   0.758 / 0.760 / 0.701
+  B, age-matched         GSE118553  0.967 / 0.953 / 0.623
+  B, age-matched         GSE132903  0.948 / 0.945 / 0.487
+  B, age-matched         GSE33000   0.914 / 0.913 / 0.512
+  B, age-matched         GSE48350   0.817 / 0.860 / 0.500
+  B, age-matched         GSE84422   0.639 / 0.636 / 0.501
+
+Genes kept from V7:
+  A, age-corrected       PLS-DA                 24 of 54  (this arm 41)
+  A, age-corrected       CVAE                   48 of 75  (this arm 68)
+  A, age-corrected       shared by both models  8 of 18  (this arm 12)
+  B, age-matched         PLS-DA                 24 of 54  (this arm 45)
+  B, age-matched         CVAE                   26 of 75  (this arm 53)
+  B, age-matched         shared by both models  7 of 18  (this arm 13)
+
+Fraction of selected genes that are age-associated in controls (q<0.05):
+  all genes              background 0.507  (n=11214)
+  V7, no age handling    PLS-DA     0.611  (n=54)
+  V7, no age handling    CVAE       0.480  (n=75)
+  A, age-corrected       PLS-DA     0.561  (n=41)
+  A, age-corrected       CVAE       0.426  (n=68)
+  B, age-matched         PLS-DA     0.511  (n=45)
+  B, age-matched         CVAE       0.547  (n=53)
