@@ -80,6 +80,13 @@ DIVERGING = LinearSegmentedColormap.from_list(
     "ctrl_ad", ["#7d92ad", "#a8b5c9", "#d3d9e3", "#eeeef1",
                 "#e3ccd3", "#c99aa8", "#a96d80"])
 
+# Pale stepped bands of P(AD) for the latent-space maps (Figure 3): light enough
+# that held-out markers in the two pole colours stand out against them.
+from matplotlib.colors import ListedColormap, BoundaryNorm
+GEO_LEVELS = [0, 0.25, 0.5, 0.75, 1.0]
+GEO_BANDS = ListedColormap(["#cdd6e3", "#e2e7ef", "#f3e7eb", "#e6cdd5"])
+GEO_NORM = BoundaryNorm(GEO_LEVELS, 4)
+
 # Sequential ramps for the confusion matrices, built from the two arm colours so
 # the matrices sit inside the same muted palette as everything else instead of
 # borrowing matplotlib's saturated "Blues"/"Oranges".
@@ -852,14 +859,12 @@ def fig_geometry():
             dens = {g: gaussian_kde(tr[tr.group == g][list(proj)].values.T, bw_method="scott")(G).reshape(GX.shape)
                     for g in ("AD", "Control")}
             post = dens["AD"] / (dens["AD"] + dens["Control"] + 1e-300)
-            im = ax.pcolormesh(gx, gy, post, cmap=DIVERGING, vmin=0, vmax=1, shading="gouraud", rasterized=True,
-                               zorder=0)
-            # topography: iso-probability lines, then the decision boundary
-            ax.contour(gx, gy, post, levels=[0.1, 0.25, 0.75, 0.9], colors=[SURFACE], linewidths=0.45,
-                       alpha=0.75, zorder=1)
-            ax.contour(gx, gy, post, levels=[0.5], colors=[INK2], linewidths=0.9, linestyles=[(0, (3.5, 2.0))],
+            # pale stepped bands, so that the held-out markers -- coloured by diagnosis in
+            # the bands' own two hues -- carry the eye and show the separation directly
+            im = ax.contourf(gx, gy, post, levels=GEO_LEVELS, cmap=GEO_BANDS, norm=GEO_NORM, zorder=0)
+            ax.contour(gx, gy, post, levels=[0.5], colors=[INK], linewidths=1.0, linestyles=[(0, (4, 2.2))],
                        zorder=2)
-            ax.scatter(tr[proj[0]], tr[proj[1]], s=1.6, color=SURFACE, alpha=0.55, linewidth=0, zorder=1,
+            ax.scatter(tr[proj[0]], tr[proj[1]], s=1.4, color=INK3, alpha=0.18, linewidth=0, zorder=1,
                        rasterized=True)
             # held-out arrays, judged against the training landscape
             kt = {g: gaussian_kde(tr[tr.group == g][list(proj)].values.T, bw_method="scott")
@@ -867,24 +872,21 @@ def fig_geometry():
             pt = kt["AD"](te[list(proj)].values.T); pc = kt["Control"](te[list(proj)].values.T)
             isad = (te.group == "AD").values
             ok = (pt / (pt + pc + 1e-300) > 0.5) == isad
-            wrong = te[~ok]
-            ax.scatter(wrong[proj[0]], wrong[proj[1]], s=30, facecolor="none", edgecolor=ACCENT, linewidth=0.6, alpha=0.85,
-                       zorder=3)
-            for g, kw in (("Control", dict(marker="o", facecolor=SURFACE, edgecolor=INK, s=11, linewidth=0.6)),
-                          ("AD", dict(marker="^", facecolor=INK, edgecolor=SURFACE, s=13, linewidth=0.4))):
+            for g, kw in (("Control", dict(marker="o", color=CTRL, s=13, edgecolor=SURFACE, linewidth=0.45)),
+                          ("AD", dict(marker="^", color=AD, s=15, edgecolor=SURFACE, linewidth=0.45))):
                 s = te[te.group == g]
                 ax.scatter(s[proj[0]], s[proj[1]], zorder=4, **kw)
             ax.text(0.965, 0.035, f"correct side  {ok.mean():.0%}\ncontrols {ok[~isad].mean():.0%} · "
                                   f"AD {ok[isad].mean():.0%}", transform=ax.transAxes, ha="right",
                     va="bottom", fontsize=5.8, color=INK, linespacing=1.35,
-                    bbox=dict(boxstyle="round,pad=0.3", facecolor=SURFACE, edgecolor="none", alpha=0.88), zorder=6)
+                    bbox=dict(boxstyle="round,pad=0.3", facecolor=SURFACE, edgecolor="none", alpha=0.9), zorder=6)
             ax.set_xlim(lo_[0], hi_[0]); ax.set_ylim(lo_[1], hi_[1])
             ax.set_xticks([]); ax.set_yticks([])
             for sp in ax.spines.values():
                 sp.set_visible(True); sp.set_color(RULE); sp.set_linewidth(0.6)
             ax.text(0.035, 0.965, next(letters), transform=ax.transAxes, ha="left", va="top", fontsize=9,
                     fontweight="bold", family="DejaVu Sans", color=INK,
-                    bbox=dict(boxstyle="square,pad=0.15", facecolor=SURFACE, edgecolor="none", alpha=0.7))
+                    bbox=dict(boxstyle="square,pad=0.15", facecolor=SURFACE, edgecolor="none", alpha=0.75))
             if r == 0:
                 ax.text(0.5, 1.10, tname, transform=ax.transAxes, ha="center", va="bottom", fontsize=8.6,
                         color=tcol)
@@ -894,14 +896,12 @@ def fig_geometry():
             if c == 0:
                 ax.text(-0.06, 0.5, pname, transform=ax.transAxes, ha="right", va="center", rotation=90,
                         fontsize=8.4, color=INK2)
-    hl = [Line2D([], [], marker="o", ls="", color=INK, markerfacecolor=SURFACE, markersize=4.5,
+    hl = [Line2D([], [], marker="o", ls="", color=CTRL, markeredgecolor=SURFACE, markersize=5,
                  label="control, held out"),
-          Line2D([], [], marker="^", ls="", color=INK, markersize=4.8, label="AD, held out"),
-          Line2D([], [], marker="o", ls="", color=ACCENT, markerfacecolor="none", markersize=6, markeredgewidth=0.6,
-                 label="wrong side"),
-          Line2D([], [], color=INK2, lw=0.9, ls=(0, (3.5, 2.0)), label="$P = 0.5$"),
-          Line2D([], [], color="#b9b9c3", lw=0.6, label="$P$ = 0.1, 0.25, 0.75, 0.9")]
-    fig.legend(handles=hl, loc="lower left", bbox_to_anchor=(0.06, 0.0), ncol=3, fontsize=7.0, frameon=False,
+          Line2D([], [], marker="^", ls="", color=AD, markeredgecolor=SURFACE, markersize=5.4, label="AD, held out"),
+          Line2D([], [], marker="o", ls="", color=INK3, alpha=0.4, markersize=2.5, label="training arrays"),
+          Line2D([], [], color=INK, lw=1.0, ls=(0, (4, 2.2)), label="$P = 0.5$ boundary")]
+    fig.legend(handles=hl, loc="lower left", bbox_to_anchor=(0.06, 0.0), ncol=2, fontsize=7.0, frameon=False,
                columnspacing=1.6)
     cax = fig.add_axes([0.62, 0.022, 0.30, 0.011])
     cb = fig.colorbar(im, cax=cax, orientation="horizontal")
@@ -910,8 +910,8 @@ def fig_geometry():
                  labelpad=2)
     fig.text(0.075, 0.975, "Latent space of one representative split: the landscape learned in training, "
                            "and where unseen donors land", fontsize=8.8, color=INK, ha="left", va="top")
-    fig.text(0.075, 0.952, "background: P(AD) learned from training arrays (faint dots) · markers: held-out arrays, "
-                           "ringed when on the wrong side", fontsize=6.6, color=INK3, ha="left", va="top")
+    fig.text(0.075, 0.952, "bands: P(AD) learned from training arrays, in steps of 0.25 · markers: held-out arrays, "
+                           "coloured by diagnosis", fontsize=6.6, color=INK3, ha="left", va="top")
     save(fig, "fig3_latent_geometry")
 
 
