@@ -489,3 +489,90 @@ pd.DataFrame([{"test": "direct effects, PLS-DA only vs CVAE only", "odds_ratio":
 pd.DataFrame([{"cell": k, "mean_AD_minus_control": v, "markers_used": len(MARKERS[k])}
               for k, v in cell_d.items()]).to_csv(f"{OUT}/gene_sides_cell_scores.csv", index=False)
 print("written:", sorted(f for f in os.listdir(OUT) if f.startswith("gene_sides")))
+
+# %%
+# ======================================================================
+# Sensitivity: is either list driven by sex?
+# ======================================================================
+# AD and control donors differ in sex composition in some cohorts (most clearly
+# GSE33000), and the main analysis does not adjust for sex. If sex drove the
+# selection, the selected genes would be sex-associated among controls and the
+# canonical sex-chromosome genes would rank high.
+from sklearn.metrics import roc_auc_score
+MALE = (DM.sex == "male").values
+sex_rows = []
+for c in COHORTS:
+    m = COH == c
+    sex_rows.append({"cohort": c, "AD_female_frac": float(1 - MALE[m & AD].mean()),
+                     "control_female_frac": float(1 - MALE[m & ~AD].mean()),
+                     "auc_sex_alone": float(roc_auc_score(AD[m], (~MALE[m]).astype(float)))})
+sex_rows.append({"cohort": "merged", "AD_female_frac": float(1 - MALE[AD].mean()),
+                 "control_female_frac": float(1 - MALE[~AD].mean()), "auc_sex_alone": np.nan})
+SEXCOH = pd.DataFrame(sex_rows)
+print(SEXCOH.round(3).to_string(index=False))
+
+ctl = ~AD
+Xs_ = np.column_stack([Coh[ctl], MALE[ctl].astype(float)])
+_, ts_, ps_ = ols_t(Xs_, Dv[ctl])
+G["q_sex_controls"] = bh(ps_)
+gi_chr = pd.read_csv(f"{TMP}/Homo_sapiens.gene_info.gz", sep="\t", dtype=str,
+                     usecols=["Symbol", "chromosome"]).drop_duplicates("Symbol").set_index("Symbol").chromosome
+G["chromosome"] = [gi_chr.get(g, "") for g in G.index]
+SEXCHR = G.chromosome.isin(["X", "Y", "X|Y"])
+sexg_rows = []
+for name, genes in list(GROUPS.items()) + [("all genes", list(G.index))]:
+    sub = G.loc[genes]
+    sexg_rows.append({"group": name, "n_genes": len(sub),
+                      "n_sex_associated_controls": int((sub.q_sex_controls < 0.05).sum()),
+                      "frac_sex_associated_controls": float((sub.q_sex_controls < 0.05).mean()),
+                      "n_sex_chromosome": int(SEXCHR[genes].sum()),
+                      "sex_associated_genes": ", ".join(sub.index[sub.q_sex_controls < 0.05]) if name != "all genes" else "",
+                      "sex_chromosome_genes": ", ".join(sub.index[SEXCHR[genes].values]) if name != "all genes" else ""})
+SEXG = pd.DataFrame(sexg_rows)
+print(SEXG.drop(columns=[]).to_string(index=False))
+CANON = [g for g in ["XIST", "RPS4Y1", "DDX3Y", "UTY", "EIF1AY", "KDM5D", "USP9Y", "ZFY"] if g in G.index]
+vip_rank = G.vip.rank(ascending=False); ig_rank = G.ig.rank(ascending=False)
+SEXCANON = pd.DataFrame({"gene": CANON, "q_sex_controls": G.loc[CANON, "q_sex_controls"].values,
+                         "vip_rank": vip_rank[CANON].values.astype(int), "ig_rank": ig_rank[CANON].values.astype(int),
+                         "n_genes": len(G)})
+print(SEXCANON.to_string(index=False))
+SEXCOH.to_csv(f"{OUT}/gene_sides_sex_cohorts.csv", index=False)
+SEXG.to_csv(f"{OUT}/gene_sides_sex_genes.csv", index=False)
+SEXCANON.to_csv(f"{OUT}/gene_sides_sex_canonical.csv", index=False)
+
+# %%
+# ======================================================================
+# Where else are the selected genes expressed? (Human Protein Atlas)
+# ======================================================================
+# A gene that is barely expressed in brain gives a weak array signal that may
+# reflect background or cross-hybridisation rather than the gene itself. HPA's
+# consensus tissue-specificity call flags genes whose expression is concentrated in
+# a non-brain tissue.
+import time, json as _json
+BRAIN_WORDS = ("brain", "cerebral", "cerebell", "hippocamp", "amygdala", "basal ganglia",
+               "midbrain", "spinal cord", "hypothalamus", "pituitary", "retina", "choroid plexus")
+hpa_rows = []
+for g in sorted(SELECTED):
+    url = ("https://www.proteinatlas.org/api/search_download.php?search=" + g +
+           "&format=json&columns=g,rnats,rnatsm,rnabrd&compress=no")
+    rec = {}
+    for attempt in range(4):
+        try:
+            rec = next((x for x in requests.get(url, headers=HDR, timeout=60).json() if x.get("Gene") == g), {})
+            break
+        except Exception:                            # noqa: BLE001
+            time.sleep(2)
+    tissues = rec.get("RNA tissue specific nTPM") or {}
+    spec = rec.get("RNA tissue specificity", "")
+    brain_dist = rec.get("RNA brain regional distribution", "")
+    nonbrain = (spec in ("Tissue enriched", "Group enriched") and
+                not any(w in t.lower() for t in tissues for w in BRAIN_WORDS)) or brain_dist == "Not detected"
+    hpa_rows.append({"gene": g, "group": G.at[g, "group"], "rna_tissue_specificity": spec,
+                     "specific_tissues": "; ".join(f"{t} {v}" for t, v in tissues.items()),
+                     "brain_distribution": brain_dist, "non_brain_enriched": bool(nonbrain)})
+    time.sleep(0.3)
+HPA = pd.DataFrame(hpa_rows)
+HPA.to_csv(f"{OUT}/gene_sides_hpa_tissue.csv", index=False)
+print(HPA[HPA.non_brain_enriched].to_string(index=False))
+print(HPA.groupby("group").non_brain_enriched.agg(["sum", "count"]))
+print("HPA records found:", int((HPA.rna_tissue_specificity != "").sum()), "of", len(HPA))

@@ -1,0 +1,112 @@
+gene,group,rna_tissue_specificity,specific_tissues,brain_distribution,non_brain_enriched
+ABHD8,PLS-DA only,Tissue enhanced,brain 99.0,Detected in all,False
+ABLIM1,CVAE only,Low tissue specificity,,Detected in all,False
+ACP6,CVAE only,Low tissue specificity,,Detected in all,False
+ACSBG1,CVAE only,Group enriched,brain 38.5; skin 1 13.5,Detected in all,False
+ADGRA3,shared,Tissue enhanced,liver 54.5,Detected in all,False
+AEBP1,PLS-DA only,Tissue enriched,blood vessel 1145.3,Detected in all,True
+AKAP9,shared,Low tissue specificity,,Detected in all,False
+ANGPTL7,CVAE only,Tissue enhanced,adipose tissue 15.5; blood vessel 17.5,Detected in all,False
+APLNR,PLS-DA only,Tissue enhanced,brain 77.5; lymphoid tissue 101.5; placenta 87.2,Detected in all,False
+ASCL1,shared,Tissue enhanced,brain 15.5; liver 10.4; pituitary gland 28.2,Detected in all,False
+ASF1B,CVAE only,Tissue enhanced,lymphoid tissue 21.6; testis 36.2,Detected in some,False
+BDNF,shared,Tissue enhanced,brain 4.9,Detected in all,False
+CAB39L,PLS-DA only,Tissue enhanced,choroid plexus 88.0,Detected in all,False
+CARTPT,shared,Tissue enriched,brain 599.0,Detected in many,False
+CCDC106,PLS-DA only,Tissue enhanced,brain 68.7,Detected in all,False
+CD52,CVAE only,Tissue enriched,epididymis 34113.9,Detected in many,True
+CDC25B,CVAE only,Low tissue specificity,,Detected in all,False
+CDK13,PLS-DA only,Low tissue specificity,,Detected in all,False
+CENPQ,CVAE only,Low tissue specificity,,Detected in all,False
+CHP1,CVAE only,Low tissue specificity,,Detected in all,False
+CLDN5,CVAE only,Tissue enhanced,adipose tissue 424.4; breast 412.2; choroid plexus 406.9; lung 384.3,Detected in all,False
+COL21A1,PLS-DA only,Tissue enhanced,blood vessel 28.5; placenta 26.6,Detected in all,False
+COLEC12,PLS-DA only,Tissue enhanced,cervix 25.9,Detected in all,False
+CPEB3,PLS-DA only,Tissue enhanced,liver 30.1,Detected in all,False
+CPSF6,CVAE only,Low tissue specificity,,Detected in all,False
+DEPP1,CVAE only,Tissue enhanced,adipose tissue 858.3; breast 687.9,Detected in all,False
+DGKG,shared,Tissue enhanced,brain 25.7,Detected in all,False
+DPEP2,CVAE only,Tissue enhanced,bone marrow 22.0; lymphoid tissue 27.4,Detected in all,False
+DRD2,CVAE only,Group enriched,brain 62.0; pituitary gland 56.6,Detected in many,False
+DUSP6,PLS-DA only,Tissue enhanced,salivary gland 213.0,Detected in all,False
+ELK1,PLS-DA only,Low tissue specificity,,Detected in all,False
+ELMO2,PLS-DA only,Low tissue specificity,,Detected in all,False
+FAM53C,PLS-DA only,Low tissue specificity,,Detected in all,False
+FCGR2C,CVAE only,Tissue enriched,placenta 26.6,Detected in many,True
+FDXR,CVAE only,Tissue enriched,adrenal gland 339.7,Detected in all,True
+FOXN3,PLS-DA only,Low tissue specificity,,Detected in all,False
+GFAP,shared,Tissue enriched,brain 15929.3,Detected in all,False
+GGA2,PLS-DA only,Low tissue specificity,,Detected in all,False
+GMIP,CVAE only,Tissue enhanced,bone marrow 48.1; lymphoid tissue 52.0,Detected in all,False
+GPR17,CVAE only,Tissue enriched,brain 35.3,Detected in all,False
+GREB1,CVAE only,Tissue enriched,ovary 255.7,Detected in all,True
+GSTM1,CVAE only,Tissue enhanced,liver 569.8,Detected in all,False
+HBB,shared,Tissue enriched,bone marrow 125480.9,Detected in all,True
+HBD,shared,Tissue enriched,bone marrow 2634.4,Detected in some,True
+HEMK1,CVAE only,Low tissue specificity,,Detected in all,False
+HMGN2,PLS-DA only,Low tissue specificity,,Detected in all,False
+ICAM3,CVAE only,Tissue enhanced,bone marrow 167.4; lymphoid tissue 88.8,Detected in all,False
+IFITM1,CVAE only,Low tissue specificity,,Detected in all,False
+ITPKB,shared,Tissue enhanced,brain 98.8; choroid plexus 90.2,Detected in all,False
+ITPRID2,CVAE only,Tissue enhanced,pancreas 165.7,Detected in all,False
+KCTD15,CVAE only,Tissue enhanced,skin 1 75.2,Detected in all,False
+KDM2A,PLS-DA only,Low tissue specificity,,Detected in all,False
+KIF5A,PLS-DA only,Tissue enriched,brain 1437.1,Detected in all,False
+KLHDC10,CVAE only,Low tissue specificity,,Detected in all,False
+KLHL1,CVAE only,Tissue enriched,brain 12.0,Detected in many,False
+LAMA2,CVAE only,Tissue enhanced,placenta 138.5,Detected in all,False
+LIPT1,CVAE only,Low tissue specificity,,Detected in all,False
+LPA,CVAE only,Tissue enriched,liver 71.8,Detected in many,True
+LRRC14,CVAE only,Low tissue specificity,,Detected in all,False
+LRRC37A2,CVAE only,Tissue enriched,testis 6.5,Detected in all,True
+MSL2,CVAE only,Tissue enhanced,bone marrow 58.7,Detected in all,False
+NAIP,shared,Tissue enhanced,lymphoid tissue 31.0,Detected in all,False
+NAT8B,CVAE only,Group enriched,intestine 46.4; kidney 32.6,Detected in all,True
+NEBL,shared,Tissue enriched,heart muscle 292.1,Detected in all,True
+NEDD9,PLS-DA only,Low tissue specificity,,Detected in all,False
+NINL,CVAE only,Low tissue specificity,,Detected in all,False
+NKX2-5,CVAE only,Tissue enriched,heart muscle 233.9,Not detected,True
+NPAS2,PLS-DA only,Low tissue specificity,,Detected in all,False
+NPTX2,shared,Tissue enriched,pituitary gland 200.0,Detected in all,False
+OLR1,CVAE only,Tissue enhanced,lung 94.3; placenta 107.4,Detected in all,False
+PDE4DIP,PLS-DA only,Group enriched,heart muscle 686.9; skeletal muscle 1934.8; tongue 1153.3,Detected in all,True
+PEG10,shared,Tissue enhanced,adrenal gland 162.5; placenta 439.1,Detected in all,False
+PLAC8,CVAE only,Tissue enhanced,bone marrow 345.6; intestine 221.2; lymphoid tissue 149.0,Detected in all,False
+PLCXD1,CVAE only,Low tissue specificity,,Detected in all,False
+POLR1D,shared,Low tissue specificity,,Detected in all,False
+PPM1A,CVAE only,Tissue enhanced,bone marrow 134.9,Detected in all,False
+PSTPIP1,CVAE only,Group enriched,bone marrow 55.1; lymphoid tissue 30.4,Detected in all,True
+PWWP3A,CVAE only,Low tissue specificity,,Detected in all,False
+QPRT,shared,Tissue enhanced,liver 220.5,Detected in all,False
+RAF1,PLS-DA only,Tissue enhanced,skeletal muscle 163.1,Detected in all,False
+RCHY1,CVAE only,Low tissue specificity,,Detected in all,False
+RCVRN,CVAE only,Tissue enriched,retina 430.9,Detected in many,False
+RERE,PLS-DA only,Low tissue specificity,,Detected in all,False
+RHOQ,PLS-DA only,Tissue enhanced,tongue 169.4,Detected in all,False
+RPH3A,shared,Tissue enriched,brain 115.4,Detected in all,False
+SLC2A3,CVAE only,Tissue enhanced,bone marrow 404.4,Detected in all,False
+SLC38A2,PLS-DA only,Low tissue specificity,,Detected in all,False
+SLC5A3,PLS-DA only,Tissue enhanced,kidney 27.1,Detected in all,False
+SPECC1L,PLS-DA only,Low tissue specificity,,Detected in all,False
+SPRY4,PLS-DA only,Low tissue specificity,,Detected in all,False
+SRSF4,PLS-DA only,Low tissue specificity,,Detected in all,False
+STAP2,CVAE only,Tissue enhanced,esophagus 89.7,Detected in all,False
+STIP1,PLS-DA only,Low tissue specificity,,Detected in all,False
+TAB2,PLS-DA only,Low tissue specificity,,Detected in all,False
+TMEM80,CVAE only,Low tissue specificity,,Detected in all,False
+TNR,CVAE only,Group enriched,brain 38.9; retina 15.1,Detected in all,False
+TOM1L1,CVAE only,Low tissue specificity,,Detected in all,False
+TPP2,CVAE only,Low tissue specificity,,Detected in all,False
+TRIL,shared,Tissue enriched,brain 38.0,Detected in all,False
+TRMO,CVAE only,Low tissue specificity,,Detected in all,False
+TRMT5,PLS-DA only,Low tissue specificity,,Detected in all,False
+TRPM3,CVAE only,Tissue enriched,choroid plexus 657.8,Detected in all,False
+TUBB2B,PLS-DA only,Tissue enriched,brain 596.1,Detected in all,False
+UBE2C,CVAE only,Tissue enhanced,bone marrow 74.0; lymphoid tissue 105.6,Detected in many,False
+VEGFA,CVAE only,Low tissue specificity,,Detected in all,False
+VGF,PLS-DA only,Group enriched,brain 143.5; pituitary gland 91.1,Detected in all,False
+YEATS4,CVAE only,Low tissue specificity,,Detected in all,False
+ZMYND8,PLS-DA only,Low tissue specificity,,Detected in all,False
+ZNF148,PLS-DA only,Low tissue specificity,,Detected in all,False
+ZNF184,CVAE only,Low tissue specificity,,Detected in all,False
+ZNF669,CVAE only,Low tissue specificity,,Detected in all,False

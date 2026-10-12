@@ -1,0 +1,5 @@
+group,n_genes,n_sex_associated_controls,frac_sex_associated_controls,n_sex_chromosome,sex_associated_genes,sex_chromosome_genes
+shared,18,0,0.0,0,,
+PLS-DA only,36,0,0.0,1,,ELK1
+CVAE only,57,1,0.017543859649122806,1,PLCXD1,PLCXD1
+all genes,11214,31,0.0027644016408061352,470,,

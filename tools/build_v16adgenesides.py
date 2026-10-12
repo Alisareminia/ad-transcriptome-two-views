@@ -22,9 +22,9 @@ def flush():
     text = "\n".join(buf).strip("\n")
     if kind == "markdown":
         text = "\n".join(l[2:] if l.startswith("# ") else l.lstrip("#") for l in text.splitlines())
-        cells.append({"cell_type": "markdown", "metadata": {}, "source": text})
+        cells.append({"cell_type": "markdown", "id": f"c{len(cells)}", "metadata": {}, "source": text})
     else:
-        cells.append({"cell_type": "code", "metadata": {}, "execution_count": None,
+        cells.append({"cell_type": "code", "id": f"c{len(cells)}", "metadata": {}, "execution_count": None,
                       "outputs": [], "source": text})
 
 

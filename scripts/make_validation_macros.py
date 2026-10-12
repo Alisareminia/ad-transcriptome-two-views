@@ -219,6 +219,43 @@ for g_, t_ in (("PLS-DA only", "plsonly"), ("CVAE only", "cvaeonly"), ("shared",
     if len(mk_):
         put(f"gs_genes_{t_}_markers", ", ".join(rf"\gene{{{g}}}" for g in mk_.index))
 
+# sex sensitivity (V16 version 2)
+SXC = pd.read_csv(v16 / "gene_sides_sex_cohorts.csv").set_index("cohort")
+put("gs_sex_ad_female_pct", int(round(100 * SXC.at["merged", "AD_female_frac"])))
+put("gs_sex_ctrl_female_pct", int(round(100 * SXC.at["merged", "control_female_frac"])))
+put("gs_sex_gse33000_ad_female_pct", int(round(100 * SXC.at["GSE33000", "AD_female_frac"])))
+put("gs_sex_gse33000_ctrl_female_pct", int(round(100 * SXC.at["GSE33000", "control_female_frac"])))
+_sx = SXC.drop(index="merged").auc_sex_alone
+put("gs_sex_auc_max", float(_sx.max())); put("gs_sex_auc_max_cohort", _sx.idxmax())
+SXG = pd.read_csv(v16 / "gene_sides_sex_genes.csv").set_index("group")
+for g_, t_ in GRP.items():
+    put(f"gs_sex_n_{t_}", int(SXG.at[g_, "n_sex_associated_controls"]))
+put("gs_sex_all_pct", float(100 * SXG.at["all genes", "frac_sex_associated_controls"]))
+SXK = pd.read_csv(v16 / "gene_sides_sex_canonical.csv")
+put("gs_sex_canon_n", len(SXK)); put("gs_sex_canon_best_vip_rank", int(SXK.vip_rank.min()))
+put("gs_sex_canon_best_ig_rank", int(SXK.ig_rank.min()))
+# tissue specificity of the selected genes (Human Protein Atlas)
+HP_ = pd.read_csv(v16 / "gene_sides_hpa_tissue.csv")
+put("gs_hpa_n_total", int(HP_.non_brain_enriched.sum()))
+for g_, t_ in (("shared", "shared"), ("PLS-DA only", "plsonly"), ("CVAE only", "cvaeonly")):
+    s_ = HP_[(HP_.group == g_) & HP_.non_brain_enriched]
+    put(f"gs_hpa_n_{t_}", len(s_))
+    if len(s_):
+        put(f"gs_hpa_genes_{t_}", gene_list(sorted(s_.gene)))
+put("gs_hpa_brain_not_detected", gene_list(sorted(HP_.gene[HP_.brain_distribution == "Not detected"])))
+# what the enrichment terms are: term counts by database
+ENR = {n: pd.read_csv(ROOT / "data" / "enrichment" / f"{n}.csv") for n in ("plsda_down", "plsda_up", "cvae_down", "cvae_up")}
+put("enr_all_terms_n", int(sum(len(d) for d in ENR.values())))
+_pd = ENR["plsda_down"]
+put("enr_pdown_terms_n", len(_pd)); put("enr_pdown_hp_n", int((_pd.source == "HP").sum()))
+put("enr_pdown_hpa_n", int((_pd.source == "HPA").sum()))
+_hp = _pd[_pd.source == "HP"]
+_hpg = pd.Series([g for x in _hp.intersections for g in x.split(",")]).value_counts()
+put("enr_pdown_hp_spry_n", int(_hpg.get("SPRY4", 0))); put("enr_pdown_hp_hbb_n", int(_hpg.get("HBB", 0)))
+put("enr_pdown_hp_tubb_n", int(_hpg.get("TUBB2B", 0)))
+put("enr_pdown_hp_maxsize_k2", int(_hp[_hp.intersection_size <= 2].term_size.max()))
+
+
 # the functional map of the selected genes: themes (curated from NCBI Gene, in
 # data/gene_themes.csv) by provenance, each gene with its direction in AD and its
 # composition class from V16
